@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Event | LSPGCOER Ratnagiri</title>
+<meta name="description" content="Event details from Lokenete Shamrao Peje Government College of Engineering, Ratnagiri.">
+<style>
+/* ============ RESET ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+
+/* ============ TOKENS ============ */
+:root{
+  --navy:#0B2A4A;
+  --navy-deep:#071A30;
+  --azure:#1D6690;
+  --gold:#C99A44;
+  --gold-bright:#E0B565;
+  --paper:#F5F6F3;
+  --paper-dim:#ECEEE9;
+  --ink:#101826;
+  --slate:#54647A;
+  --line:#DDE2E1;
+  --white:#FFFFFF;
+  --radius:4px;
+  --shadow:0 10px 30px -12px rgba(11,42,74,.22);
+  --serif:Georgia,'Times New Roman',Times,serif;
+  --sans:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --mono:Consolas,'SFMono-Regular','Courier New',monospace;
+  --maxw:1280px;
+}
+
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(--navy-deep)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;font-weight:600}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold);display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.6rem;border-radius:var(--radius);font-weight:600;font-size:.92rem;letter-spacing:.01em;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;white-space:nowrap}
+.btn svg{width:16px;height:16px;flex-shrink:0}
+.btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:var(--white)}
+
+.skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy-deep);padding:.7rem 1.2rem;z-index:999;font-weight:700}
+.skip-link:focus{left:1rem;top:1rem}
+
+/* ============ PLAQUE BAR ============ */
+.plaque-bar{background:var(--navy-deep);color:#CBD8E4;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em}
+.plaque-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.4rem 1.25rem;gap:1rem;flex-wrap:wrap}
+.plaque-inner .tags{display:flex;gap:1.4rem;flex-wrap:wrap}
+.plaque-inner .tags span{white-space:nowrap}
+.plaque-inner .tags b{color:var(--gold-bright)}
+.plaque-contact{display:flex;gap:1.1rem}
+.plaque-contact a{display:inline-flex;align-items:center;gap:.35rem;opacity:.9}
+.plaque-contact a:hover{opacity:1;color:var(--gold-bright)}
+.plaque-contact svg{width:13px;height:13px}
+
+/* ============ HEADER ============ */
+.site-header{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .25s ease}
+.site-header.scrolled{box-shadow:0 6px 24px -12px rgba(11,42,74,.25)}
+.header-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.4rem 1.25rem}
+.logo-mark{height:70px;width:70px;object-fit:contain;flex-shrink:0;transition:height .25s ease,width .25s ease}
+.site-header.scrolled .logo-mark{height:50px;width:50px}
+.logo-mark.fallback{border-radius:50%;background:var(--navy);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:.85rem;text-align:center}
+.brand-text{flex:1;min-width:0}
+.brand-text .name-en{font-family:var(--serif);font-weight:700;color:var(--navy-deep);font-size:clamp(.92rem,2vw,1.18rem);line-height:1.25}
+.brand-text .name-mr{font-size:.85rem;color:var(--azure);margin-top:1px}
+.brand-text .name-sub{font-size:.7rem;color:var(--slate);margin-top:2px;letter-spacing:.01em}
+.menu-toggle{display:none;padding:.4rem;color:var(--navy)}
+.menu-toggle svg{width:26px;height:26px}
+.main-nav{border-top:1px solid var(--line);background:var(--white)}
+.nav-inner{width:100%;display:flex;align-items:center;flex-wrap:wrap;padding:.25rem .5rem;row-gap:.25rem}
+.nav-scroll{flex:1 1 auto;min-width:0;padding-left:.5rem}
+.nav-list{display:flex;flex-wrap:wrap;row-gap:.15rem;gap:.15rem}
+.nav-list>li{position:relative;flex-shrink:0}
+.nav-list>li>a,.dropdown-btn{display:flex;align-items:center;gap:.2rem;padding:.5rem .55rem;font-size:.85rem;font-weight:600;white-space:nowrap;color:var(--navy-deep);border-bottom:2px solid transparent}
+.nav-list>li>a:hover,.dropdown-btn:hover{color:var(--azure);border-bottom-color:var(--gold)}
+.nav-list>li>a.active{color:var(--azure);border-bottom-color:var(--gold)}
+.has-dropdown.open>.dropdown-btn{color:var(--azure);border-bottom-color:var(--gold);background:var(--paper-dim)}
+.dropdown-btn svg{width:12px;height:12px;transition:transform .2s ease;flex-shrink:0}
+.has-dropdown.open>.dropdown-btn svg{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:100%;left:0;min-width:270px;max-width:360px;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:.4rem;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s ease, transform .18s ease, visibility .18s;z-index:50}
+.has-dropdown.open>.dropdown-menu{opacity:1;visibility:visible;transform:none}
+.dropdown-menu a{display:block;padding:.65rem .85rem;font-size:.92rem;border-radius:3px;color:var(--ink)}
+.dropdown-menu a:hover{background:var(--paper-dim);color:var(--azure)}
+.dropdown-menu li{position:relative}
+.dropdown-menu .badge{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.02em;padding:.15rem .45rem;border-radius:99px;margin-left:.4rem;background:var(--gold);color:var(--navy-deep);vertical-align:middle;white-space:nowrap}
+.dropdown-menu .badge.muted{background:var(--paper-dim);color:var(--slate)}
+.dropdown-submenu{position:relative}
+.dropdown-submenu>.submenu-toggle{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.55rem .7rem;font-size:.82rem;border-radius:3px;color:var(--ink);cursor:pointer}
+.dropdown-submenu>.submenu-toggle:hover{background:var(--paper-dim);color:var(--azure)}
+.dropdown-submenu>.submenu-toggle svg{width:11px;height:11px;flex-shrink:0;transform:rotate(-90deg);color:var(--slate)}
+.dropdown-submenu>.dropdown-menu{position:absolute;top:-.4rem;left:100%;margin-left:.35rem}
+.dropdown-submenu.open>.dropdown-menu{opacity:1;visibility:visible;transform:none}
+
+/* ============ PAGE HERO ============ */
+.page-hero{background:var(--navy-deep);color:var(--white);padding:clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,3.5rem)}
+.page-hero-inner{max-width:var(--maxw);margin:0 auto}
+.page-hero .eyebrow{color:var(--gold-bright)}
+.page-hero .eyebrow::before{background:var(--gold-bright)}
+.page-hero h1{color:var(--white);font-size:clamp(1.7rem,3.6vw,2.5rem);margin-top:.65rem;max-width:28ch}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.1rem;color:#C7D1DD;font-size:.9rem}
+.hero-meta span{display:flex;align-items:center;gap:.45rem}
+.hero-meta svg{width:15px;height:15px;color:var(--gold-bright);flex-shrink:0}
+.back-home{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.4rem;font-size:.82rem;color:var(--gold-bright);font-weight:600}
+.back-home:hover{text-decoration:underline}
+.back-home svg{width:14px;height:14px;transform:rotate(180deg)}
+
+/* ============ MAIN LAYOUT ============ */
+main{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1.25rem,4vw,1.75rem)}
+
+/* ============ CAROUSEL ============ */
+.carousel{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--navy-deep)}
+.carousel-track-wrap{aspect-ratio:16/8;overflow:hidden;position:relative}
+.carousel-track{display:flex;height:100%;transition:transform .5s cubic-bezier(.65,0,.35,1)}
+.carousel-slide{flex:0 0 100%;height:100%;position:relative}
+.carousel-slide img{width:100%;height:100%;object-fit:cover}
+.carousel-slide .no-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),var(--azure) 60%,var(--gold) 140%);color:rgba(255,255,255,.85);font-family:var(--mono);font-size:.85rem;letter-spacing:.04em;text-align:center;padding:1rem}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(7,26,48,.55);color:var(--white);display:flex;align-items:center;justify-content:center;z-index:5;transition:background .2s ease,transform .2s ease}
+.carousel-arrow:hover{background:var(--gold);color:var(--navy-deep)}
+.carousel-arrow svg{width:20px;height:20px}
+.carousel-prev{left:1rem}
+.carousel-next{right:1rem}
+.carousel-next svg{transform:scaleX(-1)}
+.carousel-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:5}
+.carousel-dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.45);transition:background .2s ease,transform .2s ease}
+.carousel-dots button.active{background:var(--gold-bright);transform:scale(1.25)}
+.carousel-count{position:absolute;top:1rem;right:1rem;background:rgba(7,26,48,.55);color:var(--white);font-family:var(--mono);font-size:.72rem;padding:.3rem .65rem;border-radius:99px;z-index:5;letter-spacing:.03em}
+
+/* ============ EVENT BODY ============ */
+.event-body{max-width:820px;margin:clamp(2rem,4vw,3rem) auto 0}
+.event-body p{color:var(--slate);margin-top:1.1rem;font-size:1rem}
+.event-body p:first-of-type{margin-top:0}
+.event-quote{margin-top:2rem;padding:1.5rem 1.75rem;background:var(--paper-dim);border-left:4px solid var(--gold);border-radius:var(--radius);font-family:var(--serif);font-style:italic;color:var(--navy-deep);font-size:1.08rem}
+
+.event-actions{max-width:820px;margin:2.5rem auto 0;display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ============ RELATED EVENTS ============ */
+.related{margin-top:clamp(3rem,6vw,4.5rem)}
+.related h3{font-size:clamp(1.3rem,2.4vw,1.6rem);margin-bottom:1.5rem}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.news-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(11,42,74,.04);transition:transform .2s ease,box-shadow .2s ease;display:block}
+.news-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ph-img{aspect-ratio:16/10;object-fit:cover;width:100%;background:linear-gradient(135deg,var(--navy) 0%,var(--azure) 60%,var(--gold) 140%)}
+.news-card .nc-body{padding:1.1rem 1.2rem 1.3rem}
+.news-card .nc-date{font-family:var(--mono);font-size:.7rem;color:var(--azure);letter-spacing:.06em;text-transform:uppercase}
+.news-card h4{font-size:1.02rem;margin-top:.5rem;line-height:1.35}
+.news-card .nc-readmore{display:inline-flex;align-items:center;gap:.35rem;margin-top:.8rem;font-size:.8rem;font-weight:600;color:var(--azure)}
+.news-card .nc-readmore svg{width:13px;height:13px}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--navy-deep);color:#C7D1DD}
+.footer-top{max-width:var(--maxw);margin:0 auto;padding:3.5rem 1.5rem 2.5rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2.5rem}
+.footer-brand{display:flex;gap:.9rem;align-items:flex-start}
+.footer-brand .logo-mark{height:46px;width:46px}
+.footer-brand h4{color:var(--white);font-size:1rem}
+.footer-brand p{font-size:.8rem;margin-top:.5rem;color:#9FADC0}
+.footer-col h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:.9rem}
+.footer-col li{margin-bottom:.6rem;font-size:.85rem}
+.footer-col a:hover{color:var(--white);text-decoration:underline}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);max-width:var(--maxw);margin:0 auto;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;font-size:.78rem;color:#8695AA}
+
+#backToTop{position:fixed;right:1.5rem;bottom:1.5rem;z-index:70;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s ease}
+#backToTop.show{opacity:1;visibility:visible;transform:none}
+#backToTop:hover{background:var(--azure)}
+#backToTop svg{width:20px;height:20px}
+
+.not-found{max-width:600px;margin:3rem auto;text-align:center;padding:3rem 1.5rem}
+.not-found h2{margin-bottom:1rem}
+.not-found p{color:var(--slate);margin-bottom:1.5rem}
+
+@media (max-width:1080px){
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:1500px){
+  .menu-toggle{display:block}
+  .main-nav{display:none}
+  .main-nav.open{display:block}
+  .nav-inner{flex-direction:column;align-items:stretch;padding:.5rem 1rem}
+  .nav-scroll{overflow:visible;flex:none;width:100%}
+  .nav-list{flex-direction:column;width:auto;justify-content:flex-start}
+  .nav-list>li>a,.dropdown-btn{padding:.8rem .3rem;border-bottom:1px solid var(--line)}
+  .dropdown-menu{position:static;box-shadow:none;border:none;display:none;opacity:1;visibility:visible;transform:none;padding-left:.6rem}
+  .has-dropdown.open>.dropdown-menu{display:block}
+  .dropdown-submenu>.dropdown-menu{margin-left:0;padding-left:1rem}
+  .dropdown-submenu.open>.dropdown-menu{display:block}
+  .dropdown-submenu>.submenu-toggle svg{transform:rotate(0)}
+  .dropdown-submenu.open>.submenu-toggle svg{transform:rotate(90deg)}
+}
+@media (max-width:760px){
+  .plaque-inner .tags{display:none}
+  .plaque-inner{padding:.3rem 1rem}
+  .plaque-contact{gap:.8rem;font-size:.68rem}
+  .header-inner{padding:.5rem .85rem;gap:.6rem}
+  .logo-mark{height:38px;width:38px}
+  .brand-text .name-mr{display:none}
+  .brand-text .name-sub{display:none}
+  .header-badge-logo{display:none}
+  .carousel-track-wrap{aspect-ratio:4/3}
+  .carousel-arrow{width:36px;height:36px}
+  .news-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .event-actions{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<svg style="display:none" aria-hidden="true">
+<defs>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+</defs>
+</svg>
+
+<!-- ============ PLAQUE BAR ============ -->
+<div class="plaque-bar">
+  <div class="plaque-inner">
+    <div class="tags">
+      <span>Government of Maharashtra</span>
+      <span>DTE Code: <b>3042</b></span>
+      <span>AICTE Permanent ID: <b>1-9442079401</b></span>
+      <span>Affiliated to Dr. Babasaheb Ambedkar Technological University, Lonere</span>
+    </div>
+    <div class="plaque-contact">
+      <a href="mailto:office@gcoer.ac.in"><svg><use href="#i-mail"/></svg>office@gcoer.ac.in</a>
+      <a href="tel:8793284358"><svg><use href="#i-phone"/></svg>8793284358</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <img src="images/lsp_logo.jpeg" alt="LSPGCOER Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP\nGCOER'}))">
+    <img src="images/logo3.jpeg" alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo" class="logo-mark header-badge-logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DBATU'}))">
+    <div class="brand-text">
+      <div class="name-en">Lokenete Shamrao Peje Government College of Engineering, Ratnagiri</div>
+      <div class="name-mr">लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी</div>
+      <div class="name-sub">An Institute of Government of Maharashtra &middot; Established 2021</div>
+    </div>
+    <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark header-badge-logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
+    <img src="images/dte_logo.gif" alt="Directorate of Technical Education, Maharashtra Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DTE'}))">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg id="menuIcon"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+  <nav class="main-nav" id="mainNav" aria-label="Primary">
+    <div class="nav-inner">
+      <div class="nav-scroll">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">About Us <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="about_institute.html">About Institute</a></li>
+            <li><a href="Doc/Citizen%20charter%20new.pdf" target="_blank">Draft Citizens Charter</a></li>
+            <li><a href="GCOER_programme.html">Course Details</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Admission <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="Doc/IMP%20Instructions%20about%20admission%20in%20EN3042%20for%202024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
+            <li><a href="Doc/Admission%20Fees%20structure%2025-26_page-0001%20.pdf" target="_blank">Fee Structure</a></li>
+            <li><a href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
+            <li><a href="Doc/FE-ACAP%20(25-26)IL-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
+            <li><a href="Doc/ACAP%20(DSE-2526)%20IL%20round-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Departments <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="AI_Dept.html">Artificial Intelligence &amp; Data Science</a></li>
+            <li><a href="Civil_Dept.html">Civil &amp; Infrastructure Engineering</a></li>
+            <li><a href="Electrical_Dept.html">Electrical Engineering</a></li>
+            <li><a href="Foodtech_Dept.html">Food Technology &amp; Management</a></li>
+            <li><a href="Mechatronics_Dept.html">Mechatronics Engineering</a></li>
+            <li><a href="Science_Dept.html">Science &amp; Humanities</a></li>
+            <li><a href="Workshop.html">Workshop Department</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Students Corner <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <span class="submenu-toggle">Student Notices <svg><use href="#i-chevron"/></svg></span>
+              <ul class="dropdown-menu">
+                <li><a href="Doc/Student%20Notice%2025-26.pdf" target="_blank">Notice 1</a></li>
+                <li><a href="Doc/Student%20Notices-2%2025-26.pdf" target="_blank">Notice 2</a></li>
+              </ul>
+            </li>
+            <li><a href="Doc/Gymkhana/APPLICATION%20FORM%20FOR%20NOMINATION%20TO%20GYMKHANA%20POST%2026.pdf" target="_blank">Gymkhana Notice &amp; Application Form <span class="badge">New</span></a></li>
+            <li><a href="Doc/AC_Engg_UGPG_EvenSem_AY25-26.pdf" target="_blank">Academic Calendar 25-26</a></li>
+            <li><a href="Doc/Academic%20calendar%20ODD%20Sem%202025%20GCOER.pdf" target="_blank">Academic Calendar Odd Sem (Winter AY 25-26)</a></li>
+            <li><a href="Doc/LSPGCoE%20Ratnagiri%20Governance%20Manual%20for%20Students_w.e.f.%20January%2001,%202025.pdf" target="_blank">Governance Manual</a></li>
+            <li><a href="Doc/bonafide%20certificate%20procedure.pdf" target="_blank">Bonafide Procedure</a></li>
+            <li><a href="Doc/Application%20for%20Bonafide%20Certificate%20(1).pdf" target="_blank">Application Format</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Scholarship <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="Doc/Scholarship%20Notice.pdf" target="_blank">Scholarship Notice</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Facilities <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="GCOER_library.html">Library</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Hostel <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Girls Hostel <span class="badge muted">Not Available</span></a></li>
+            <li><a href="#">Boys Hostel <span class="badge muted">Not Available</span></a></li>
+            <li class="dropdown-submenu">
+              <span class="submenu-toggle">अल्पसंख्यांक Girls Hostel <svg><use href="#i-chevron"/></svg></span>
+              <ul class="dropdown-menu">
+                <li><a href="Doc/Notice%20Hostel-26.pdf" target="_blank">Notices</a></li>
+                <li><a href="Doc/Hostel%20Notice%202.pdf" target="_blank">Notices 1 <span class="badge">Latest</span></a></li>
+                <li><a href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87%20%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf" target="_blank">Admission Form</a></li>
+                <li><a href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf" target="_blank">Rules and Regulations</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Mandatory Disclosure <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="Doc/Mandatary%20disclosure%20New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
+            <li><a href="Doc/Mandatory%20Disclosure%202025-26.pdf" target="_blank">Mandatory Disclosure 2025-26</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">UGC Compliance <span class="badge">New</span> <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="Doc/UGC%20compliance%20docs/UGC%20Self%20Compliance.pdf" target="_blank">UGC Compliance</a></li>
+            <li><a href="Doc/UGC%20compliance%20docs/IQAC%20.pdf" target="_blank">IQAC Committee (incl. External Members)</a></li>
+            <li><a href="Doc/UGC%20compliance%20docs/Mandatory%20disclosure%20.pdf" target="_blank">Mandatory Disclosure</a></li>
+            <li><a href="Doc/UGC%20compliance%20docs/Int%20Comp%20Com.pdf" target="_blank">Internal Complaint Committee</a></li>
+            <li><a href="Doc/UGC%20compliance%20docs/C-66540_AISHE_provisional-certificate_DCF.pdf" target="_blank">AISHE Certificate</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Doc/RTI.pdf" target="_blank">RTI</a></li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">T&amp;P <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li><a href="Doc/LSPGCoER_Ind_Training_and_Internship%20Policy_Complete%20Draft%20Document%20(13%20March%202025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">AICTE EOA <svg><use href="#i-chevron"/></svg></button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <span class="submenu-toggle">EOA <svg><use href="#i-chevron"/></svg></span>
+              <ul class="dropdown-menu">
+                <li><a href="Doc/EOA%20and%20LOA/LOA%202021-22.PDF" target="_blank">2021-22</a></li>
+                <li><a href="Doc/EOA%202022-23_EOA%20GCOER.pdf" target="_blank">2022-23</a></li>
+                <li><a href="Doc/EOA%202023-24.pdf" target="_blank">2023-24</a></li>
+                <li><a href="Doc/EOA%20REPORT%202024-2025.pdf" target="_blank">2024-25</a></li>
+                <li><a href="Doc/EOA%20Report%202025-26.PDF" target="_blank">2025-26</a></li>
+                <li><a href="Doc/EOA%20Report%202026-2027.pdf" target="_blank">2026-27</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <span class="submenu-toggle">Affiliation <svg><use href="#i-chevron"/></svg></span>
+              <ul class="dropdown-menu">
+                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202021-22.pdf" target="_blank">2021-22</a></li>
+                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202022-23.pdf" target="_blank">2022-23</a></li>
+                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202023-24.pdf" target="_blank">2023-24</a></li>
+                <li><a href="Doc/EOA%20and%20LOA/Provisional%20Affiliation%20LSPGCoER%20for%20AY%202024-25.pdf" target="_blank">2024-25</a></li>
+                <li><a href="Doc/UGC%20compliance%20docs/3042%20Affi%20letter%202025-26%20LSPGCoE%20Ratnagiri.pdf" target="_blank">2025-26</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="Doc/Grive.cell.pdf" target="_blank">Grievance Cell</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ PAGE HERO (filled by JS) ============ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Event</p>
+    <h1 id="eventTitle">Loading event&hellip;</h1>
+    <div class="hero-meta">
+      <span><svg><use href="#i-calendar"/></svg><span id="eventDate"></span></span>
+      <span><svg><use href="#i-pin"/></svg><span id="eventVenue"></span></span>
+    </div>
+    <a href="news-events.html" class="back-home"><svg><use href="#i-arrow"/></svg>Back to News &amp; Events</a>
+  </div>
+</section>
+
+<main id="main-content">
+
+  <!-- ============ NOT FOUND STATE ============ -->
+  <div class="not-found" id="notFound" style="display:none">
+    <h2>Event not found</h2>
+    <p>We couldn&rsquo;t find the event you were looking for. It may have been moved or the link is incorrect.</p>
+    <a href="news-events.html" class="btn btn-ghost">View All News &amp; Events <svg><use href="#i-arrow"/></svg></a>
+  </div>
+
+  <div id="eventContent">
+    <!-- ============ CAROUSEL ============ -->
+    <div class="carousel" id="carousel">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+      <button class="carousel-arrow carousel-prev" id="carPrev" aria-label="Previous image"><svg><use href="#i-arrow-left"/></svg></button>
+      <button class="carousel-arrow carousel-next" id="carNext" aria-label="Next image"><svg><use href="#i-arrow-left"/></svg></button>
+      <div class="carousel-dots" id="carDots"></div>
+      <div class="carousel-count" id="carCount"></div>
+    </div>
+
+    <!-- ============ DETAILS ============ -->
+    <article class="event-body" id="eventBodyText"></article>
+
+    <div class="event-actions">
+      <a href="news-events.html" class="btn btn-ghost"><svg><use href="#i-arrow-left"/></svg>All Events</a>
+    </div>
+
+    <!-- ============ RELATED EVENTS ============ -->
+    <section class="related">
+      <h3>More from LSPGCOER</h3>
+      <div class="news-grid" id="relatedGrid"></div>
+    </section>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="images/college-logo.png" alt="LSPGCOER Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP'}))">
+      <div>
+        <h4>LSPGCOER, Ratnagiri</h4>
+        <p>Near Thiba Palace Road, Ratnagiri &ndash; 415612, Maharashtra. An institute of Government of Maharashtra, affiliated to DBATU, Lonere.</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#admission">Admission</a></li>
+        <li><a href="news-events.html">News &amp; Events</a></li>
+        <li><a href="index.html#facilities">Facilities</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="Doc/RTI.pdf">RTI</a></li>
+        <li><a href="Doc/Grive.cell.pdf">Grievance Cell</a></li>
+        <li><a href="https://dte.maharashtra.gov.in/" target="_blank" rel="noopener">DTE Maharashtra</a></li>
+        <li><a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener">CET Cell</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:principal@gcoer.ac.in">principal@gcoer.ac.in</a></li>
+        <li><a href="mailto:office@gcoer.ac.in">office@gcoer.ac.in</a></li>
+        <li><a href="tel:8793284358">8793284358</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; Copyright 2021 &mdash; Government College of Engineering, Ratnagiri</span>
+    <span>Maintained by: Government College of Engineering, Ratnagiri</span>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top"><svg><use href="#i-chevron" style="transform:rotate(180deg)"/></svg></button>
+
+<script src="events-data.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  /* ---- header shrink / back to top ---- */
+  var header = document.getElementById('siteHeader');
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    if(y > 24){ header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
+    if(y > 500){ backToTop.classList.add('show'); } else { backToTop.classList.remove('show'); }
+  }, {passive:true});
+  backToTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  /* ---- mobile menu ---- */
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  var menuIcon = document.getElementById('menuIcon');
+  menuToggle.addEventListener('click', function(){
+    var isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuIcon.innerHTML = isOpen ? '<use href="#i-close"/>' : '<use href="#i-menu"/>';
+  });
+
+  /* ---- dropdown menus ---- */
+  var dropdownParents = document.querySelectorAll('.has-dropdown, .dropdown-submenu');
+  dropdownParents.forEach(function(el){
+    var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
+    if(!trigger) return;
+    trigger.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var wasOpen = el.classList.contains('open');
+      var siblingScope = el.parentElement;
+      siblingScope.querySelectorAll(':scope > .has-dropdown.open, :scope > .dropdown-submenu.open').forEach(function(sib){
+        if(sib !== el){
+          sib.classList.remove('open');
+          var sibTrigger = sib.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
+          if(sibTrigger) sibTrigger.setAttribute('aria-expanded','false');
+        }
+      });
+      el.classList.toggle('open', !wasOpen);
+      trigger.setAttribute('aria-expanded', !wasOpen);
+    });
+  });
+  document.addEventListener('click', function(e){
+    dropdownParents.forEach(function(el){
+      if(!el.contains(e.target)){
+        el.classList.remove('open');
+        var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
+        if(trigger) trigger.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+
+  document.querySelectorAll('#mainNav .nav-list a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(window.innerWidth <= 1500){
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuIcon.innerHTML = '<use href="#i-menu"/>';
+      }
+    });
+  });
+
+  /* ---- load event from URL ?id=... ---- */
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  var EVENTS = window.EVENTS || {};
+  var event = id ? EVENTS[id] : null;
+
+  if(!event){
+    document.getElementById('eventContent').style.display = 'none';
+    document.getElementById('notFound').style.display = 'block';
+    document.getElementById('eventTitle').textContent = 'Event not found';
+    document.title = 'Event not found | LSPGCOER Ratnagiri';
+    return;
+  }
+
+  document.title = event.title.replace(/&mdash;/g,'\u2014').replace(/&amp;/g,'&').replace(/&ndash;/g,'\u2013') + ' | LSPGCOER Ratnagiri';
+  document.getElementById('pageTitle').textContent = document.title;
+  document.getElementById('eventTitle').innerHTML = event.title;
+  document.getElementById('eventDate').textContent = event.date || '';
+  document.getElementById('eventVenue').textContent = event.venue || '';
+
+  /* body text */
+  var bodyEl = document.getElementById('eventBodyText');
+  (event.body || []).forEach(function(p){
+    var para = document.createElement('p');
+    para.innerHTML = p;
+    bodyEl.appendChild(para);
+  });
+  if(event.quote){
+    var q = document.createElement('p');
+    q.className = 'event-quote';
+    q.innerHTML = '&ldquo;' + event.quote + '&rdquo;';
+    bodyEl.appendChild(q);
+  }
+
+  /* ---- carousel ---- */
+  var images = (event.images && event.images.length) ? event.images : (event.cover ? [event.cover] : []);
+  var track = document.getElementById('carouselTrack');
+  var dotsWrap = document.getElementById('carDots');
+  var countEl = document.getElementById('carCount');
+  var current = 0;
+
+  images.forEach(function(src, i){
+    var slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = event.title.replace(/&mdash;|&amp;|&ndash;/g,'') + ' photo ' + (i+1);
+    img.loading = 'lazy';
+    img.onerror = function(){
+      slide.innerHTML = '<div class="no-img">Add photo here<br>(' + src + ')</div>';
+    };
+    slide.appendChild(img);
+    track.appendChild(slide);
+
+    var dot = document.createElement('button');
+    dot.setAttribute('aria-label', 'Go to image ' + (i+1));
+    if(i === 0) dot.classList.add('active');
+    dot.addEventListener('click', function(){ goTo(i); });
+    dotsWrap.appendChild(dot);
+  });
+
+  function updateCarousel(){
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    Array.prototype.forEach.call(dotsWrap.children, function(d, i){
+      d.classList.toggle('active', i === current);
+    });
+    countEl.textContent = (current+1) + ' / ' + images.length;
+  }
+  function goTo(i){
+    current = (i + images.length) % images.length;
+    updateCarousel();
+  }
+
+  if(images.length > 1){
+    document.getElementById('carPrev').addEventListener('click', function(){ goTo(current - 1); });
+    document.getElementById('carNext').addEventListener('click', function(){ goTo(current + 1); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight') goTo(current + 1);
+      if(e.key === 'ArrowLeft') goTo(current - 1);
+    });
+    /* touch swipe */
+    var startX = null;
+    var wrap = document.querySelector('.carousel-track-wrap');
+    wrap.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+    wrap.addEventListener('touchend', function(e){
+      if(startX === null) return;
+      var diff = e.changedTouches[0].clientX - startX;
+      if(diff > 40) goTo(current - 1);
+      else if(diff < -40) goTo(current + 1);
+      startX = null;
+    }, {passive:true});
+    /* autoplay, pauses on hover */
+    var autoplay = setInterval(function(){ goTo(current + 1); }, 5000);
+    document.getElementById('carousel').addEventListener('mouseenter', function(){ clearInterval(autoplay); });
+  } else {
+    document.getElementById('carPrev').style.display = 'none';
+    document.getElementById('carNext').style.display = 'none';
+  }
+  updateCarousel();
+
+  /* ---- related events (3 others, random-ish but stable) ---- */
+  var relatedGrid = document.getElementById('relatedGrid');
+  var otherIds = Object.keys(EVENTS).filter(function(k){ return k !== id; });
+  otherIds.slice(0, 3).forEach(function(k){
+    var ev = EVENTS[k];
+    var card = document.createElement('a');
+    card.className = 'news-card';
+    card.href = 'event.html?id=' + encodeURIComponent(k);
+    var coverImg = ev.cover || (ev.images && ev.images[0]) || '';
+    card.innerHTML =
+      '<img src="' + coverImg + '" alt="" class="ph-img" loading="lazy" onerror="this.style.background=\'linear-gradient(135deg,var(--navy),var(--azure) 60%,var(--gold) 140%)\'">' +
+      '<div class="nc-body">' +
+        '<p class="nc-date">' + (ev.date || '') + '</p>' +
+        '<h4>' + ev.title + '</h4>' +
+        '<span class="nc-readmore">Read More <svg><use href="#i-arrow"/></svg></span>' +
+      '</div>';
+    relatedGrid.appendChild(card);
+  });
+
+})();
+</script>
+
+</body>
+</html>
