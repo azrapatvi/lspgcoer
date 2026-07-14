@@ -207,6 +207,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   display:block;
   opacity:1;visibility:visible;transform:none;
 }
+/* flip-left: applied via JS when a dropdown would overflow the right edge of the viewport */
+.dropdown-menu.flip-left{left:auto;right:0}
+.dropdown-submenu>.dropdown-menu.flip-left{left:auto;right:100%;margin-left:0;margin-right:.35rem}
 .nav-apply{
   background:var(--navy);color:var(--white);padding:.4rem 1rem;border-radius:var(--radius);
   font-size:.8rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;
@@ -626,7 +629,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <button class="dropdown-btn" aria-expanded="false">About Us <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
             <li><a href="about_institute.html">About Institute</a></li>
-            <li><a href="Doc/Citizen%20charter%20new.pdf" target="_blank">Draft Citizens Charter</a></li>
+            <li><a href="Doc/Citizen charter new.pdf" target="_blank">Draft Citizens Charter</a></li>
             <li><a href="course_details.html">Course Details</a></li>
           </ul>
         </li>
@@ -634,11 +637,11 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">Admission <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/IMP%20Instructions%20about%20admission%20in%20EN3042%20for%202024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
-            <li><a href="Doc/Admission%20Fees%20structure%2025-26_page-0001%20.pdf" target="_blank">Fee Structure</a></li>
-            <li><a href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
-            <li><a href="Doc/FE-ACAP%20(25-26)IL-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
-            <li><a href="Doc/ACAP%20(DSE-2526)%20IL%20round-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
+            <li><a href="Doc/IMP Instructions about admission in EN3042 for 2024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
+            <li><a href="Doc/Admission Fees structure 25-26_page-0001.pdf" target="_blank">Fee Structure</a></li>
+            <li><a href="Doc\प्रवेश विषयक  (4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
+            <li><a href="Doc/FE-ACAP (25-26)IL-3042 .docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
+            <li><a href="Doc/ACAP (DSE-2526) IL round-3042 .docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
           </ul>
         </li>
 
@@ -661,23 +664,23 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
             <li class="dropdown-submenu">
               <span class="submenu-toggle">Student Notices <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/Student%20Notice%2025-26.pdf" target="_blank">Notice 1</a></li>
-                <li><a href="Doc/Student%20Notices-2%2025-26.pdf" target="_blank">Notice 2</a></li>
+                <li><a href="Doc/Student Notice 25-26.pdf" target="_blank">Notice 1</a></li>
+                <li><a href="Doc/Student Notices-2 25-26.pdf" target="_blank">Notice 2</a></li>
               </ul>
             </li>
-            <li><a href="Doc/Gymkhana/APPLICATION%20FORM%20FOR%20NOMINATION%20TO%20GYMKHANA%20POST%2026.pdf" target="_blank">Gymkhana Notice &amp; Application Form <span class="badge">New</span></a></li>
+            <li><a href="Doc/Gymkhana/APPLICATION FORM FOR NOMINATION ΤΟ GYMKHANA POST 26.pdf" target="_blank">Gymkhana Notice &amp; Application Form <span class="badge">New</span></a></li>
             <li><a href="Doc/AC_Engg_UGPG_EvenSem_AY25-26.pdf" target="_blank">Academic Calendar 25-26</a></li>
-            <li><a href="Doc/Academic%20calendar%20ODD%20Sem%202025%20GCOER.pdf" target="_blank">Academic Calendar Odd Sem (Winter AY 25-26)</a></li>
-            <li><a href="Doc/LSPGCoE%20Ratnagiri%20Governance%20Manual%20for%20Students_w.e.f.%20January%2001,%202025.pdf" target="_blank">Governance Manual</a></li>
-            <li><a href="Doc/bonafide%20certificate%20procedure.pdf" target="_blank">Bonafide Procedure</a></li>
-            <li><a href="Doc/Application%20for%20Bonafide%20Certificate%20(1).pdf" target="_blank">Application Format</a></li>
+            <li><a href="Doc/Academic calendar ODD Sem 2025 GCOER.pdf" target="_blank">Academic Calendar Odd Sem (Winter AY 25-26)</a></li>
+            <li><a href="Doc/LSPGCoE Ratnagiri Governance Manual for Students_w.e.f. January 01, 2025.pdf" target="_blank">Governance Manual</a></li>
+            <li><a href="Doc/bonafide certificate procedure.pdf" target="_blank">Bonafide Procedure</a></li>
+            <li><a href="Doc/Application for Bonafide Certificate (1).pdf" target="_blank">Application Format</a></li>
           </ul>
         </li>
 
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">Scholarship <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/Scholarship%20Notice.pdf" target="_blank">Scholarship Notice</a></li>
+            <li><a href="Doc/Scholarship Notice.pdf" target="_blank">Scholarship Notice</a></li>
           </ul>
         </li>
 
@@ -696,10 +699,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
             <li class="dropdown-submenu">
               <span class="submenu-toggle">अल्पसंख्यांक Girls Hostel <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/Notice%20Hostel-26.pdf" target="_blank">Notices</a></li>
-                <li><a href="Doc/Hostel%20Notice%202.pdf" target="_blank">Notices 1 <span class="badge">Latest</span></a></li>
-                <li><a href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87%20%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf" target="_blank">Admission Form</a></li>
-                <li><a href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf" target="_blank">Rules and Regulations</a></li>
+                <li><a href="Doc/Notice Hostel-26.pdf" target="_blank">Notices</a></li>
+                <li><a href="Doc/Hostel Notice 2.pdf" target="_blank">Notices 1 <span class="badge">Latest</span></a></li>
+                <li><a href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95 %E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87 %E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9 %E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6 %E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf" target="_blank">Admission Form</a></li>
+                <li><a href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80 %E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf" target="_blank">Rules and Regulations</a></li>
               </ul>
             </li>
           </ul>
@@ -708,19 +711,19 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">Mandatory Disclosure <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/Mandatary%20disclosure%20New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
-            <li><a href="Doc/Mandatory%20Disclosure%202025-26.pdf" target="_blank">Mandatory Disclosure 2025-26</a></li>
+            <li><a href="Doc/Mandatary disclosure New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
+            <li><a href="Doc/Mandatory Disclosure 2025-26.pdf" target="_blank">Mandatory Disclosure 2025-26</a></li>
           </ul>
         </li>
 
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">UGC Compliance <span class="badge">New</span> <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/UGC%20compliance%20docs/UGC%20Self%20Compliance.pdf" target="_blank">UGC Compliance</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/IQAC%20.pdf" target="_blank">IQAC Committee (incl. External Members)</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/Mandatory%20disclosure%20.pdf" target="_blank">Mandatory Disclosure</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/Int%20Comp%20Com.pdf" target="_blank">Internal Complaint Committee</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/C-66540_AISHE_provisional-certificate_DCF.pdf" target="_blank">AISHE Certificate</a></li>
+            <li><a href="Doc/UGC compliance docs/UGC Self Compliance.pdf" target="_blank">UGC Compliance</a></li>
+            <li><a href="Doc/UGC compliance docs/IQAC.pdf" target="_blank">IQAC Committee (incl. External Members)</a></li>
+            <li><a href="Doc/UGC compliance docs/Mandatory disclosure.pdf" target="_blank">Mandatory Disclosure</a></li>
+            <li><a href="Doc/UGC compliance docs/Int Comp Com.pdf" target="_blank">Internal Complaint Committee</a></li>
+            <li><a href="Doc/UGC compliance docs/C-66540_AISHE_provisional-certificate_DCF.pdf" target="_blank">AISHE Certificate</a></li>
           </ul>
         </li>
 
@@ -729,7 +732,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">T&amp;P <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/LSPGCoER_Ind_Training_and_Internship%20Policy_Complete%20Draft%20Document%20(13%20March%202025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
+            <li><a href="Doc/LSPGCoER_Ind_Training_and_Internship Policy_Complete Draft Document (13 March 2025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
           </ul>
         </li>
 
@@ -739,22 +742,22 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
             <li class="dropdown-submenu">
               <span class="submenu-toggle">EOA <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/EOA%20and%20LOA/LOA%202021-22.PDF" target="_blank">2021-22</a></li>
-                <li><a href="Doc/EOA%202022-23_EOA%20GCOER.pdf" target="_blank">2022-23</a></li>
-                <li><a href="Doc/EOA%202023-24.pdf" target="_blank">2023-24</a></li>
-                <li><a href="Doc/EOA%20REPORT%202024-2025.pdf" target="_blank">2024-25</a></li>
-                <li><a href="Doc/EOA%20Report%202025-26.PDF" target="_blank">2025-26</a></li>
-                <li><a href="Doc/EOA%20Report%202026-2027.pdf" target="_blank">2026-27</a></li>
+                <li><a href="Doc/EOA and LOA/LOA 2021-22.PDF" target="_blank">2021-22</a></li>
+                <li><a href="Doc/EOA 2022-23_EOA GCOER.pdf" target="_blank">2022-23</a></li>
+                <li><a href="Doc/EOA 2023-24.pdf" target="_blank">2023-24</a></li>
+                <li><a href="Doc/EOA REPORT 2024-2025.pdf" target="_blank">2024-25</a></li>
+                <li><a href="Doc/EOA Report 2025-26.PDF" target="_blank">2025-26</a></li>
+                <li><a href="Doc/EOA Report 2026-2027.pdf" target="_blank">2026-27</a></li>
               </ul>
             </li>
             <li class="dropdown-submenu">
               <span class="submenu-toggle">Affiliation <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202021-22.pdf" target="_blank">2021-22</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202022-23.pdf" target="_blank">2022-23</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202023-24.pdf" target="_blank">2023-24</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Provisional%20Affiliation%20LSPGCoER%20for%20AY%202024-25.pdf" target="_blank">2024-25</a></li>
-                <li><a href="Doc/UGC%20compliance%20docs/3042%20Affi%20letter%202025-26%20LSPGCoE%20Ratnagiri.pdf" target="_blank">2025-26</a></li>
+                <li><a href="Doc/EOA and LOA/Affiliation 2021-22.pdf" target="_blank">2021-22</a></li>
+                <li><a href="Doc/EOA and LOA/Affiliation 2022-23.pdf" target="_blank">2022-23</a></li>
+                <li><a href="Doc/EOA and LOA/Affiliation 2023-24.pdf" target="_blank">2023-24</a></li>
+                <li><a href="Doc/EOA and LOA/Provisional Affiliation LSPGCoER for AY 2024-25.pdf" target="_blank">2024-25</a></li>
+                <li><a href="Doc/UGC compliance docs/3042 Affi letter 2025-26 LSPGCoE Ratnagiri.pdf" target="_blank">2025-26</a></li>
               </ul>
             </li>
           </ul>
@@ -773,12 +776,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   <div class="ticker-label"><svg><use href="#i-bell"/></svg>Notices</div>
   <div class="ticker-viewport">
     <div class="ticker-track" id="tickerTrack">
-      <a href="https://www.gcoer.ac.in/Doc/Internship%20Quicks%20Links_25-26.pdf">Internship Quick Links — New Update</a>
-      <a href="https://www.gcoer.ac.in/Doc/Student%20Notice%2025-26.pdf">Student Notice</a>
-      <a href="https://www.gcoer.ac.in/Doc/Student%20Notices-2%2025-26.pdf">Student Notice II</a>
+      <a href="https://www.gcoer.ac.in/Doc/Internship Quicks Links_25-26.pdf">Internship Quick Links — New Update</a>
+      <a href="https://www.gcoer.ac.in/Doc/Student Notice 25-26.pdf">Student Notice</a>
+      <a href="https://www.gcoer.ac.in/Doc/Student Notices-2 25-26.pdf">Student Notice II</a>
       <a href="#">College remains open on holidays for reporting students for admission</a>
       <a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener">Admission Process of First Year Engineering</a>
-      <a href="https://www.gcoer.ac.in/Doc/FE%20Admission%20Form%20With%20Undertaking.pdf">FE Admission Form with Undertaking</a>
+      <a href="https://www.gcoer.ac.in/Doc/FE Admission Form With Undertaking.pdf">FE Admission Form with Undertaking</a>
       <a href="https://www.gcoer.ac.in/Doc/LSPGCOER_Walk-in-interview25-26.pdf">Walk-in Interview 2025-26</a>
     </div>
   </div>
@@ -866,7 +869,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <li><a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg>State CET Cell</a></li>
           <li><a href="https://mis.dbatu.ac.in/erp/index.aspx" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg>DBATU ERP Login</a></li>
           <li><a href="https://forms.gle/aqMqAsqRS4V4YHa76" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg>Minority Girls Hostel &mdash; Admission Form</a></li>
-          <li><a href="https://www.gcoer.ac.in/Doc/Internship%20Quicks%20Links_25-26.pdf" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg>Internship Quick Links</a></li>
+          <li><a href="https://www.gcoer.ac.in/Doc/Internship Quicks Links_25-26.pdf" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg>Internship Quick Links</a></li>
         </ul>
         <div class="qp-divider"></div>
         <p class="qp-sub">Exam Updates</p>
@@ -924,17 +927,17 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         </div>
 
         <ul class="updates-list">
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%95%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A4%BF%E0%A4%97%E0%A5%83%E0%A4%B9%20%E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80%20%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%95%20.pdf">अल्पसंख्याक विद्यार्थिनीं करिता वसतीगृह माहिती पत्रक (New Update)</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quatation%20for%20computer%20peripharal%20items..pdf">Quotation for computer peripheral items</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quatation%20for%20cleaning%20items..pdf">Quotation for cleaning items</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quatation%20for%20consumable%20items%20F.T.%20&amp;%20m.-1.pdf">Quotation for consumable items F.T. &amp; M-1</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quatation%20for%20Electrical%20raw%20material.pdf">Quotation for Electrical raw material</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quatation%20for%20Mechatronics%20raw%20material.pdf">Quotation for Mechatronics raw material</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quatation%20for%20office%20Stationery.pdf">Quotation for office stationery</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quotation%20for%20Consumable%20material.pdf">Quotation for consumable material</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Quotation%20for%20consumable%20lab%20practical%20chemical.pdf">Quotation for consumable lab practical chemical</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation%2025-26/Darpatrak%20Mudatvaad.pdf">दर पत्रक मुदतवाढ</a></li>
-          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quotation%20for%20workshop%20raw%20material-26.pdf">Quotation for workshop raw material 25-26 — New Update</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%95 %E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80 %E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A4%BF%E0%A4%97%E0%A5%83%E0%A4%B9 %E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80 %E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%95 .pdf">अल्पसंख्याक विद्यार्थिनीं करिता वसतीगृह माहिती पत्रक (New Update)</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quatation for computer peripharal items..pdf">Quotation for computer peripheral items</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quatation for cleaning items..pdf">Quotation for cleaning items</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quatation for consumable items F.T. &amp; m.-1.pdf">Quotation for consumable items F.T. &amp; M-1</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quatation for Electrical raw material.pdf">Quotation for Electrical raw material</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quatation for Mechatronics raw material.pdf">Quotation for Mechatronics raw material</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quatation for office Stationery.pdf">Quotation for office stationery</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quotation for Consumable material.pdf">Quotation for consumable material</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Quotation for consumable lab practical chemical.pdf">Quotation for consumable lab practical chemical</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Darpatrak Mudatvaad.pdf">दर पत्रक मुदतवाढ</a></li>
+          <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quotation for workshop raw material-26.pdf">Quotation for workshop raw material 25-26 — New Update</a></li>
         </ul>
       </section>
 
@@ -1052,7 +1055,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
             </div>
           </div>
           <div class="map-embed">
-            <iframe src="https://maps.google.com/maps?q=Government%20College%20of%20Engineering%20Ratnagiri%20Thiba%20Palace%20Road&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="College location map" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://maps.google.com/maps?q=Government College of Engineering Ratnagiri Thiba Palace Road&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="College location map" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
@@ -1146,6 +1149,27 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
   // dropdowns + nested submenus (click-based, works for desktop and mobile)
   var dropdownParents = document.querySelectorAll('.has-dropdown, .dropdown-submenu');
+
+  // Reposition a dropdown/submenu's flyout menu so it never gets clipped
+  // by the right edge of the viewport (e.g. items near the far right of
+  // the nav bar, or nested submenus that would run off-screen).
+  function positionFlyout(el){
+    var menu = el.querySelector(':scope > .dropdown-menu');
+    if(!menu) return;
+    menu.classList.remove('flip-left');
+    // Only relevant on wide/desktop layouts where menus are absolutely positioned
+    if(window.innerWidth <= 1500) return;
+    var rect = menu.getBoundingClientRect();
+    if(rect.right > window.innerWidth - 8){
+      menu.classList.add('flip-left');
+      // If flipping left still overflows the left edge, fall back to right-aligned again
+      var flippedRect = menu.getBoundingClientRect();
+      if(flippedRect.left < 8){
+        menu.classList.remove('flip-left');
+      }
+    }
+  }
+
   dropdownParents.forEach(function(el){
     var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
     if(!trigger) return;
@@ -1160,10 +1184,17 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           sib.classList.remove('open');
           var sibTrigger = sib.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
           if(sibTrigger) sibTrigger.setAttribute('aria-expanded','false');
+          var sibMenu = sib.querySelector(':scope > .dropdown-menu');
+          if(sibMenu) sibMenu.classList.remove('flip-left');
         }
       });
       el.classList.toggle('open', !wasOpen);
       trigger.setAttribute('aria-expanded', !wasOpen);
+      if(!wasOpen){
+        positionFlyout(el);
+        // also re-check any already-open nested submenu once the parent has repositioned
+        el.querySelectorAll('.dropdown-submenu.open').forEach(positionFlyout);
+      }
     });
   });
   document.addEventListener('click', function(e){
@@ -1172,6 +1203,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         el.classList.remove('open');
         var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
         if(trigger) trigger.setAttribute('aria-expanded','false');
+        var menu = el.querySelector(':scope > .dropdown-menu');
+        if(menu) menu.classList.remove('flip-left');
       }
     });
   });
