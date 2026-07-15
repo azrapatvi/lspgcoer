@@ -761,14 +761,16 @@ main{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1.
   });
 
   document.querySelectorAll('#mainNav .nav-list a').forEach(function(a){
-    a.addEventListener('click', function(){
-      if(window.innerWidth <= 1500){
+  a.addEventListener('click', function(){
+    if(window.innerWidth <= 1500){
+      setTimeout(function(){
         mainNav.classList.remove('open');
         menuToggle.setAttribute('aria-expanded','false');
         menuIcon.innerHTML = '<use href="#i-menu"/>';
-      }
-    });
+      }, 0);
+    }
   });
+}); 
 })();
 </script>
 
