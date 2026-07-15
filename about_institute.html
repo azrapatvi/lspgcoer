@@ -262,19 +262,69 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
   .dropdown-submenu.open>.dropdown-menu{display:block}
 }
 @media (max-width:760px){
-  .plaque-inner .tags{display:none}
+.plaque-inner .tags{display:none}
   .plaque-inner{padding:.3rem 1rem}
   .plaque-contact{gap:.8rem;font-size:.68rem}
+
+  /* --- compact mobile header --- */
   .header-inner{padding:.5rem .85rem;gap:.5rem}
   .logo-mark{height:38px;width:36px}
   .site-header.scrolled .logo-mark{height:30px;width:30px}
   .brand-text .name-en{font-size:.86rem;line-height:1.2}
   .brand-text .name-mr{display:none}
   .brand-text .name-sub{display:none}
+  .header-inner .logo-mark:last-of-type{}
+  .header-badge-logo{display:none}
+  .news-grid,.fac-grid,.lead-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid .g-item.big,.gallery-grid .g-item.video{grid-column:span 2}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
   .legal-grid{grid-template-columns:1fr}
   .location-strip{grid-template-columns:1fr;text-align:center}
   .location-strip .loc-icon{margin:0 auto}
   .footer-top{grid-template-columns:1fr}
+}
+
+.press-body h4{font-size:.95rem;margin-top:.4rem}
+.press-thumb{cursor:pointer}
+
+/* ---- Lightbox ---- */
+.lightbox{
+  position:fixed;inset:0;z-index:200;background:rgba(7,10,16,.94);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s;
+  padding:clamp(1rem,5vw,3rem);
+}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox-figure{
+  position:relative;max-width:min(1100px,92vw);max-height:88vh;
+  display:flex;flex-direction:column;align-items:center;gap:.9rem;
+}
+.lightbox-figure img{
+  max-width:100%;max-height:78vh;object-fit:contain;border-radius:6px;
+  box-shadow:0 20px 60px -12px rgba(0,0,0,.6);
+  background:var(--navy-deep);
+  transform:scale(.96);opacity:0;transition:transform .25s ease, opacity .25s ease;
+}
+.lightbox.open .lightbox-figure img{transform:scale(1);opacity:1}
+.lightbox-caption{color:#E4E9EF;font-size:.85rem;font-family:var(--mono);letter-spacing:.02em;text-align:center}
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  position:absolute;display:flex;align-items:center;justify-content:center;
+  width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.08);
+  color:#fff;border:1px solid rgba(255,255,255,.25);transition:background .2s ease,transform .2s ease;
+}
+.lightbox-close svg,.lightbox-prev svg,.lightbox-next svg{width:20px;height:20px}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
+.lightbox-close{position:fixed;top:1.25rem;right:1.25rem}
+.lightbox-prev{left:clamp(-2.7rem,-4vw,-1rem);top:50%;transform:translateY(-50%)}
+.lightbox-next{right:clamp(-2.7rem,-4vw,-1rem);top:50%;transform:translateY(-50%)}
+.lightbox-prev svg{transform:rotate(90deg)}
+.lightbox-next svg{transform:rotate(-90deg)}
+@media (max-width:760px){
+  .lightbox-prev{left:.25rem}
+  .lightbox-next{right:.25rem}
+  .lightbox-close{top:.75rem;right:.75rem}
 }
 </style>
 </head>
@@ -301,6 +351,7 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
 <symbol id="i-newspaper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4z"/><path d="M4 4v17a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 8h7M8 12h7M8 16h4"/></symbol>
 <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a15 15 0 0 1 0 19 15 15 0 0 1 0-19z"/></symbol>
 <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v6M8 11h6"/></symbol>
 </defs>
 </svg>
 
@@ -321,16 +372,18 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
 </div>
 
 <!-- ============ HEADER ============ -->
+<!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <img src="images/lsp_logo.jpeg" alt="LSPGCOER Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP\nGCOER'}))">
-    <img src="images/logo3.jpeg" alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DBATU'}))">
+    <img src="images/logo3.jpeg" alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo" class="logo-mark header-badge-logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DBATU'}))">
     <div class="brand-text">
       <div class="name-en">Lokenete Shamrao Peje Government College of Engineering, Ratnagiri</div>
       <div class="name-mr">लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी</div>
       <div class="name-sub">An Institute of Government of Maharashtra &middot; Established 2021</div>
     </div>
-    <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
+    
+    <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark header-badge-logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
     <img src="images/dte_logo.gif" alt="Directorate of Technical Education, Maharashtra Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DTE'}))">
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg id="menuIcon"><use href="#i-menu"/></svg>
@@ -341,13 +394,13 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
     <div class="nav-inner">
       <div class="nav-scroll">
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#home">Home</a></li>
 
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">About Us <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="about_institute.html" class="active">About Institute</a></li>
-            <li><a href="Doc/Citizen%20charter%20new.pdf" target="_blank">Draft Citizens Charter</a></li>
+            <li><a href="about_institute.html">About Institute</a></li>
+            <li><a href="Doc/Citizen charter new.pdf" target="_blank">Draft Citizens Charter</a></li>
             <li><a href="course_details.html">Course Details</a></li>
           </ul>
         </li>
@@ -355,11 +408,11 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">Admission <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/IMP%20Instructions%20about%20admission%20in%20EN3042%20for%202024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
-            <li><a href="Doc/Admission%20Fees%20structure%2025-26_page-0001%20.pdf" target="_blank">Fee Structure</a></li>
-            <li><a href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
-            <li><a href="Doc/FE-ACAP%20(25-26)IL-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
-            <li><a href="Doc/ACAP%20(DSE-2526)%20IL%20round-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
+            <li><a href="Doc/IMP Instructions about admission in EN3042 for 2024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
+            <li><a href="Doc/Admission Fees structure 25-26_page-0001.pdf" target="_blank">Fee Structure</a></li>
+            <li><a href="Doc\प्रवेश विषयक  (4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
+            <li><a href="Doc/FE-ACAP (25-26)IL-3042 .docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
+            <li><a href="Doc/ACAP (DSE-2526) IL round-3042 .docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
           </ul>
         </li>
 
@@ -382,23 +435,23 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
             <li class="dropdown-submenu">
               <span class="submenu-toggle">Student Notices <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/Student%20Notice%2025-26.pdf" target="_blank">Notice 1</a></li>
-                <li><a href="Doc/Student%20Notices-2%2025-26.pdf" target="_blank">Notice 2</a></li>
+                <li><a href="Doc/Student Notice 25-26.pdf" target="_blank">Notice 1</a></li>
+                <li><a href="Doc/Student Notices-2 25-26.pdf" target="_blank">Notice 2</a></li>
               </ul>
             </li>
-            <li><a href="Doc/Gymkhana/APPLICATION%20FORM%20FOR%20NOMINATION%20TO%20GYMKHANA%20POST%2026.pdf" target="_blank">Gymkhana Notice &amp; Application Form <span class="badge">New</span></a></li>
+            <li><a href="Doc/Gymkhana/APPLICATION FORM FOR NOMINATION ΤΟ GYMKHANA POST 26.pdf" target="_blank">Gymkhana Notice &amp; Application Form <span class="badge">New</span></a></li>
             <li><a href="Doc/AC_Engg_UGPG_EvenSem_AY25-26.pdf" target="_blank">Academic Calendar 25-26</a></li>
-            <li><a href="Doc/Academic%20calendar%20ODD%20Sem%202025%20GCOER.pdf" target="_blank">Academic Calendar Odd Sem (Winter AY 25-26)</a></li>
-            <li><a href="Doc/LSPGCoE%20Ratnagiri%20Governance%20Manual%20for%20Students_w.e.f.%20January%2001,%202025.pdf" target="_blank">Governance Manual</a></li>
-            <li><a href="Doc/bonafide%20certificate%20procedure.pdf" target="_blank">Bonafide Procedure</a></li>
-            <li><a href="Doc/Application%20for%20Bonafide%20Certificate%20(1).pdf" target="_blank">Application Format</a></li>
+            <li><a href="Doc/Academic calendar ODD Sem 2025 GCOER.pdf" target="_blank">Academic Calendar Odd Sem (Winter AY 25-26)</a></li>
+            <li><a href="Doc/LSPGCoE Ratnagiri Governance Manual for Students_w.e.f. January 01, 2025.pdf" target="_blank">Governance Manual</a></li>
+            <li><a href="Doc/bonafide certificate procedure.pdf" target="_blank">Bonafide Procedure</a></li>
+            <li><a href="Doc/Application for Bonafide Certificate (1).pdf" target="_blank">Application Format</a></li>
           </ul>
         </li>
 
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">Scholarship <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/Scholarship%20Notice.pdf" target="_blank">Scholarship Notice</a></li>
+            <li><a href="Doc/Scholarship Notice.pdf" target="_blank">Scholarship Notice</a></li>
           </ul>
         </li>
 
@@ -417,10 +470,10 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
             <li class="dropdown-submenu">
               <span class="submenu-toggle">अल्पसंख्यांक Girls Hostel <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/Notice%20Hostel-26.pdf" target="_blank">Notices</a></li>
-                <li><a href="Doc/Hostel%20Notice%202.pdf" target="_blank">Notices 1 <span class="badge">Latest</span></a></li>
-                <li><a href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87%20%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf" target="_blank">Admission Form</a></li>
-                <li><a href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf" target="_blank">Rules and Regulations</a></li>
+                <li><a href="Doc/Notice Hostel-26.pdf" target="_blank">Notices</a></li>
+                <li><a href="Doc/Hostel Notice 2.pdf" target="_blank">Notices 1 <span class="badge">Latest</span></a></li>
+                <li><a href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95 %E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87 %E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9 %E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6 %E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf" target="_blank">Admission Form</a></li>
+                <li><a href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80 %E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf" target="_blank">Rules and Regulations</a></li>
               </ul>
             </li>
           </ul>
@@ -429,19 +482,19 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">Mandatory Disclosure <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/Mandatary%20disclosure%20New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
-            <li><a href="Doc/Mandatory%20Disclosure%202025-26.pdf" target="_blank">Mandatory Disclosure 2025-26</a></li>
+            <li><a href="Doc/Mandatary disclosure New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
+            <li><a href="Doc/Mandatory Disclosure 2025-26.pdf" target="_blank">Mandatory Disclosure 2025-26</a></li>
           </ul>
         </li>
 
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">UGC Compliance <span class="badge">New</span> <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/UGC%20compliance%20docs/UGC%20Self%20Compliance.pdf" target="_blank">UGC Compliance</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/IQAC%20.pdf" target="_blank">IQAC Committee (incl. External Members)</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/Mandatory%20disclosure%20.pdf" target="_blank">Mandatory Disclosure</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/Int%20Comp%20Com.pdf" target="_blank">Internal Complaint Committee</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/C-66540_AISHE_provisional-certificate_DCF.pdf" target="_blank">AISHE Certificate</a></li>
+            <li><a href="Doc/UGC compliance docs/UGC Self Compliance.pdf" target="_blank">UGC Compliance</a></li>
+            <li><a href="Doc/UGC compliance docs/IQAC.pdf" target="_blank">IQAC Committee (incl. External Members)</a></li>
+            <li><a href="Doc/UGC compliance docs/Mandatory disclosure.pdf" target="_blank">Mandatory Disclosure</a></li>
+            <li><a href="Doc/UGC compliance docs/Int Comp Com.pdf" target="_blank">Internal Complaint Committee</a></li>
+            <li><a href="Doc/UGC compliance docs/C-66540_AISHE_provisional-certificate_DCF.pdf" target="_blank">AISHE Certificate</a></li>
           </ul>
         </li>
 
@@ -450,7 +503,7 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
         <li class="has-dropdown">
           <button class="dropdown-btn" aria-expanded="false">T&amp;P <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
-            <li><a href="Doc/LSPGCoER_Ind_Training_and_Internship%20Policy_Complete%20Draft%20Document%20(13%20March%202025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
+            <li><a href="Doc/LSPGCoER_Ind_Training_and_Internship Policy_Complete Draft Document (13 March 2025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
           </ul>
         </li>
 
@@ -460,22 +513,22 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
             <li class="dropdown-submenu">
               <span class="submenu-toggle">EOA <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/EOA%20and%20LOA/LOA%202021-22.PDF" target="_blank">2021-22</a></li>
-                <li><a href="Doc/EOA%202022-23_EOA%20GCOER.pdf" target="_blank">2022-23</a></li>
-                <li><a href="Doc/EOA%202023-24.pdf" target="_blank">2023-24</a></li>
-                <li><a href="Doc/EOA%20REPORT%202024-2025.pdf" target="_blank">2024-25</a></li>
-                <li><a href="Doc/EOA%20Report%202025-26.PDF" target="_blank">2025-26</a></li>
-                <li><a href="Doc/EOA%20Report%202026-2027.pdf" target="_blank">2026-27</a></li>
+                <li><a href="Doc/EOA and LOA/LOA 2021-22.PDF" target="_blank">2021-22</a></li>
+                <li><a href="Doc/EOA 2022-23_EOA GCOER.pdf" target="_blank">2022-23</a></li>
+                <li><a href="Doc/EOA 2023-24.pdf" target="_blank">2023-24</a></li>
+                <li><a href="Doc/EOA REPORT 2024-2025.pdf" target="_blank">2024-25</a></li>
+                <li><a href="Doc/EOA Report 2025-26.PDF" target="_blank">2025-26</a></li>
+                <li><a href="Doc/EOA Report 2026-2027.pdf" target="_blank">2026-27</a></li>
               </ul>
             </li>
             <li class="dropdown-submenu">
               <span class="submenu-toggle">Affiliation <svg><use href="#i-chevron"/></svg></span>
               <ul class="dropdown-menu">
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202021-22.pdf" target="_blank">2021-22</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202022-23.pdf" target="_blank">2022-23</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202023-24.pdf" target="_blank">2023-24</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Provisional%20Affiliation%20LSPGCoER%20for%20AY%202024-25.pdf" target="_blank">2024-25</a></li>
-                <li><a href="Doc/UGC%20compliance%20docs/3042%20Affi%20letter%202025-26%20LSPGCoE%20Ratnagiri.pdf" target="_blank">2025-26</a></li>
+                <li><a href="Doc/EOA and LOA/Affiliation 2021-22.pdf" target="_blank">2021-22</a></li>
+                <li><a href="Doc/EOA and LOA/Affiliation 2022-23.pdf" target="_blank">2022-23</a></li>
+                <li><a href="Doc/EOA and LOA/Affiliation 2023-24.pdf" target="_blank">2023-24</a></li>
+                <li><a href="Doc/EOA and LOA/Provisional Affiliation LSPGCoER for AY 2024-25.pdf" target="_blank">2024-25</a></li>
+                <li><a href="Doc/UGC compliance docs/3042 Affi letter 2025-26 LSPGCoE Ratnagiri.pdf" target="_blank">2025-26</a></li>
               </ul>
             </li>
           </ul>
@@ -484,6 +537,7 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
         <li><a href="Doc/Grive.cell.pdf" target="_blank">Grievance Cell</a></li>
       </ul>
       </div>
+      
     </div>
   </nav>
 </header>
@@ -557,10 +611,10 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
           <p class="eyebrow">In the News</p>
           <h2>Institute in newspapers</h2>
           <p style="color:var(--slate);margin-top:.6rem">Coverage of the Institute's establishment in the local press.</p>
-          <div class="press-grid">
-            <div class="press-card">
+          <div class="press-grid" id="pressGrid">
+            <div class="press-card" data-lightbox="images/Ratnagiri_Times_17_Nov_21_new.jpeg" data-caption="Ratnagiri Times — 17 November 2021">
               <div class="press-thumb">
-                <img src="images/ratnagiri_times_17nov2021.jpg" alt="Ratnagiri Times, 17 November 2021" loading="lazy" onerror="this.remove(); this.parentElement.querySelector('.ph-fallback').style.display='flex'">
+                <img src="images/Ratnagiri_Times_17_Nov_21_new.jpeg" alt="Ratnagiri Times, 17 November 2021" loading="lazy" onerror="this.remove(); this.parentElement.querySelector('.ph-fallback').style.display='flex'">
                 <div class="ph-fallback" style="display:none">
                   <svg><use href="#i-newspaper"/></svg>
                   <span>Clipping unavailable</span>
@@ -571,9 +625,9 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
                 <h4>Ratnagiri Times</h4>
               </div>
             </div>
-            <div class="press-card">
+            <div class="press-card" data-lightbox="images/Lokmat_18_Nov_21.jpeg" data-caption="Lokmat — 18 November 2021">
               <div class="press-thumb">
-                <img src="images/lokmat_18nov2021.jpg" alt="Lokmat, 18 November 2021" loading="lazy" onerror="this.remove(); this.parentElement.querySelector('.ph-fallback').style.display='flex'">
+                <img src="images/Lokmat_18_Nov_21.jpeg" alt="Lokmat, 18 November 2021" loading="lazy" onerror="this.remove(); this.parentElement.querySelector('.ph-fallback').style.display='flex'">
                 <div class="ph-fallback" style="display:none">
                   <svg><use href="#i-newspaper"/></svg>
                   <span>Clipping unavailable</span>
@@ -582,6 +636,20 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
               <div class="press-body">
                 <p class="p-date">18 November 2021</p>
                 <h4>Lokmat</h4>
+              </div>
+            </div>
+
+            <div class="press-card" data-lightbox="images/Pudhari_27_Nov_2021.jpeg" data-caption="Pudhari — 27 November 2021 — Institute MOU with Infosys">
+              <div class="press-thumb">
+                <img src="images/Pudhari_27_Nov_2021.jpeg" alt="Pudhari, 27 November 2021 — Institute MOU with Infosys" loading="lazy" onerror="this.remove(); this.parentElement.querySelector('.ph-fallback').style.display='flex'">
+                <div class="ph-fallback" style="display:none">
+                  <svg><use href="#i-newspaper"/></svg>
+                  <span>Clipping unavailable</span>
+                </div>
+              </div>
+              <div class="press-body">
+                <p class="p-date">27 November 2021</p>
+                <h4>Institute MOU with Infosys</h4>
               </div>
             </div>
           </div>
@@ -689,6 +757,16 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
     </div>
   </div>
 </main>
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-figure">
+    <button class="lightbox-close" id="lbClose" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+    <button class="lightbox-prev" id="lbPrev" aria-label="Previous image"><svg><use href="#i-chevron"/></svg></button>
+    <img src="" alt="" id="lbImage">
+    <p class="lightbox-caption" id="lbCaption"></p>
+    <button class="lightbox-next" id="lbNext" aria-label="Next image"><svg><use href="#i-chevron"/></svg></button>
+  </div>
+</div>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
@@ -736,7 +814,62 @@ table.prog-table{width:100%;border-collapse:collapse;min-width:720px}
 <button id="backToTop" aria-label="Back to top">
   <svg style="width:20px;height:20px;transform:rotate(180deg)"><use href="#i-chevron"/></svg>
 </button>
+<script>
+(function(){
+  "use strict";
+  // ============ PRESS CLIPPINGS LIGHTBOX ============
+  var pressGrid = document.getElementById('pressGrid');
+  if(pressGrid){
+    var pressItems = Array.prototype.slice.call(pressGrid.querySelectorAll('.press-card[data-lightbox]'));
+    var lightbox = document.getElementById('lightbox');
+    var lbImage = document.getElementById('lbImage');
+    var lbCaption = document.getElementById('lbCaption');
+    var lbClose = document.getElementById('lbClose');
+    var lbPrev = document.getElementById('lbPrev');
+    var lbNext = document.getElementById('lbNext');
+    var currentIndex = 0;
 
+    function openLightbox(index){
+      currentIndex = index;
+      var item = pressItems[currentIndex];
+      lbImage.src = item.getAttribute('data-lightbox');
+      lbImage.alt = item.getAttribute('data-caption') || '';
+      lbCaption.textContent = item.getAttribute('data-caption') || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function showNext(){ openLightbox((currentIndex + 1) % pressItems.length); }
+    function showPrev(){ openLightbox((currentIndex - 1 + pressItems.length) % pressItems.length); }
+
+    pressItems.forEach(function(item, index){
+      item.addEventListener('click', function(){ openLightbox(index); });
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'button');
+      item.setAttribute('aria-label', 'View ' + (item.getAttribute('data-caption') || 'clipping') + ' full size');
+      item.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openLightbox(index); }
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbNext.addEventListener('click', showNext);
+    lbPrev.addEventListener('click', showPrev);
+    lightbox.addEventListener('click', function(e){
+      if(e.target === lightbox){ closeLightbox(); }
+    });
+    document.addEventListener('keydown', function(e){
+      if(!lightbox.classList.contains('open')) return;
+      if(e.key === 'Escape'){ closeLightbox(); }
+      if(e.key === 'ArrowRight'){ showNext(); }
+      if(e.key === 'ArrowLeft'){ showPrev(); }
+    });
+  }
+})();
+</script>
 <script>
 (function(){
   "use strict";
