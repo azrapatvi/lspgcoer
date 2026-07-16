@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Department of Civil &amp; Infrastructure Engineering | LSPGCOER Ratnagiri</title>
 <meta name="description" content="Department of Civil and Infrastructure Engineering at Loknete Shamrao Peje Government College of Engineering, Ratnagiri — about, HOD's desk, vision & mission, faculty, laboratory, news, syllabus, academic calendar and time-table.">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <style>
 /* ============ RESET ============ */
 html, body{ overflow-x:hidden; }
@@ -141,10 +144,13 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
 /* ============ LAYOUT ============ */
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,1.75rem)}
-.dept-grid{display:grid;grid-template-columns:260px 1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:start;padding-top:clamp(2rem,4vw,3rem);padding-bottom:clamp(2.5rem,5vw,4rem)}
+.dept-grid{display:grid;grid-template-columns:260px 1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:stretch;padding-top:clamp(2rem,4vw,3rem);padding-bottom:clamp(2.5rem,5vw,4rem)}
+.dept-grid > div{min-width:0}
 
 /* ============ DEPT TAB SIDEBAR ============ */
-.dept-side{position:sticky;top:100px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(11,42,74,.04)}
+.dept-side{position:sticky;top:100px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(11,42,74,.04);min-width:0}
+.dept-tab-btn{flex-wrap:nowrap}
+.dept-tab-btn span,.dept-tab-btn{word-break:break-word}
 .dept-side .ds-head{padding:1rem 1.1rem;background:var(--navy);color:var(--white);font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
 .dept-tab-list{padding:.5rem}
 .dept-tab-btn{display:flex;align-items:center;gap:.6rem;width:100%;text-align:left;padding:.7rem .75rem;font-size:.85rem;font-weight:600;border-radius:3px;color:var(--ink);border-left:3px solid transparent}
@@ -155,13 +161,14 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .dept-side-mobile{display:none}
 
 /* ============ DEPT PANELS ============ */
-.dept-panel{display:none;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.5rem,3vw,2.25rem);box-shadow:0 1px 2px rgba(11,42,74,.04)}
+.dept-panel{display:none;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.5rem,3vw,2.25rem);box-shadow:0 1px 2px rgba(11,42,74,.04);min-width:0;overflow-wrap:break-word}
 .dept-panel.active{display:block}
 .dept-panel h2{font-size:clamp(1.3rem,2.5vw,1.7rem)}
+.dept-panel h2,.dept-panel h3,.dept-panel p{overflow-wrap:break-word;word-break:break-word}
 .dept-panel h3{font-size:1.05rem;color:var(--azure);margin-top:1.5rem}
-.dept-panel p{color:var(--slate);margin-top:.85rem;max-width:75ch;text-align:justify}
+.dept-panel p{color:var(--slate);margin-top:.85rem;text-align:justify}
 .dept-panel ul.bullets{margin-top:.6rem;padding-left:1.2rem}
-.dept-panel ul.bullets li{list-style:disc;color:var(--slate);margin-bottom:.4rem;max-width:70ch}
+.dept-panel ul.bullets li{list-style:disc;color:var(--slate);margin-bottom:.4rem}
 .dept-panel ul.bullets li b{color:var(--navy-deep)}
 .sign-block{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
 .sign-block b{color:var(--navy-deep)}
@@ -178,7 +185,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .vm-block h3{margin-top:0;color:var(--navy-deep)}
 .vm-block p{color:var(--slate);margin-top:.6rem}
 .vm-block ol{margin-top:.6rem;padding-left:1.2rem}
-.vm-block ol li{color:var(--slate);margin-bottom:.5rem;max-width:75ch}
+.vm-block ol li{color:var(--slate);margin-bottom:.5rem}
 
 /* PEO/PSO images */
 .doc-image-stack{margin-top:1rem;display:flex;flex-direction:column;gap:1.25rem}
@@ -187,7 +194,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 /* Faculty grid */
 .fac-section-title{margin-top:2rem;margin-bottom:.25rem}
 .fac-section-title:first-of-type{margin-top:0}
-.fac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.25rem;margin-top:1rem}
+.fac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:1.25rem;margin-top:1rem}
 .fac-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.1rem;text-align:center;transition:transform .2s ease,box-shadow .2s ease}
 .fac-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .fac-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto .9rem;border:3px solid var(--white);box-shadow:0 0 0 1px var(--line)}
@@ -202,7 +209,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .lab-caption{font-size:.8rem;color:var(--slate);margin-top:.5rem;text-align:center}
 
 /* News */
-.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;margin-top:1.25rem}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.4rem;margin-top:1.25rem}
 .news-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
 .news-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .news-thumb{aspect-ratio:4/3;background:var(--paper-dim);overflow:hidden}
@@ -242,15 +249,47 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 #backToTop svg{width:20px;height:20px}
 
 /* ============ RESPONSIVE ============ */
+
+/* tablet: shrink sidebar column instead of hiding it too late */
+@media (max-width:1100px){
+  .dept-grid{grid-template-columns:210px 1fr;gap:1.25rem}
+  .dept-tab-btn{padding:.6rem .55rem;font-size:.8rem}
+  .dept-tab-btn svg{width:13px;height:13px;flex-shrink:0}
+}
+
 @media (max-width:960px){
   .dept-grid{grid-template-columns:1fr}
   .dept-side{position:static;display:none}
-  .dept-side-mobile{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-top:1.5rem;-webkit-overflow-scrolling:touch}
-  .dept-side-mobile .dept-tab-btn{flex-shrink:0;background:var(--white);border:1px solid var(--line);border-radius:99px;white-space:nowrap;border-left:none}
-  .dept-side-mobile .dept-tab-btn.active{background:var(--navy);color:var(--white)}
+  .dept-side-mobile{
+    display:flex;
+    gap:.5rem;
+    overflow-x:auto;
+    padding:.4rem .1rem 1rem;
+    margin-top:1.5rem;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+  }
+  .dept-side-mobile::-webkit-scrollbar{display:none}
+  .dept-side-mobile .dept-tab-btn{
+    width:auto;
+    flex:0 0 auto;
+    scroll-snap-align:start;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:99px;
+    white-space:nowrap;
+    border-left:none;
+    padding:.55rem 1.1rem;
+    font-size:.8rem;
+    gap:.4rem;
+  }
+  .dept-side-mobile .dept-tab-btn svg{width:13px;height:13px;flex-shrink:0}
+  .dept-side-mobile .dept-tab-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
   .hod-card{grid-template-columns:1fr;justify-items:center;text-align:center}
   .footer-top{grid-template-columns:1fr 1fr}
 }
+
 @media (max-width:1500px){
   .menu-toggle{display:block}
   .main-nav{display:none}
@@ -326,13 +365,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <img src="images/lsp_logo.jpeg" alt="LSPGCOER Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP\nGCOER'}))">
-    <img src="images/logo3.jpeg" alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DBATU'}))">
-    <div class="brand-text">
+        <div class="brand-text">
       <div class="name-en">Lokenete Shamrao Peje Government College of Engineering, Ratnagiri</div>
       <div class="name-mr">लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी</div>
       <div class="name-sub">An Institute of Government of Maharashtra &middot; Established 2021</div>
     </div>
-    <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
+    <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark header-badge-logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
     <img src="images/dte_logo.gif" alt="Directorate of Technical Education, Maharashtra Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DTE'}))">
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg id="menuIcon"><use href="#i-menu"/></svg>
@@ -365,8 +403,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           </ul>
         </li>
 
-        <li class="has-dropdown open">
-          <button class="dropdown-btn" aria-expanded="true">Departments <svg><use href="#i-chevron"/></svg></button>
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Departments <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
             <li><a href="AI_Dept.html">Artificial Intelligence &amp; Data Science</a></li>
             <li><a href="Civil_Dept.html" class="active">Civil &amp; Infrastructure Engineering</a></li>
@@ -560,7 +598,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <h2 style="margin-top:.5rem">Message from the HOD</h2>
           <div class="hod-card">
             <div class="hod-photo-wrap">
-              <img class="hod-photo" src="GCOER WEBSITE/images/Staff_Photos/Deshpande Sir.jpeg" alt="Dr. P. K. Deshpande">
+              <img class="hod-photo" src="images/Staff_Photos/Deshpande Sir.jpeg" alt="Dr. P. K. Deshpande">
               <span class="hod-name">Dr. P. K. Deshpande</span>
               <span class="hod-role">Head of Department</span>
             </div>
@@ -602,8 +640,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <p class="eyebrow">Outcomes</p>
           <h2 style="margin-top:.5rem">PEO's &amp; PSO's</h2>
           <div class="doc-image-stack">
-            <img src="GCOER WEBSITE/images/PEO1 civil infra.png" alt="Programme Educational Objectives - Civil & Infrastructure Engineering">
-            <img src="GCOER WEBSITE/images/POs civil infra.png" alt="Programme Specific Outcomes - Civil & Infrastructure Engineering">
+            <img src="images/PEO1 civil infra.png" alt="Programme Educational Objectives - Civil & Infrastructure Engineering">
+            <img src="images/POs civil infra.png" alt="Programme Specific Outcomes - Civil & Infrastructure Engineering">
           </div>
         </div>
 
@@ -616,73 +654,73 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <h3 class="fac-section-title">Regular Faculty</h3>
           <div class="fac-grid">
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Deshpande Sir.jpeg" alt="Dr. P. K. Deshpande">
+              <img class="fac-photo" src="images/Staff_Photos/Deshpande Sir.jpeg" alt="Dr. P. K. Deshpande">
               <h4>Dr. P. K. Deshpande</h4>
               <p class="fac-role">HOD, Civil &amp; Infra. Engg. Dept.</p>
               <a class="fac-resume" href="example.pdf" target="_blank">Resume</a>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Landge Sir.jpg" alt="Dr. Amarsinh B. Landage">
+              <img class="fac-photo" src="images/Staff_Photos/Landge Sir.jpg" alt="Dr. Amarsinh B. Landage">
               <h4>Dr. Amarsinh B. Landage</h4>
               <p class="fac-role">Assistant Professor</p>
-              <a class="fac-resume" href="Doc/staff resume/Dr. Landge Sir Resume.pdf" target="_blank">Resume</a>
+              <a class="fac-resume" href="Doc/Dr. Landge Sir Resume.pdf" target="_blank">Resume</a>
             </div>
           </div>
 
           <h3 class="fac-section-title">Visiting Faculty</h3>
           <div class="fac-grid">
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Akash N. Bane photo.jpg" alt="Mr. A. N. Bane">
+              <img class="fac-photo" src="images/Staff_Photos/Akash N. Bane photo.jpg" alt="Mr. A. N. Bane">
               <h4>Mr. A. N. Bane</h4>
               <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Akash N. Bane Resume.pdf" target="_blank">Resume</a>
+              <a class="fac-resume" href="Doc/Akash N. Bane Resume.pdf" target="_blank">Resume</a>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Mrs. Aditi m. Sharangdhar.jpg" alt="Mrs. A. M. Sharangdhar">
+              <img class="fac-photo" src="images/Staff_Photos/Mrs. Aditi m. Sharangdhar.jpg" alt="Mrs. A. M. Sharangdhar">
               <h4>Mrs. A. M. Sharangdhar</h4>
               <p class="fac-role">Visiting Faculty</p>
               <a class="fac-resume" href="example.pdf" target="_blank">Resume</a>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Swati Bundile.jpg" alt="Mrs. S. V. Bundile">
+              <img class="fac-photo" src="images/Staff_Photos/Swati Bundile.jpg" alt="Mrs. S. V. Bundile">
               <h4>Mrs. S. V. Bundile</h4>
               <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Swati B. resume.pdf" target="_blank">Resume</a>
+              <a class="fac-resume" href="Doc/Swati B. resume.pdf" target="_blank">Resume</a>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Siddhi R. Photo.jpg" alt="Ms. S. M. Sawant">
+              <img class="fac-photo" src="images/Staff_Photos/Siddhi R. Photo.jpg" alt="Ms. S. M. Sawant">
               <h4>Ms. S. M. Sawant</h4>
               <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Siddhi M. Sawant Resume.pdf" target="_blank">Resume</a>
+              <a class="fac-resume" href="Doc/Siddhi M. Sawant Resume.pdf" target="_blank">Resume</a>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Shreya M. photo.jpg" alt="Ms. S. S. Manduskar">
+              <img class="fac-photo" src="images/Staff_Photos/Shreya M. photo.jpg" alt="Ms. S. S. Manduskar">
               <h4>Ms. S. S. Manduskar</h4>
               <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Shreya Manduskar Resume.pdf" target="_blank">Resume</a>
+              <a class="fac-resume" href="Doc/Shreya Manduskar Resume.pdf" target="_blank">Resume</a>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/Aman Bijapuri Photo.jpg" alt="Mr. A. A. Bijapuri">
+              <img class="fac-photo" src="images/Staff_Photos/Aman Bijapuri Photo.jpg" alt="Mr. A. A. Bijapuri">
               <h4>Mr. A. A. Bijapuri</h4>
               <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Aman Bijapuri Resume.pdf" target="_blank">Resume</a>
+              <a class="fac-resume" href="Doc/Aman Bijapuri Resume.pdf" target="_blank">Resume</a>
             </div>
           </div>
 
           <h3 class="fac-section-title">Contractual Staff</h3>
           <div class="fac-grid">
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/person.png" alt="Mrs. Minakshee P. M.">
+              <img class="fac-photo" src="images/person.png" alt="Mrs. Minakshee P. M.">
               <h4>Mrs. Minakshee P. M.</h4>
               <p class="fac-role">Technical Lab Assistant</p>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/person.png" alt="Mr. Siddharth S. K.">
+              <img class="fac-photo" src="images/person.png" alt="Mr. Siddharth S. K.">
               <h4>Mr. Siddharth S. K.</h4>
               <p class="fac-role">Technical Lab Assistant</p>
             </div>
             <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/person.png" alt="Mr. Omkar D. T.">
+              <img class="fac-photo" src="images/person.png" alt="Mr. Omkar D. T.">
               <h4>Mr. Omkar D. T.</h4>
               <p class="fac-role">Technical Lab Assistant</p>
             </div>
@@ -695,7 +733,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <h2 style="margin-top:.5rem">Laboratory Details</h2>
           <h3>Laboratory Equipment &amp; Practicals</h3>
           <div class="lab-slider-wrap">
-            <img id="labSlider" src="GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.1.jpg" alt="Civil & Infrastructure Laboratory">
+            <img id="labSlider" src="images/Lab/Civil&infra_practi.4.jpg" alt="Civil & Infrastructure Laboratory">
           </div>
           <p class="lab-caption">Slideshow rotates through laboratory &amp; practical images automatically.</p>
 
@@ -712,32 +750,32 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <div class="news-grid">
 
             <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Civil&Infra_KoynaDam_img4.jpg" alt="Koyana Dam Visit"></div>
+              <div class="news-thumb"><img src="images/events/Civil&Infra_KoynaDam_img4.jpg" alt="Koyana Dam Visit"></div>
               <div class="news-body">
                 <p class="news-date">9 April 2025</p>
                 <h4>Koyana Dam Visit</h4>
                 <p>"Koynanagar Dam" &ndash; Maharashtra's biggest infrastructure with 1920MW installed capacity. A one-day visit with Civil and Infrastructure and Electrical Engineering students.</p>
-                <a class="news-readmore" href="civil & infra. Koyana D visit T.Y.B.Tech Sem.5 24-25.html" target="_blank">Read more &rarr;</a>
+                <a class="news-readmore" href="civil_events.html?id=koyanadam2025">Read more &rarr;</a>
               </div>
             </div>
 
             <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Solidwaste_civil&infra_sem7_24-25.jpg" alt="Solid Waste Management visit"></div>
+              <div class="news-thumb"><img src="images/events/Solidwaste_civil&infra_sem7_24-25.jpg" alt="Solid Waste Management visit"></div>
               <div class="news-body">
                 <p class="news-date">2024-2025</p>
                 <h4>Solid Waste Management</h4>
                 <p>Solid waste management visit at Ratnagiri for final year B.Tech Civil and Infrastructure Engineering, Sem-7, 2024-25.</p>
-                <a class="news-readmore" href="Civil & Infra. SolidWaste FinalYear BTech. sem7 24-25.html" target="_blank">Read more &rarr;</a>
+                <a class="news-readmore" href="civil_events.html?id=solidwaste2025">Read more &rarr;</a>
               </div>
             </div>
 
             <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/TridentLab_Civil&infra_Sem6_23-24_2.jpg" alt="Trident Lab Mirjole Visit"></div>
+              <div class="news-thumb"><img src="images/events/TridentLab_Civil&infra_Sem6_23-24_2.jpg" alt="Trident Lab Mirjole Visit"></div>
               <div class="news-body">
                 <p class="news-date">2024-2025</p>
                 <h4>Trident Lab Mirjole Visit</h4>
                 <p>TY B.Tech Civil and Infrastructure Engineering, Sem-6, 2023-24 visit to Trident Laboratories, Mirjole.</p>
-                <a class="news-readmore" href="Civil & infra. TridentLab visit TYBTech sem-6 24-25.html" target="_blank">Read more &rarr;</a>
+                <a class="news-readmore" href="civil_events.html?id=tridentlab2024">Read more &rarr;</a>
               </div>
             </div>
 
@@ -751,17 +789,17 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
           <h3>Second Year</h3>
           <div class="embed-wrap">
-            <embed src="Syllabus/Second-Year-B.-Tech.-Civil-Infra-Eng22-23.pdf" type="application/pdf">
+            <embed src="Doc/Syllabus/Second-Year-B.-Tech.-Civil-Infra-Eng22-23.pdf" type="application/pdf">
           </div>
 
           <h3>Third Year</h3>
           <div class="embed-wrap">
-            <embed src="Syllabus/TY_B Tech_Civil and Infra- Aug 2023-24.pdf" type="application/pdf">
+            <embed src="Doc/Syllabus/TY_B Tech_Civil and Infra- Aug 2023-24.pdf" type="application/pdf">
           </div>
 
           <h3>Final Year</h3>
           <div class="embed-wrap">
-            <embed src="Syllabus/Final Year_B.Tech_Civil and Infra 24-25.pdf" type="application/pdf">
+            <embed src="Doc/Syllabus/Final Year_B.Tech_Civil and Infra 24-25.pdf" type="application/pdf">
           </div>
         </div>
 
@@ -772,7 +810,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
           <h3>Second Year</h3>
           <div class="embed-wrap">
-            <embed src="Syllabus/Civil & infra 25-26/B.Tech&InfraStructureEngineering-2nd-year_NEP25-26.pdf" type="application/pdf">
+            <embed src="Doc/Syllabus/Civil & infra 25-26/B.Tech&InfraStructureEngineering-2nd-year_NEP25-26.pdf" type="application/pdf">
           </div>
         </div>
 
@@ -783,13 +821,13 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
           <div class="cal-block">
             <h3>Academic Calendar Odd Sem (Winter AY 25-26)</h3>
-            <img src="GCOER WEBSITE/images/Academic calendar ODD Sem 2025 GCOER_page-1.jpg" alt="Academic Calendar Odd Sem Winter AY 25-26">
+            <img src="images/Academic calendar ODD Sem 2025 GCOER_page-1.jpg" alt="Academic Calendar Odd Sem Winter AY 25-26">
           </div>
 
           <div class="cal-block">
             <h3>Academic Calendar</h3>
-            <img src="GCOER WEBSITE/images/AC_Engg_UGPG_OddSem_AY25-26_page-0001.jpg" alt="Academic Calendar Odd Sem AY25-26">
-            <img src="GCOER WEBSITE/images/AC_Engg_UGPG_EvenSem_AY25-26_page-0002.jpg" alt="Academic Calendar Even Sem AY25-26" style="margin-top:1rem">
+            <img src="images/AC_Engg_UGPG_OddSem_AY25-26_page-0001.jpg" alt="Academic Calendar Odd Sem AY25-26">
+            <img src="images/AC_Engg_UGPG_EvenSem_AY25-26_page-0002.jpg" alt="Academic Calendar Even Sem AY25-26" style="margin-top:1rem">
           </div>
         </div>
 
@@ -798,10 +836,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <p class="eyebrow">Schedule</p>
           <h2 style="margin-top:.5rem">Time-Table</h2>
           <div class="cal-block">
-            <img src="TimeTable/Civil&infra-Timetable(2025-26).png" alt="Civil & Infrastructure Engineering Time-Table 2025-26">
+            <img src="images/Civil&infra-Timetable(2025-26).png" alt="Civil & Infrastructure Engineering Time-Table 2025-26">
           </div>
           <div class="tt-download">
-            <a class="btn btn-primary" href="TimeTable/Civil&infra-Timetable(2025-26).pdf" download="time_table.pdf"><svg><use href="#i-download"/></svg>Download PDF</a>
+            <a class="btn btn-primary" href="Doc/TimeTable/time_table_civil.pdf" download="time_table.pdf"><svg><use href="#i-download"/></svg>Download PDF</a>
           </div>
         </div>
 
@@ -987,12 +1025,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
   /* ---- Laboratory image slideshow ---- */
   var labImages = [
-    "GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.1.jpg",
-    "GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.2.jpg",
-    "GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.3.jpg",
-    "GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.4.jpg",
-    "GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.5.jpg",
-    "GCOER WEBSITE/images/Lab or Practical images/Civil&infra_practi.6.jpg"
+    "images/Lab/Civil&infra_practi.4.jpg",
+    "images/Lab/Civil&infra_practi.6.jpg"
+    
   ];
   var labIndex = 0;
   var labSlider = document.getElementById('labSlider');
