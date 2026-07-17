@@ -243,6 +243,27 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   overflow:hidden;
 }
 .hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:1;z-index:0}
+.hero-carousel{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;z-index:0}
+.hero-slide{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 40%;
+  opacity:0;transition:opacity 1.4s ease;z-index:0;
+}
+.hero-slide.active{opacity:1;z-index:1}
+.hero-dots{
+  position:absolute;bottom:1.9rem;right:clamp(1rem,4vw,3rem);z-index:3;
+  display:flex;gap:.55rem;
+}
+.hero-dot{
+  width:9px;height:9px;border-radius:50%;padding:0;cursor:pointer;
+  background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.55);
+  transition:background .2s ease,transform .2s ease,border-color .2s ease;
+}
+.hero-dot:hover{background:rgba(255,255,255,.65)}
+.hero-dot.active{background:var(--gold-bright);border-color:var(--gold-bright);transform:scale(1.2)}
+@media (max-width:760px){
+  .hero-dots{right:1rem;bottom:1.4rem}
+}
 .hero::before{
   content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(7,26,48,.72) 0%,rgba(7,26,48,.48) 30%,rgba(7,26,48,.55) 60%,rgba(7,26,48,.96) 100%);
@@ -279,6 +300,44 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .scroll-cue svg{width:16px;height:16px;animation:bob 1.8s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
+/* ---- Hero floating Quick Links card ---- */
+.hero-quicklinks{
+  position:absolute;top:clamp(5.5rem,10vw,7.5rem);right:clamp(1rem,4vw,3rem);
+  width:270px;max-width:calc(100vw - 2.5rem);
+  background:rgba(11,42,74,.58);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(224,181,101,.32);border-radius:8px;
+  padding:1.1rem 1.15rem 1.2rem;
+  box-shadow:0 24px 55px -18px rgba(0,0,0,.65);
+  z-index:3;transition:transform .25s ease, box-shadow .25s ease;
+}
+.hero-quicklinks:hover{transform:translateY(-3px);box-shadow:0 30px 65px -18px rgba(0,0,0,.75)}
+.hql-head{
+  display:flex;align-items:center;gap:.5rem;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold-bright);padding-bottom:.65rem;margin-bottom:.4rem;
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.hql-head svg{width:15px;height:15px;flex-shrink:0}
+.hero-quicklinks ul{display:flex;flex-direction:column}
+.hero-quicklinks li a{
+  display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  padding:.6rem .35rem;font-size:.84rem;color:#EAEFF4;border-radius:4px;
+  transition:background .18s ease,color .18s ease,padding-left .18s ease;
+}
+.hero-quicklinks li a svg{width:13px;height:13px;flex-shrink:0;opacity:.65;transition:opacity .18s ease,transform .18s ease}
+.hero-quicklinks li a:hover{background:rgba(255,255,255,.1);color:var(--gold-bright);padding-left:.6rem}
+.hero-quicklinks li a:hover svg{opacity:1;transform:translateX(2px)}
+.hero-quicklinks li+li a{border-top:1px solid rgba(255,255,255,.08)}
+
+@media (max-width:1080px){
+  .hero-quicklinks{
+    position:static;margin-top:2.25rem;width:100%;max-width:360px;
+  }
+}
+@media (max-width:760px){
+  .hero-quicklinks{max-width:100%}
+}
+
 /* wave divider - signature coastal motif */
 .wave-divider{display:block;width:100%;line-height:0}
 .wave-divider svg{width:100%;height:56px;display:block}
@@ -288,7 +347,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   max-width:var(--maxw);margin:0 auto;
   display:grid;grid-template-columns:1fr 320px;gap:clamp(1.5rem,3vw,3rem);
   padding:clamp(2rem,4vw,3.5rem) clamp(1.25rem,4vw,1.75rem) 0;
-  align-items:start;
+  align-items:stretch;
 }
 .content-col{min-width:0}
 .content-col>section{margin-bottom:clamp(2.5rem,5vw,4rem)}
@@ -303,11 +362,14 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .fullwidth-wrap>section:last-child{margin-bottom:0}
 
 /* quick links sidebar */
-.quick-col{position:sticky;top:100px}
+.quick-col{position:sticky;top:100px;align-self:stretch}
 .quick-panel{
   background:var(--navy);color:var(--white);border-radius:var(--radius);
   overflow:hidden;box-shadow:var(--shadow);
+  height:100%;display:flex;flex-direction:column;
 }
+.quick-panel ul:last-of-type{margin-top:0}
+.qp-divider.qp-divider-push{margin-top:auto}
 .quick-panel .qp-head{
   padding:1.1rem 1.25rem;background:var(--navy-deep);
   display:flex;align-items:center;gap:.6rem;
@@ -339,18 +401,6 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 }
 .about-badges b{color:var(--azure)}
 
-/* ============ VISION / MISSION ============ */
-.vm-wrap{
-  background:var(--navy-deep);color:var(--white);border-radius:var(--radius);
-  padding:clamp(1.75rem,4vw,3rem);display:grid;grid-template-columns:1fr 1.3fr;gap:2.5rem;
-}
-.vm-wrap .eyebrow{color:var(--gold-bright)}
-.vm-wrap .eyebrow::before{background:var(--gold-bright)}
-.vision-quote{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.75rem);line-height:1.4;margin-top:1rem}
-.mission-list li{display:flex;gap:.75rem;padding:.65rem 0;border-top:1px solid rgba(255,255,255,.12);font-size:.92rem;color:#E4E9EF}
-.mission-list li:first-child{border-top:none}
-.mission-list svg{width:17px;height:17px;flex-shrink:0;margin-top:3px;color:var(--gold-bright)}
-
 /* ============ NEWS / UPDATES ============ */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .news-card{
@@ -373,7 +423,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .updates-list li a:hover{color:var(--azure);text-decoration:underline}
 
 /* ============ LEADERSHIP ============ */
-.lead-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media (max-width:1300px){.lead-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.lead-grid{grid-template-columns:1fr}}
 .lead-card{
   background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
   padding:1.6rem 1.25rem;text-align:center;
@@ -513,8 +565,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   .layout-grid{grid-template-columns:1fr}
   .quick-col{position:static}
   .news-grid,.fac-grid{grid-template-columns:repeat(2,1fr)}
-  .lead-grid{grid-template-columns:repeat(2,1fr)}
-  .vm-wrap,.about-grid,.contact-wrap{grid-template-columns:1fr}
+  .about-grid,.contact-wrap{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr 1fr}
 }
 /* --- nav collapses to hamburger earlier (1300px) so items never run out of room and overlap the Apply button --- */
@@ -793,7 +844,20 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="home">
-  <img class="hero-media" src="images/college (1).jpg" alt="Front view of the LSPGCOER Ratnagiri campus building" loading="eager" fetchpriority="high">
+  <div class="hero-carousel" id="heroCarousel">
+    <img class="hero-slide active" src="images/college (1).jpg" alt="Front view of the LSPGCOER Ratnagiri campus building" loading="eager" fetchpriority="high">
+    
+    <img class="hero-slide" src="images/college_top.png" alt="LSPGCOER campus top view" loading="lazy">
+    <img class="hero-slide" src="images/college2.png" alt="LSPGCOER campus" loading="lazy">
+    <img class="hero-slide" src="images/college4.jpg" alt="LSPGCOER campus entrance" loading="lazy">
+  </div>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-index="0" aria-label="Show slide 1"></button>
+    <button class="hero-dot" data-index="1" aria-label="Show slide 2"></button>
+    <button class="hero-dot" data-index="2" aria-label="Show slide 3"></button>
+    <button class="hero-dot" data-index="3" aria-label="Show slide 4"></button>
+    <button class="hero-dot" data-index="4" aria-label="Show slide 5"></button>
+  </div>
   <div class="hero-inner">
     <p class="eyebrow">Loknete Sham Rao Peje Government College of Engineering &middot; Ratnagiri</p>
     <h1 class="reveal">Engineering education, built on the Konkan coast.</h1>
@@ -808,6 +872,17 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
       <div><b>DBATU</b><span>Affiliated University</span></div>
       <div><b>Govt.</b><span>Of Maharashtra</span></div>
     </div>
+
+    <div class="hero-quicklinks reveal">
+      <div class="hql-head"><svg><use href="#i-external"/></svg><span>Quick Links</span></div>
+      <ul>
+        <li><a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener">Apply for Admission <svg><use href="#i-arrow"/></svg></a></li>
+        <li><a href="Doc/Admission Fees structure 25-26_page-0001.pdf" target="_blank">Fee Structure <svg><use href="#i-arrow"/></svg></a></li>
+        <li><a href="Doc/AC_Engg_UGPG_EvenSem_AY25-26.pdf" target="_blank">Academic Calendar <svg><use href="#i-arrow"/></svg></a></li>
+        <li><a href="Doc/Scholarship Notice.pdf" target="_blank">Scholarship Notice <svg><use href="#i-arrow"/></svg></a></li>
+        <li><a href="Doc/Mandatory Disclosure 2025-26.pdf" target="_blank">Mandatory Disclosure <svg><use href="#i-arrow"/></svg></a></li>
+      </ul>
+    </div>
   </div>
   <div class="scroll-cue"><span>Scroll</span><svg><use href="#i-chevron"/></svg></div>
 </section>
@@ -816,7 +891,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,32 C240,60 480,0 720,20 C960,40 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--paper)"/></svg>
 </div>
 
-<!-- ============ MAIN CONTENT + QUICK LINKS (sidebar spans only About + Vision) ============ -->
+<!-- ============ MAIN CONTENT + QUICK LINKS (sidebar spans only About) ============ -->
 <main id="main-content">
   <div class="layout-grid">
 
@@ -839,28 +914,49 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         </div>
       </section>
 
-      <!-- VISION / MISSION -->
-      <section id="vision" class="reveal">
-        <div class="vm-wrap">
-          <div>
-            <p class="eyebrow">Institute Vision</p>
-            <p class="vision-quote">&ldquo;To develop technologically competent human resource to serve society.&rdquo;</p>
+      <!-- LEADERSHIP -->
+      <section id="leadership" class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Leadership</p>
+          <h2>Guiding the institute</h2>
+        </div>
+        <div class="lead-grid">
+          <div class="lead-card">
+            <div class="lead-avatar"><img src="images/leader_chandrakant.jpg" alt="Shri. Chandrakant Dada Patil" onerror="this.parentElement.innerText='CDP'"></div>
+            <h4>Shri. Chandrakant Dada Patil</h4>
+            <p>Hon'ble Minister, Higher and Technical Education</p>
           </div>
-          <div>
-            <p class="eyebrow">Institute Mission</p>
-            <ul class="mission-list">
-              <li><svg><use href="#i-check"/></svg>Provide a conducive environment for academic excellence in engineering education.</li>
-              <li><svg><use href="#i-check"/></svg>Create an intellectually stimulating environment for research, scholarship, creativity, innovation and professional activities.</li>
-              <li><svg><use href="#i-check"/></svg>Enhance career opportunities through Industry-Institute interaction, value-added courses and projects in cutting-edge technology.</li>
-              <li><svg><use href="#i-check"/></svg>Promote services to community and revenue generation for sustainable development.</li>
-            </ul>
+          <div class="lead-card">
+            <div class="lead-avatar"><img src="images/leader_indranil.jpg" alt="Shri. Indranil Naik" onerror="this.parentElement.innerText='IN'"></div>
+            <h4>Shri. Indranil Naik</h4>
+            <p>Hon'ble Minister of State, Higher and Technical Education</p>
+          </div>
+          <div class="lead-card">
+            <div class="lead-avatar"><img src="images/Venugopal.png" alt="Shri B. Venugopal Reddy, IAS" onerror="this.parentElement.innerText='BVR'"></div>
+            <h4>Shri B. Venugopal Reddy, IAS</h4>
+            <p>Hon. Addl. Chief Secretary, Higher &amp; Technical Education</p>
+          </div>
+          <div class="lead-card">
+            <div class="lead-avatar"><img src="images/pramod.jpg" alt="Shri Pramod Naik" onerror="this.parentElement.innerText='PN'"></div>
+            <h4>Shri Pramod Naik</h4>
+            <p>I/c Director, DTE, Mumbai</p>
+          </div>
+          <div class="lead-card">
+            <div class="lead-avatar"><img src="images/leader_maruti.jpg" alt="Dr. Maruti Jadhav" onerror="this.parentElement.innerText='MJ'"></div>
+            <h4>Dr. Maruti Jadhav</h4>
+            <p>I/c Joint Director, Regional Office, Mumbai</p>
+          </div>
+          <div class="lead-card">
+            <div class="lead-avatar"><img src="images/sudhir_akojwar.jpg" alt="Dr. Sudhir G. Akojwar" onerror="this.parentElement.innerText='SA'"></div>
+            <h4>Dr. Sudhir G. Akojwar</h4>
+            <p>I/c Principal, Govt. College of Engg., Ratnagiri</p>
           </div>
         </div>
       </section>
 
     </div><!-- /content-col -->
 
-    <!-- QUICK LINKS SIDEBAR (sticky only through About + Vision) -->
+    <!-- QUICK LINKS SIDEBAR (sticky through About) -->
     <aside class="quick-col">
       <div class="quick-panel">
         <div class="qp-head"><svg><use href="#i-external"/></svg><h3>Quick Links</h3></div>
@@ -878,7 +974,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
         <div class="qp-divider"></div>
         <p class="qp-sub">Exam Updates</p>
         <p class="qp-note">Update soon&hellip;</p>
-        <div class="qp-divider"></div>
+        <div class="qp-divider qp-divider-push"></div>
         <p class="qp-sub">Reach Us</p>
         <ul>
           <li><a href="tel:8793284358"><svg><use href="#i-phone"/></svg>8793284358</a></li>
@@ -943,36 +1039,6 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quatation 25-26/Darpatrak Mudatvaad.pdf">दर पत्रक मुदतवाढ</a></li>
           <li><svg><use href="#i-file"/></svg><a href="https://www.gcoer.ac.in/Doc/Quotation for workshop raw material-26.pdf">Quotation for workshop raw material 25-26 — New Update</a></li>
         </ul>
-      </section>
-
-      <!-- LEADERSHIP -->
-      <section id="leadership" class="reveal">
-        <div class="section-head">
-          <p class="eyebrow">Leadership</p>
-          <h2>Guiding the institute</h2>
-        </div>
-        <div class="lead-grid">
-          <div class="lead-card">
-            <div class="lead-avatar"><img src="images/Venugopal.png" alt="Shri B. Venugopal Reddy, IAS" onerror="this.parentElement.innerText='BVR'"></div>
-            <h4>Shri B. Venugopal Reddy, IAS</h4>
-            <p>Hon. Additional Chief Secretary, Higher &amp; Technical Education</p>
-          </div>
-          <div class="lead-card">
-            <div class="lead-avatar"><img src="images/vinod.png" alt="Dr. Vinod Mohitkar" onerror="this.parentElement.innerText='VM'"></div>
-            <h4>Dr. Vinod Mohitkar</h4>
-            <p>Director, DTE, Mumbai</p>
-          </div>
-          <div class="lead-card">
-            <div class="lead-avatar"><img src="images/pramod.jpg" alt="Shri Pramod Naik" onerror="this.parentElement.innerText='PN'"></div>
-            <h4>Shri Pramod Naik</h4>
-            <p>Joint Director, Regional Office, Mumbai</p>
-          </div>
-          <div class="lead-card">
-            <div class="lead-avatar"><img src="images/sudhir_akojwar.jpg" alt="Dr. Sudhir G. Akojwar" onerror="this.parentElement.innerText='SA'"></div>
-            <h4>Dr. Sudhir G. Akojwar</h4>
-            <p>Principal, Government College of Engineering, Ratnagiri</p>
-          </div>
-        </div>
       </section>
 
       <!-- FACILITIES -->
@@ -1229,6 +1295,35 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   // duplicate ticker content for a seamless infinite loop
   var track = document.getElementById('tickerTrack');
   track.innerHTML += track.innerHTML;
+
+  // ============ HERO CAROUSEL ============
+  var heroSlides = document.querySelectorAll('.hero-slide');
+  var heroDots = document.querySelectorAll('.hero-dot');
+  var heroIndex = 0;
+  var heroTimer;
+
+  function showHeroSlide(i){
+    heroSlides.forEach(function(s){ s.classList.remove('active'); });
+    heroDots.forEach(function(d){ d.classList.remove('active'); });
+    if(heroSlides[i]) heroSlides[i].classList.add('active');
+    if(heroDots[i]) heroDots[i].classList.add('active');
+    heroIndex = i;
+  }
+
+  function nextHeroSlide(){
+    showHeroSlide((heroIndex + 1) % heroSlides.length);
+  }
+
+  if(heroSlides.length > 1){
+    heroTimer = setInterval(nextHeroSlide, 5000);
+    heroDots.forEach(function(dot){
+      dot.addEventListener('click', function(){
+        clearInterval(heroTimer);
+        showHeroSlide(parseInt(dot.getAttribute('data-index'), 10));
+        heroTimer = setInterval(nextHeroSlide, 5000);
+      });
+    });
+  }
 
   // reveal-on-scroll
   var revealEls = document.querySelectorAll('.reveal');

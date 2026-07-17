@@ -1,986 +1,2824 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Department of Mechanical Engineering | LSPGCOER Ratnagiri</title>
-<meta name="description" content="Department of Mechanical Engineering at Loknete Shamrao Peje Government College of Engineering, Ratnagiri — about, HOD's desk, vision & mission, faculty, laboratory, news, syllabus, academic calendar and time-table.">
-<style>
-/* ============ RESET ============ */
-html, body{ overflow-x:hidden; }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-ul{list-style:none}
-button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Mechanical Engineering | LSPGCOER Ratnagiri</title>
+    <meta
+      name="description"
+      content="Department of Mechanical Engineering at Loknete Shamrao Peje Government College of Engineering, Ratnagiri — about, HOD's desk, vision & mission, faculty, laboratory, news, syllabus, academic calendar and time-table."
+    />
+    <style>
+      /* ============ RESET ============ */
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: inherit;
+      }
 
-/* ============ TOKENS (matches site) ============ */
-:root{
-  --navy:#0B2A4A;
-  --navy-deep:#071A30;
-  --azure:#1D6690;
-  --gold:#C99A44;
-  --gold-bright:#E0B565;
-  --paper:#F5F6F3;
-  --paper-dim:#ECEEE9;
-  --ink:#101826;
-  --slate:#54647A;
-  --line:#DDE2E1;
-  --white:#FFFFFF;
-  --radius:4px;
-  --shadow:0 10px 30px -12px rgba(11,42,74,.22);
-  --serif:Georgia,'Times New Roman',Times,serif;
-  --sans:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-  --mono:Consolas,'SFMono-Regular','Courier New',monospace;
-  --maxw:1280px;
-}
+      /* ============ TOKENS (matches site) ============ */
+      :root {
+        --navy: #0b2a4a;
+        --navy-deep: #071a30;
+        --azure: #1d6690;
+        --gold: #c99a44;
+        --gold-bright: #e0b565;
+        --paper: #f5f6f3;
+        --paper-dim: #eceee9;
+        --ink: #101826;
+        --slate: #54647a;
+        --line: #dde2e1;
+        --white: #ffffff;
+        --radius: 4px;
+        --shadow: 0 10px 30px -12px rgba(11, 42, 74, 0.22);
+        --serif: Georgia, "Times New Roman", Times, serif;
+        --sans:
+          "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial,
+          sans-serif;
+        --mono: Consolas, "SFMono-Regular", "Courier New", monospace;
+        --maxw: 1280px;
+      }
 
-body{
-  font-family:var(--sans);
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(--navy-deep)}
-.eyebrow{
-  font-family:var(--mono);
-  font-size:.72rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--gold);
-  display:flex;align-items:center;gap:.5rem;
-  font-weight:600;
-}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold);display:inline-block}
-.btn{
-  display:inline-flex;align-items:center;gap:.55rem;
-  padding:.85rem 1.6rem;border-radius:var(--radius);
-  font-weight:600;font-size:.92rem;letter-spacing:.01em;
-  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
-  white-space:nowrap;
-}
-.btn svg{width:16px;height:16px;flex-shrink:0}
-.btn-primary{background:var(--gold);color:var(--navy-deep)}
-.btn-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(201,154,68,.55)}
-.btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
-.btn-ghost:hover{background:var(--navy);color:var(--white)}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-.skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy-deep);padding:.7rem 1.2rem;z-index:999;font-weight:700}
-.skip-link:focus{left:1rem;top:1rem}
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--serif);
+        font-weight: 700;
+        line-height: 1.15;
+        color: var(--navy-deep);
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--gold);
+        display: inline-block;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.85rem 1.6rem;
+        border-radius: var(--radius);
+        font-weight: 600;
+        font-size: 0.92rem;
+        letter-spacing: 0.01em;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+        white-space: nowrap;
+      }
+      .btn svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      .btn-primary {
+        background: var(--gold);
+        color: var(--navy-deep);
+      }
+      .btn-primary:hover {
+        background: var(--gold-bright);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -10px rgba(201, 154, 68, 0.55);
+      }
+      .btn-ghost {
+        border: 1.5px solid var(--navy);
+        color: var(--navy);
+      }
+      .btn-ghost:hover {
+        background: var(--navy);
+        color: var(--white);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: var(--gold);
+        color: var(--navy-deep);
+        padding: 0.7rem 1.2rem;
+        z-index: 999;
+        font-weight: 700;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
 
-/* ============ PLAQUE BAR ============ */
-.plaque-bar{background:var(--navy-deep);color:#CBD8E4;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em}
-.plaque-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.4rem 1.25rem;gap:1rem;flex-wrap:wrap}
-.plaque-inner .tags{display:flex;gap:1.4rem;flex-wrap:wrap}
-.plaque-inner .tags span{white-space:nowrap}
-.plaque-inner .tags b{color:var(--gold-bright)}
-.plaque-contact{display:flex;gap:1.1rem}
-.plaque-contact a{display:inline-flex;align-items:center;gap:.35rem;opacity:.9}
-.plaque-contact a:hover{opacity:1;color:var(--gold-bright)}
-.plaque-contact svg{width:13px;height:13px}
+      /* ============ PLAQUE BAR ============ */
+      .plaque-bar {
+        background: var(--navy-deep);
+        color: #cbd8e4;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.03em;
+      }
+      .plaque-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.4rem 1.25rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .plaque-inner .tags {
+        display: flex;
+        gap: 1.4rem;
+        flex-wrap: wrap;
+      }
+      .plaque-inner .tags span {
+        white-space: nowrap;
+      }
+      .plaque-inner .tags b {
+        color: var(--gold-bright);
+      }
+      .plaque-contact {
+        display: flex;
+        gap: 1.1rem;
+      }
+      .plaque-contact a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        opacity: 0.9;
+      }
+      .plaque-contact a:hover {
+        opacity: 1;
+        color: var(--gold-bright);
+      }
+      .plaque-contact svg {
+        width: 13px;
+        height: 13px;
+      }
 
-/* ============ HEADER ============ */
-.site-header{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .25s ease, padding .25s ease}
-.site-header.scrolled{box-shadow:0 6px 24px -12px rgba(11,42,74,.25)}
-.header-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.4rem 1.25rem}
-.logo-mark{height:70px;width:70px;object-fit:contain;flex-shrink:0;transition:height .25s ease,width .25s ease}
-.site-header.scrolled .logo-mark{height:50px;width:50px}
-.logo-mark.fallback{border-radius:50%;background:var(--navy);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:.85rem;text-align:center}
-.brand-text{flex:1;min-width:0}
-.brand-text .name-en{font-family:var(--serif);font-weight:700;color:var(--navy-deep);font-size:clamp(.92rem,2vw,1.18rem);line-height:1.25}
-.brand-text .name-mr{font-size:.85rem;color:var(--azure);margin-top:1px}
-.brand-text .name-sub{font-size:.7rem;color:var(--slate);margin-top:2px;letter-spacing:.01em}
-.menu-toggle{display:none;padding:.4rem;color:var(--navy)}
-.menu-toggle svg{width:26px;height:26px}
-.main-nav{border-top:1px solid var(--line);background:var(--white)}
-.nav-inner{width:100%;display:flex;align-items:center;flex-wrap:wrap;padding:.25rem .5rem;row-gap:.25rem}
-.nav-scroll{flex:1 1 auto;min-width:0;padding-left:.5rem}
-.nav-list{display:flex;flex-wrap:wrap;row-gap:.15rem;gap:.15rem}
-.nav-list>li{position:relative;flex-shrink:0}
-.nav-list>li>a,.dropdown-btn{display:flex;align-items:center;gap:.2rem;padding:.5rem .55rem;font-size:.85rem;font-weight:600;white-space:nowrap;color:var(--navy-deep);border-bottom:2px solid transparent}
-.nav-list>li>a:hover,.dropdown-btn:hover{color:var(--azure);border-bottom-color:var(--gold)}
-.nav-list>li>a.active{color:var(--azure);border-bottom-color:var(--gold)}
-.has-dropdown.open>.dropdown-btn{color:var(--azure);border-bottom-color:var(--gold);background:var(--paper-dim)}
-.dropdown-btn svg{width:12px;height:12px;transition:transform .2s ease;flex-shrink:0}
-.has-dropdown.open>.dropdown-btn svg{transform:rotate(180deg)}
-.dropdown-menu{position:absolute;top:100%;left:0;min-width:270px;max-width:360px;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:.4rem;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s ease, transform .18s ease, visibility .18s;z-index:50}
-.has-dropdown.open>.dropdown-menu{opacity:1;visibility:visible;transform:none}
-.dropdown-menu a{display:block;padding:.65rem .85rem;font-size:.92rem;border-radius:3px;color:var(--ink)}
-.dropdown-menu a:hover{background:var(--paper-dim);color:var(--azure)}
-.dropdown-menu a.active{color:var(--azure);background:var(--paper-dim)}
-.nav-apply{background:var(--navy);color:var(--white);padding:.4rem 1rem;border-radius:var(--radius);font-size:.8rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;flex-shrink:0;margin-left:auto;margin-right:.5rem}
-.nav-apply:hover{background:var(--azure)}
+      /* ============ HEADER ============ */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        transition:
+          box-shadow 0.25s ease,
+          padding 0.25s ease;
+      }
+      .site-header.scrolled {
+        box-shadow: 0 6px 24px -12px rgba(11, 42, 74, 0.25);
+      }
+      .header-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.4rem 1.25rem;
+      }
+      .logo-mark {
+        height: 70px;
+        width: 70px;
+        object-fit: contain;
+        flex-shrink: 0;
+        transition:
+          height 0.25s ease,
+          width 0.25s ease;
+      }
+      .site-header.scrolled .logo-mark {
+        height: 50px;
+        width: 50px;
+      }
+      .logo-mark.fallback {
+        border-radius: 50%;
+        background: var(--navy);
+        color: var(--gold-bright);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+      .brand-text {
+        flex: 1;
+        min-width: 0;
+      }
+      .brand-text .name-en {
+        font-family: var(--serif);
+        font-weight: 700;
+        color: var(--navy-deep);
+        font-size: clamp(0.92rem, 2vw, 1.18rem);
+        line-height: 1.25;
+      }
+      .brand-text .name-mr {
+        font-size: 0.85rem;
+        color: var(--azure);
+        margin-top: 1px;
+      }
+      .brand-text .name-sub {
+        font-size: 0.7rem;
+        color: var(--slate);
+        margin-top: 2px;
+        letter-spacing: 0.01em;
+      }
+      .menu-toggle {
+        display: none;
+        padding: 0.4rem;
+        color: var(--navy);
+      }
+      .menu-toggle svg {
+        width: 26px;
+        height: 26px;
+      }
+      .main-nav {
+        border-top: 1px solid var(--line);
+        background: var(--white);
+      }
+      .nav-inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0.25rem 0.5rem;
+        row-gap: 0.25rem;
+      }
+      .nav-scroll {
+        flex: 1 1 auto;
+        min-width: 0;
+        padding-left: 0.5rem;
+      }
+      .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 0.15rem;
+        gap: 0.15rem;
+      }
+      .nav-list > li {
+        position: relative;
+        flex-shrink: 0;
+      }
+      .nav-list > li > a,
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        padding: 0.5rem 0.55rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        white-space: nowrap;
+        color: var(--navy-deep);
+        border-bottom: 2px solid transparent;
+      }
+      .nav-list > li > a:hover,
+      .dropdown-btn:hover {
+        color: var(--azure);
+        border-bottom-color: var(--gold);
+      }
+      .nav-list > li > a.active {
+        color: var(--azure);
+        border-bottom-color: var(--gold);
+      }
+      .has-dropdown.open > .dropdown-btn {
+        color: var(--azure);
+        border-bottom-color: var(--gold);
+        background: var(--paper-dim);
+      }
+      .dropdown-btn svg {
+        width: 12px;
+        height: 12px;
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+      }
+      .has-dropdown.open > .dropdown-btn svg {
+        transform: rotate(180deg);
+      }
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 270px;
+        max-width: 360px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        padding: 0.4rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(6px);
+        transition:
+          opacity 0.18s ease,
+          transform 0.18s ease,
+          visibility 0.18s;
+        z-index: 50;
+      }
+      .has-dropdown.open > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .dropdown-menu a {
+        display: block;
+        padding: 0.65rem 0.85rem;
+        font-size: 0.92rem;
+        border-radius: 3px;
+        color: var(--ink);
+      }
+      .dropdown-menu a:hover {
+        background: var(--paper-dim);
+        color: var(--azure);
+      }
+      .dropdown-menu a.active {
+        color: var(--azure);
+        background: var(--paper-dim);
+      }
+      .nav-apply {
+        background: var(--navy);
+        color: var(--white);
+        padding: 0.4rem 1rem;
+        border-radius: var(--radius);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: 0.5rem;
+      }
+      .nav-apply:hover {
+        background: var(--azure);
+      }
 
-/* ============ NESTED SUBMENUS ============ */
-.dropdown-submenu{position:relative}
-.submenu-toggle{display:flex;align-items:center;justify-content:space-between;gap:.4rem;padding:.65rem .85rem;font-size:.92rem;border-radius:3px;color:var(--ink);cursor:pointer}
-.submenu-toggle svg{width:12px;height:12px;transition:transform .2s ease;flex-shrink:0}
-.submenu-toggle:hover{background:var(--paper-dim);color:var(--azure)}
-.dropdown-submenu.open>.submenu-toggle{background:var(--paper-dim);color:var(--azure)}
-.dropdown-submenu.open>.submenu-toggle svg{transform:rotate(180deg)}
-.dropdown-submenu>.dropdown-menu{top:-.4rem;left:100%;margin-left:.35rem;opacity:0;visibility:hidden;transform:translateY(6px);}
-.dropdown-submenu.open>.dropdown-menu{opacity:1;visibility:visible;transform:none}
+      /* ============ NESTED SUBMENUS ============ */
+      .dropdown-submenu {
+        position: relative;
+      }
+      .submenu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.4rem;
+        padding: 0.65rem 0.85rem;
+        font-size: 0.92rem;
+        border-radius: 3px;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      .submenu-toggle svg {
+        width: 12px;
+        height: 12px;
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+      }
+      .submenu-toggle:hover {
+        background: var(--paper-dim);
+        color: var(--azure);
+      }
+      .dropdown-submenu.open > .submenu-toggle {
+        background: var(--paper-dim);
+        color: var(--azure);
+      }
+      .dropdown-submenu.open > .submenu-toggle svg {
+        transform: rotate(180deg);
+      }
+      .dropdown-submenu > .dropdown-menu {
+        top: -0.4rem;
+        left: 100%;
+        margin-left: 0.35rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(6px);
+      }
+      .dropdown-submenu.open > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
 
-/* ============ PAGE HERO (compact banner) ============ */
-.page-hero{position:relative;background:var(--navy-deep);overflow:hidden}
-.page-hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:.5}
-.page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,48,.82) 0%,rgba(7,26,48,.9) 100%)}
-.page-hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:clamp(2.5rem,6vw,4rem) clamp(1.25rem,4vw,1.75rem)}
-.breadcrumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:#B7C4D6;display:flex;gap:.5rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap}
-.breadcrumb a:hover{color:var(--gold-bright)}
-.page-hero h1{color:var(--white);font-size:clamp(1.7rem,4vw,2.6rem);max-width:32ch;text-shadow:0 3px 18px rgba(0,0,0,.5)}
-.page-hero .lede{color:#DDE4EC;max-width:70ch;margin-top:1rem;font-size:1.02rem}
-.hero-mail{margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.78rem;color:var(--gold-bright)}
-.hero-mail svg{width:14px;height:14px}
+      /* ============ PAGE HERO (compact banner) ============ */
+      .page-hero {
+        position: relative;
+        background: var(--navy-deep);
+        overflow: hidden;
+      }
+      .page-hero-media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 45%;
+        opacity: 0.5;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(7, 26, 48, 0.82) 0%,
+          rgba(7, 26, 48, 0.9) 100%
+        );
+      }
+      .page-hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 4vw, 1.75rem);
+      }
+      .breadcrumb {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.05em;
+        color: #b7c4d6;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+      .breadcrumb a:hover {
+        color: var(--gold-bright);
+      }
+      .page-hero h1 {
+        color: var(--white);
+        font-size: clamp(1.7rem, 4vw, 2.6rem);
+        max-width: 32ch;
+        text-shadow: 0 3px 18px rgba(0, 0, 0, 0.5);
+      }
+      .page-hero .lede {
+        color: #dde4ec;
+        max-width: 70ch;
+        margin-top: 1rem;
+        font-size: 1.02rem;
+      }
+      .hero-mail {
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--gold-bright);
+      }
+      .hero-mail svg {
+        width: 14px;
+        height: 14px;
+      }
 
-.wave-divider{display:block;width:100%;line-height:0}
-.wave-divider svg{width:100%;height:44px;display:block}
+      .wave-divider {
+        display: block;
+        width: 100%;
+        line-height: 0;
+      }
+      .wave-divider svg {
+        width: 100%;
+        height: 44px;
+        display: block;
+      }
 
-/* ============ LAYOUT ============ */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,1.75rem)}
-.dept-grid{display:grid;grid-template-columns:260px 1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:start;padding-top:clamp(2rem,4vw,3rem);padding-bottom:clamp(2.5rem,5vw,4rem)}
+      /* ============ LAYOUT ============ */
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 clamp(1.25rem, 4vw, 1.75rem);
+      }
+      .dept-grid {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: clamp(1.5rem, 3vw, 2.5rem);
+        align-items: start;
+        padding-top: clamp(2rem, 4vw, 3rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+      }
 
-/* ============ DEPT TAB SIDEBAR ============ */
-.dept-side{position:sticky;top:100px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(11,42,74,.04)}
-.dept-side .ds-head{padding:1rem 1.1rem;background:var(--navy);color:var(--white);font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
-.dept-tab-list{padding:.5rem}
-.dept-tab-btn{display:flex;align-items:center;gap:.6rem;width:100%;text-align:left;padding:.7rem .75rem;font-size:.85rem;font-weight:600;border-radius:3px;color:var(--ink);border-left:3px solid transparent}
-.dept-tab-btn:hover{background:var(--paper-dim);color:var(--azure)}
-.dept-tab-btn.active{background:var(--paper-dim);color:var(--azure);border-left-color:var(--gold)}
+      /* ============ DEPT TAB SIDEBAR ============ */
+      .dept-side {
+        position: sticky;
+        top: 100px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(11, 42, 74, 0.04);
+      }
+      .dept-side .ds-head {
+        padding: 1rem 1.1rem;
+        background: var(--navy);
+        color: var(--white);
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .dept-tab-list {
+        padding: 0.5rem;
+      }
+      .dept-tab-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        width: 100%;
+        text-align: left;
+        padding: 0.7rem 0.75rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 3px;
+        color: var(--ink);
+        border-left: 3px solid transparent;
+      }
+      .dept-tab-btn:hover {
+        background: var(--paper-dim);
+        color: var(--azure);
+      }
+      .dept-tab-btn.active {
+        background: var(--paper-dim);
+        color: var(--azure);
+        border-left-color: var(--gold);
+      }
 
-/* mobile: horizontal scroll pill tabs */
-.dept-side-mobile{display:none}
+      /* mobile: horizontal scroll pill tabs */
+      .dept-side-mobile {
+        display: none;
+      }
 
-/* ============ DEPT PANELS ============ */
-.dept-panel{display:none;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.5rem,3vw,2.25rem);box-shadow:0 1px 2px rgba(11,42,74,.04)}
-.dept-panel.active{display:block}
-.dept-panel h2{font-size:clamp(1.3rem,2.5vw,1.7rem)}
-.dept-panel h3{font-size:1.05rem;color:var(--azure);margin-top:1.5rem}
-.dept-panel p{color:var(--slate);margin-top:.85rem;max-width:75ch;text-align:justify}
-.dept-panel ul.bullets{margin-top:.6rem;padding-left:1.2rem}
-.dept-panel ul.bullets li{list-style:disc;color:var(--slate);margin-bottom:.4rem;max-width:70ch}
-.dept-panel ul.bullets li b{color:var(--navy-deep)}
-.sign-block{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
-.sign-block b{color:var(--navy-deep)}
+      /* ============ DEPT PANELS ============ */
+      .dept-panel {
+        display: none;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: clamp(1.5rem, 3vw, 2.25rem);
+        box-shadow: 0 1px 2px rgba(11, 42, 74, 0.04);
+      }
+      .dept-panel.active {
+        display: block;
+      }
+      .dept-panel h2 {
+        font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      }
+      .dept-panel h3 {
+        font-size: 1.05rem;
+        color: var(--azure);
+        margin-top: 1.5rem;
+      }
+      .dept-panel p {
+        color: var(--slate);
+        margin-top: 0.85rem;
+        max-width: 75ch;
+        text-align: justify;
+      }
+      .dept-panel ul.bullets {
+        margin-top: 0.6rem;
+        padding-left: 1.2rem;
+      }
+      .dept-panel ul.bullets li {
+        list-style: disc;
+        color: var(--slate);
+        margin-bottom: 0.4rem;
+        max-width: 70ch;
+      }
+      .dept-panel ul.bullets li b {
+        color: var(--navy-deep);
+      }
+      .sign-block {
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--line);
+      }
+      .sign-block b {
+        color: var(--navy-deep);
+      }
 
-/* HOD card */
-.hod-card{display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start;margin-top:.5rem}
-.hod-photo{width:100%;border-radius:50%;aspect-ratio:1/1;object-fit:cover;border:4px solid var(--paper-dim)}
-.hod-photo-wrap{display:flex;flex-direction:column;align-items:center;gap:.75rem;text-align:center}
-.hod-photo-wrap .hod-name{font-family:var(--serif);font-weight:700;color:var(--navy-deep)}
-.hod-photo-wrap .hod-role{font-size:.82rem;color:var(--azure)}
+      /* HOD card */
+      .hod-card {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 2rem;
+        align-items: start;
+        margin-top: 0.5rem;
+      }
+      .hod-photo {
+        width: 100%;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border: 4px solid var(--paper-dim);
+      }
+      .hod-photo-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: center;
+      }
+      .hod-photo-wrap .hod-name {
+        font-family: var(--serif);
+        font-weight: 700;
+        color: var(--navy-deep);
+      }
+      .hod-photo-wrap .hod-role {
+        font-size: 0.82rem;
+        color: var(--azure);
+      }
 
-/* Vision/Mission */
-.vm-block{margin-top:1.25rem;padding:1.25rem 1.4rem;background:var(--paper-dim);border-radius:var(--radius);border-left:3px solid var(--gold)}
-.vm-block h3{margin-top:0;color:var(--navy-deep)}
-.vm-block p{color:var(--slate);margin-top:.6rem}
-.vm-block ol{margin-top:.6rem;padding-left:1.2rem}
-.vm-block ol li{color:var(--slate);margin-bottom:.5rem;max-width:75ch}
+      /* Vision/Mission */
+      .vm-block {
+        margin-top: 1.25rem;
+        padding: 1.25rem 1.4rem;
+        background: var(--paper-dim);
+        border-radius: var(--radius);
+        border-left: 3px solid var(--gold);
+      }
+      .vm-block h3 {
+        margin-top: 0;
+        color: var(--navy-deep);
+      }
+      .vm-block p {
+        color: var(--slate);
+        margin-top: 0.6rem;
+      }
+      .vm-block ol {
+        margin-top: 0.6rem;
+        padding-left: 1.2rem;
+      }
+      .vm-block ol li {
+        color: var(--slate);
+        margin-bottom: 0.5rem;
+        max-width: 75ch;
+      }
 
-/* PEO/PSO images */
-.doc-image-stack{margin-top:1rem;display:flex;flex-direction:column;gap:1.25rem}
-.doc-image-stack img{border:1px solid var(--line);border-radius:var(--radius)}
+      /* PEO/PSO images */
+      .doc-image-stack {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .doc-image-stack img {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
 
-/* Faculty grid */
-.fac-section-title{margin-top:2rem;margin-bottom:.25rem}
-.fac-section-title:first-of-type{margin-top:0}
-.fac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.25rem;margin-top:1rem}
-.fac-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.1rem;text-align:center;transition:transform .2s ease,box-shadow .2s ease}
-.fac-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.fac-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto .9rem;border:3px solid var(--white);box-shadow:0 0 0 1px var(--line)}
-.fac-card h4{font-size:.94rem;color:var(--navy-deep)}
-.fac-card .fac-role{font-size:.8rem;color:var(--azure);margin-top:.3rem}
-.fac-card .fac-resume{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:700;color:var(--azure);padding:.35rem .8rem;border:1px solid var(--azure);border-radius:99px}
-.fac-card .fac-resume:hover{background:var(--azure);color:var(--white)}
+      /* Faculty grid */
+      .fac-section-title {
+        margin-top: 2rem;
+        margin-bottom: 0.25rem;
+      }
+      .fac-section-title:first-of-type {
+        margin-top: 0;
+      }
+      .fac-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.25rem;
+        margin-top: 1rem;
+      }
+      .fac-card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.4rem 1.1rem;
+        text-align: center;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .fac-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+      }
+      .fac-photo {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 0.9rem;
+        border: 3px solid var(--white);
+        box-shadow: 0 0 0 1px var(--line);
+      }
+      .fac-card h4 {
+        font-size: 0.94rem;
+        color: var(--navy-deep);
+      }
+      .fac-card .fac-role {
+        font-size: 0.8rem;
+        color: var(--azure);
+        margin-top: 0.3rem;
+      }
+      .fac-card .fac-resume {
+        display: inline-block;
+        margin-top: 0.7rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--azure);
+        padding: 0.35rem 0.8rem;
+        border: 1px solid var(--azure);
+        border-radius: 99px;
+      }
+      .fac-card .fac-resume:hover {
+        background: var(--azure);
+        color: var(--white);
+      }
 
-/* Lab */
-.lab-slider-wrap{margin-top:1.25rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
-.lab-slider-wrap img{width:100%;height:auto;display:block}
-.lab-caption{font-size:.8rem;color:var(--slate);margin-top:.5rem;text-align:center}
+      /* Lab */
+      .lab-slider-wrap {
+        margin-top: 1.25rem;
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .lab-slider-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .lab-caption {
+        font-size: 0.8rem;
+        color: var(--slate);
+        margin-top: 0.5rem;
+        text-align: center;
+      }
 
-/* News */
-.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;margin-top:1.25rem}
-.news-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
-.news-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.news-thumb{aspect-ratio:4/3;background:var(--paper-dim);overflow:hidden}
-.news-thumb img{width:100%;height:100%;object-fit:cover}
-.news-body{padding:1rem 1.1rem 1.2rem}
-.news-date{font-family:var(--mono);font-size:.68rem;color:var(--azure);letter-spacing:.05em;text-transform:uppercase}
-.news-body h4{font-size:.92rem;margin-top:.45rem;color:var(--navy-deep)}
-.news-body p{font-size:.82rem;color:var(--slate);margin-top:.5rem;text-align:left}
-.news-readmore{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:700;color:var(--azure)}
-.news-readmore:hover{text-decoration:underline}
+      /* News */
+      .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.4rem;
+        margin-top: 1.25rem;
+      }
+      .news-card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .news-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+      }
+      .news-thumb {
+        aspect-ratio: 4/3;
+        background: var(--paper-dim);
+        overflow: hidden;
+      }
+      .news-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .news-body {
+        padding: 1rem 1.1rem 1.2rem;
+      }
+      .news-date {
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        color: var(--azure);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .news-body h4 {
+        font-size: 0.92rem;
+        margin-top: 0.45rem;
+        color: var(--navy-deep);
+      }
+      .news-body p {
+        font-size: 0.82rem;
+        color: var(--slate);
+        margin-top: 0.5rem;
+        text-align: left;
+      }
+      .news-readmore {
+        display: inline-block;
+        margin-top: 0.7rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--azure);
+      }
+      .news-readmore:hover {
+        text-decoration: underline;
+      }
+      .news-full {
+        display: none;
+        margin-top: 15px;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+      }
 
-/* Syllabus / calendar embeds */
-.embed-wrap{margin-top:1.25rem;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.embed-wrap embed{width:100%;height:900px;display:block}
-.cal-block{margin-top:1.75rem}
-.cal-block:first-of-type{margin-top:0}
-.cal-block img{border:1px solid var(--line);border-radius:var(--radius);margin-top:1rem}
+      .news-full.show {
+        display: block;
+      }
 
-/* Timetable */
-.tt-download{display:flex;justify-content:center;margin-top:1.5rem}
+      /* Syllabus / calendar embeds */
+      .embed-wrap {
+        margin-top: 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .embed-wrap embed {
+        width: 100%;
+        height: 900px;
+        display: block;
+      }
+      .cal-block {
+        margin-top: 1.75rem;
+      }
+      .cal-block:first-of-type {
+        margin-top: 0;
+      }
+      .cal-block img {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        margin-top: 1rem;
+      }
 
-/* ============ FOOTER ============ */
-.site-footer{background:var(--navy-deep);color:#C7D1DD}
-.footer-top{max-width:var(--maxw);margin:0 auto;padding:3.5rem 1.5rem 2.5rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2.5rem}
-.footer-brand{display:flex;gap:.9rem;align-items:flex-start}
-.footer-brand .logo-mark{height:46px;width:46px}
-.footer-brand h4{color:var(--white);font-size:1rem}
-.footer-brand p{font-size:.8rem;margin-top:.5rem;color:#9FADC0}
-.footer-col h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:.9rem}
-.footer-col li{margin-bottom:.6rem;font-size:.85rem}
-.footer-col a:hover{color:var(--white);text-decoration:underline}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);max-width:var(--maxw);margin:0 auto;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;font-size:.78rem;color:#8695AA}
+      /* Timetable */
+      .tt-download {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
 
-#backToTop{position:fixed;right:1.5rem;bottom:1.5rem;z-index:70;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s ease}
-#backToTop.show{opacity:1;visibility:visible;transform:none}
-#backToTop:hover{background:var(--azure)}
-#backToTop svg{width:20px;height:20px}
+      /* ============ FOOTER ============ */
+      .site-footer {
+        background: var(--navy-deep);
+        color: #c7d1dd;
+      }
+      .footer-top {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 3.5rem 1.5rem 2.5rem;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr 1fr;
+        gap: 2.5rem;
+      }
+      .footer-brand {
+        display: flex;
+        gap: 0.9rem;
+        align-items: flex-start;
+      }
+      .footer-brand .logo-mark {
+        height: 46px;
+        width: 46px;
+      }
+      .footer-brand h4 {
+        color: var(--white);
+        font-size: 1rem;
+      }
+      .footer-brand p {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        color: #9fadc0;
+      }
+      .footer-col h5 {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold-bright);
+        margin-bottom: 0.9rem;
+      }
+      .footer-col li {
+        margin-bottom: 0.6rem;
+        font-size: 0.85rem;
+      }
+      .footer-col a:hover {
+        color: var(--white);
+        text-decoration: underline;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-size: 0.78rem;
+        color: #8695aa;
+      }
 
-/* ============ RESPONSIVE ============ */
-@media (max-width:960px){
-  .dept-grid{grid-template-columns:1fr}
-  .dept-side{position:static;display:none}
-  .dept-side-mobile{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-top:1.5rem;-webkit-overflow-scrolling:touch}
-  .dept-side-mobile .dept-tab-btn{flex-shrink:0;background:var(--white);border:1px solid var(--line);border-radius:99px;white-space:nowrap;border-left:none}
-  .dept-side-mobile .dept-tab-btn.active{background:var(--navy);color:var(--white)}
-  .hod-card{grid-template-columns:1fr;justify-items:center;text-align:center}
-  .footer-top{grid-template-columns:1fr 1fr}
-}
-@media (max-width:1500px){
-  .menu-toggle{display:block}
-  .main-nav{display:none}
-  .main-nav.open{display:block}
-  .nav-inner{flex-direction:column;align-items:stretch;padding:.5rem 1rem}
-  .nav-scroll{overflow:visible;flex:none;width:100%}
-  .nav-list{flex-direction:column;width:auto;justify-content:flex-start}
-  .nav-apply{display:block;text-align:center;margin:.75rem .2rem .25rem}
-  .nav-list>li>a,.dropdown-btn{padding:.8rem .3rem;border-bottom:1px solid var(--line)}
-  .dropdown-menu{position:static;box-shadow:none;border:none;display:none;opacity:1;visibility:visible;transform:none;padding-left:.6rem}
-  .has-dropdown.open>.dropdown-menu{display:block}
-  .dropdown-submenu>.dropdown-menu{margin-left:0}
-  .dropdown-submenu.open>.dropdown-menu{display:block}
-}
-@media (max-width:760px){
-  .plaque-inner .tags{display:none}
-  .plaque-inner{padding:.3rem 1rem}
-  .plaque-contact{gap:.8rem;font-size:.68rem}
-  .header-inner{padding:.5rem .85rem;gap:.5rem}
-  .logo-mark{height:38px;width:36px}
-  .site-header.scrolled .logo-mark{height:30px;width:30px}
-  .brand-text .name-en{font-size:.86rem;line-height:1.2}
-  .brand-text .name-mr{display:none}
-  .brand-text .name-sub{display:none}
-  .footer-top{grid-template-columns:1fr}
-  .embed-wrap embed{height:500px}
-}
-</style>
-</head>
-<body>
+      #backToTop {
+        position: fixed;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        z-index: 70;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--navy);
+        color: var(--gold-bright);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.25s ease;
+      }
+      #backToTop.show {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      #backToTop:hover {
+        background: var(--azure);
+      }
+      #backToTop svg {
+        width: 20px;
+        height: 20px;
+      }
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+      /* ============ RESPONSIVE ============ */
+      @media (max-width: 960px) {
+        .dept-grid {
+          grid-template-columns: 1fr;
+        }
+        .dept-side {
+          position: static;
+          display: none;
+        }
+        .dept-side-mobile {
+          display: flex;
+          gap: 0.5rem;
+          overflow-x: auto;
+          padding-bottom: 0.5rem;
+          margin-top: 1.5rem;
+          -webkit-overflow-scrolling: touch;
+        }
+        .dept-side-mobile .dept-tab-btn {
+          flex-shrink: 0;
+          background: var(--white);
+          border: 1px solid var(--line);
+          border-radius: 99px;
+          white-space: nowrap;
+          border-left: none;
+        }
+        .dept-side-mobile .dept-tab-btn.active {
+          background: var(--navy);
+          color: var(--white);
+        }
+        .hod-card {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          text-align: center;
+        }
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 1500px) {
+        .menu-toggle {
+          display: block;
+        }
+        .main-nav {
+          display: none;
+        }
+        .main-nav.open {
+          display: block;
+        }
+        .nav-inner {
+          flex-direction: column;
+          align-items: stretch;
+          padding: 0.5rem 1rem;
+        }
+        .nav-scroll {
+          overflow: visible;
+          flex: none;
+          width: 100%;
+        }
+        .nav-list {
+          flex-direction: column;
+          width: auto;
+          justify-content: flex-start;
+        }
+        .nav-apply {
+          display: block;
+          text-align: center;
+          margin: 0.75rem 0.2rem 0.25rem;
+        }
+        .nav-list > li > a,
+        .dropdown-btn {
+          padding: 0.8rem 0.3rem;
+          border-bottom: 1px solid var(--line);
+        }
+        .dropdown-menu {
+          position: static;
+          box-shadow: none;
+          border: none;
+          display: none;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          padding-left: 0.6rem;
+        }
+        .has-dropdown.open > .dropdown-menu {
+          display: block;
+        }
+        .dropdown-submenu > .dropdown-menu {
+          margin-left: 0;
+        }
+        .dropdown-submenu.open > .dropdown-menu {
+          display: block;
+        }
+      }
+      @media (max-width: 760px) {
+        .plaque-inner .tags {
+          display: none;
+        }
+        .plaque-inner {
+          padding: 0.3rem 1rem;
+        }
+        .plaque-contact {
+          gap: 0.8rem;
+          font-size: 0.68rem;
+        }
+        .header-inner {
+          padding: 0.5rem 0.85rem;
+          gap: 0.5rem;
+        }
+        .logo-mark {
+          height: 38px;
+          width: 36px;
+        }
+        .site-header.scrolled .logo-mark {
+          height: 30px;
+          width: 30px;
+        }
+        .brand-text .name-en {
+          font-size: 0.86rem;
+          line-height: 1.2;
+        }
+        .brand-text .name-mr {
+          display: none;
+        }
+        .brand-text .name-sub {
+          display: none;
+        }
+        .footer-top {
+          grid-template-columns: 1fr;
+        }
+        .embed-wrap embed {
+          height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ============ ICON SPRITE ============ -->
-<svg style="display:none" aria-hidden="true">
-<defs>
-<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></symbol>
-<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
-<symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></symbol>
-<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
-<symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M18 4h2v16h-2"/></symbol>
-<symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></symbol>
-<symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
-<symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v18"/><path d="M5 4h13l-3 5 3 5H5"/></symbol>
-<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/><circle cx="17" cy="9" r="3"/><path d="M15 21c.3-3 2.3-5.5 5-6"/></symbol>
-<symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6l-6 10a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-10V3"/></symbol>
-<symbol id="i-newspaper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4z"/><path d="M4 4v17a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 8h7M8 12h7M8 16h4"/></symbol>
-<symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/></symbol>
-<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.5 2"/></symbol>
-<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0l-4-4m4 4l4-4"/><path d="M4 19h16"/></symbol>
-</defs>
-</svg>
+    <!-- ============ ICON SPRITE ============ -->
+    <svg style="display: none" aria-hidden="true">
+      <defs>
+        <symbol
+          id="i-mail"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M3 5h18v14H3z" />
+          <path d="M3 6l9 7 9-7" />
+        </symbol>
+        <symbol
+          id="i-phone"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
+          />
+        </symbol>
+        <symbol
+          id="i-chevron"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </symbol>
+        <symbol
+          id="i-menu"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </symbol>
+        <symbol
+          id="i-close"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 6l12 12M18 6L6 18" />
+        </symbol>
+        <symbol
+          id="i-book"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z" />
+          <path d="M18 4h2v16h-2" />
+        </symbol>
+        <symbol
+          id="i-user"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+        </symbol>
+        <symbol
+          id="i-target"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="5" />
+          <circle cx="12" cy="12" r="1" />
+        </symbol>
+        <symbol
+          id="i-flag"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M5 3v18" />
+          <path d="M5 4h13l-3 5 3 5H5" />
+        </symbol>
+        <symbol
+          id="i-users"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="9" cy="8" r="3.5" />
+          <path d="M2 21c0-3.9 3.1-7 7-7s7 3.1 7 7" />
+          <circle cx="17" cy="9" r="3" />
+          <path d="M15 21c.3-3 2.3-5.5 5-6" />
+        </symbol>
+        <symbol
+          id="i-flask"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M9 3h6M10 3v6l-6 10a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-10V3"
+          />
+        </symbol>
+        <symbol
+          id="i-newspaper"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M4 4h13a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4z" />
+          <path d="M4 4v17a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+          <path d="M8 8h7M8 12h7M8 16h4" />
+        </symbol>
+        <symbol
+          id="i-file"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"
+          />
+          <path d="M14 3v5h5" />
+        </symbol>
+        <symbol
+          id="i-calendar"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="3" y="5" width="18" height="16" rx="2" />
+          <path d="M16 3v4M8 3v4M3 10h18" />
+        </symbol>
+        <symbol
+          id="i-clock"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="9.5" />
+          <path d="M12 7v5l3.5 2" />
+        </symbol>
+        <symbol
+          id="i-download"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M12 3v13m0 0l-4-4m4 4l4-4" />
+          <path d="M4 19h16" />
+        </symbol>
+      </defs>
+    </svg>
 
-<!-- ============ PLAQUE / GOVT INFO BAR ============ -->
-<div class="plaque-bar">
-  <div class="plaque-inner">
-    <div class="tags">
-      <span>Government of Maharashtra</span>
-      <span>DTE Code: <b>3042</b></span>
-      <span>AICTE Permanent ID: <b>1-9442079401</b></span>
-      <span>Affiliated to Dr. Babasaheb Ambedkar Technological University, Lonere</span>
+    <!-- ============ PLAQUE / GOVT INFO BAR ============ -->
+    <div class="plaque-bar">
+      <div class="plaque-inner">
+        <div class="tags">
+          <span>Government of Maharashtra</span>
+          <span>DTE Code: <b>3042</b></span>
+          <span>AICTE Permanent ID: <b>1-9442079401</b></span>
+          <span
+            >Affiliated to Dr. Babasaheb Ambedkar Technological University,
+            Lonere</span
+          >
+        </div>
+        <div class="plaque-contact">
+          <a href="mailto:office@gcoer.ac.in"
+            ><svg><use href="#i-mail" /></svg>office@gcoer.ac.in</a
+          >
+          <a href="tel:8793284358"
+            ><svg><use href="#i-phone" /></svg>8793284358</a
+          >
+        </div>
+      </div>
     </div>
-    <div class="plaque-contact">
-      <a href="mailto:office@gcoer.ac.in"><svg><use href="#i-mail"/></svg>office@gcoer.ac.in</a>
-      <a href="tel:8793284358"><svg><use href="#i-phone"/></svg>8793284358</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <img
+          src="images/lsp_logo.jpeg"
+          alt="LSPGCOER Logo"
+          class="logo-mark"
+          onerror="
+            this.replaceWith(
+              Object.assign(document.createElement('div'), {
+                className: 'logo-mark fallback',
+                innerText: 'LSP\nGCOER',
+              }),
+            )
+          "
+        />
+        <img
+          src="images/logo3.jpeg"
+          alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo"
+          class="logo-mark"
+          onerror="
+            this.replaceWith(
+              Object.assign(document.createElement('div'), {
+                className: 'logo-mark fallback',
+                innerText: 'DBATU',
+              }),
+            )
+          "
+        />
+        <div class="brand-text">
+          <div class="name-en">
+            Lokenete Shamrao Peje Government College of Engineering, Ratnagiri
+          </div>
+          <div class="name-mr">
+            लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी
+          </div>
+          <div class="name-sub">
+            An Institute of Government of Maharashtra &middot; Established 2021
+          </div>
+        </div>
+        <img
+          src="images/75_years.jpeg"
+          alt="75 Years of the Constitution of India"
+          class="logo-mark"
+          onerror="
+            this.replaceWith(
+              Object.assign(document.createElement('div'), {
+                className: 'logo-mark fallback',
+                innerText: '75 Yrs\nConstitution',
+              }),
+            )
+          "
+        />
+        <img
+          src="images/dte_logo.gif"
+          alt="Directorate of Technical Education, Maharashtra Logo"
+          class="logo-mark"
+          onerror="
+            this.replaceWith(
+              Object.assign(document.createElement('div'), {
+                className: 'logo-mark fallback',
+                innerText: 'DTE',
+              }),
+            )
+          "
+        />
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <svg id="menuIcon"><use href="#i-menu" /></svg>
+        </button>
+      </div>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <div class="nav-inner">
+          <div class="nav-scroll">
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  About Us <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="about_institute.html">About Institute</a></li>
+                  <li>
+                    <a href="Doc/Citizen%20charter%20new.pdf" target="_blank"
+                      >Draft Citizens Charter</a
+                    >
+                  </li>
+                  <li><a href="course_details.html">Course Details</a></li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  Admission <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      href="Doc/IMP%20Instructions%20about%20admission%20in%20EN3042%20for%202024-25.pdf"
+                      target="_blank"
+                      >Detailed Guidelines for Admission Process</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/Admission%20Fees%20structure%2025-26_page-0001%20.pdf"
+                      target="_blank"
+                      >Fee Structure</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf"
+                      target="_blank"
+                      >FAQ about FE/DSE Admission</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/FE-ACAP%20(25-26)IL-3042%20.docx.pdf"
+                      target="_blank"
+                      >Admission Notification Against CAP Round (First Year)
+                      25-26</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/ACAP%20(DSE-2526)%20IL%20round-3042%20.docx.pdf"
+                      target="_blank"
+                      >Admission Notification Against CAP Round (Direct Second
+                      Year) 25-26</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown open">
+                <button class="dropdown-btn" aria-expanded="true">
+                  Departments <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="AI_Dept.html"
+                      >Artificial Intelligence &amp; Data Science</a
+                    >
+                  </li>
+                  <li>
+                    <a href="Civil_Dept.html"
+                      >Civil &amp; Infrastructure Engineering</a
+                    >
+                  </li>
+                  <li>
+                    <a href="Electrical_Dept.html">Electrical Engineering</a>
+                  </li>
+                  <li>
+                    <a href="Foodtech_Dept.html"
+                      >Food Technology &amp; Management</a
+                    >
+                  </li>
+                  <li>
+                    <a href="Mechatronics_Dept.html"
+                      >Mechatronics Engineering</a
+                    >
+                  </li>
+                  <li>
+                    <a href="Mechanical_Dept.html" class="active"
+                      >Mechanical Engineering</a
+                    >
+                  </li>
+                  <li>
+                    <a href="Science_Dept.html">Science &amp; Humanities</a>
+                  </li>
+                  <li><a href="Workshop.html">Workshop Department</a></li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  Students Corner <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <span class="submenu-toggle"
+                      >Student Notices <svg><use href="#i-chevron" /></svg
+                    ></span>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          href="Doc/Student%20Notice%2025-26.pdf"
+                          target="_blank"
+                          >Notice 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/Student%20Notices-2%2025-26.pdf"
+                          target="_blank"
+                          >Notice 2</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/Gymkhana/APPLICATION%20FORM%20FOR%20NOMINATION%20TO%20GYMKHANA%20POST%2026.pdf"
+                      target="_blank"
+                      >Gymkhana Notice &amp; Application Form
+                      <span class="badge">New</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/AC_Engg_UGPG_EvenSem_AY25-26.pdf"
+                      target="_blank"
+                      >Academic Calendar 25-26</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/Academic%20calendar%20ODD%20Sem%202025%20GCOER.pdf"
+                      target="_blank"
+                      >Academic Calendar Odd Sem (Winter AY 25-26)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/LSPGCoE%20Ratnagiri%20Governance%20Manual%20for%20Students_w.e.f.%20January%2001,%202025.pdf"
+                      target="_blank"
+                      >Governance Manual</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/bonafide%20certificate%20procedure.pdf"
+                      target="_blank"
+                      >Bonafide Procedure</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/Application%20for%20Bonafide%20Certificate%20(1).pdf"
+                      target="_blank"
+                      >Application Format</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  Scholarship <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="Doc/Scholarship%20Notice.pdf" target="_blank"
+                      >Scholarship Notice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  Facilities <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="GCOER_library.html">Library</a></li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  Hostel <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#"
+                      >Girls Hostel
+                      <span class="badge muted">Not Available</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Boys Hostel
+                      <span class="badge muted">Not Available</span></a
+                    >
+                  </li>
+                  <li class="dropdown-submenu">
+                    <span class="submenu-toggle"
+                      >अल्पसंख्यांक Girls Hostel
+                      <svg><use href="#i-chevron" /></svg
+                    ></span>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="Doc/Notice%20Hostel-26.pdf" target="_blank"
+                          >Notices</a
+                        >
+                      </li>
+                      <li>
+                        <a href="Doc/Hostel%20Notice%202.pdf" target="_blank"
+                          >Notices 1 <span class="badge">Latest</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87%20%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf"
+                          target="_blank"
+                          >Admission Form</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf"
+                          target="_blank"
+                          >Rules and Regulations</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  Mandatory Disclosure <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      href="Doc/Mandatary%20disclosure%20New.pdf"
+                      target="_blank"
+                      >Mandatory Disclosure 2024-25</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/Mandatory%20Disclosure%202025-26.pdf"
+                      target="_blank"
+                      >Mandatory Disclosure 2025-26</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  UGC Compliance <span class="badge">New</span>
+                  <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      href="Doc/UGC%20compliance%20docs/UGC%20Self%20Compliance.pdf"
+                      target="_blank"
+                      >UGC Compliance</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/UGC%20compliance%20docs/IQAC%20.pdf"
+                      target="_blank"
+                      >IQAC Committee (incl. External Members)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/UGC%20compliance%20docs/Mandatory%20disclosure%20.pdf"
+                      target="_blank"
+                      >Mandatory Disclosure</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/UGC%20compliance%20docs/Int%20Comp%20Com.pdf"
+                      target="_blank"
+                      >Internal Complaint Committee</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Doc/UGC%20compliance%20docs/C-66540_AISHE_provisional-certificate_DCF.pdf"
+                      target="_blank"
+                      >AISHE Certificate</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="Doc/RTI.pdf" target="_blank">RTI</a></li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  T&amp;P <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      href="Doc/LSPGCoER_Ind_Training_and_Internship%20Policy_Complete%20Draft%20Document%20(13%20March%202025).pdf"
+                      target="_blank"
+                      >Industry Institute Interaction Policy</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
+                  AICTE EOA <svg><use href="#i-chevron" /></svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <span class="submenu-toggle"
+                      >EOA <svg><use href="#i-chevron" /></svg
+                    ></span>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          href="Doc/EOA%20and%20LOA/LOA%202021-22.PDF"
+                          target="_blank"
+                          >2021-22</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/EOA%202022-23_EOA%20GCOER.pdf"
+                          target="_blank"
+                          >2022-23</a
+                        >
+                      </li>
+                      <li>
+                        <a href="Doc/EOA%202023-24.pdf" target="_blank"
+                          >2023-24</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/EOA%20REPORT%202024-2025.pdf"
+                          target="_blank"
+                          >2024-25</a
+                        >
+                      </li>
+                      <li>
+                        <a href="Doc/EOA%20Report%202025-26.PDF" target="_blank"
+                          >2025-26</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/EOA%20Report%202026-2027.pdf"
+                          target="_blank"
+                          >2026-27</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <span class="submenu-toggle"
+                      >Affiliation <svg><use href="#i-chevron" /></svg
+                    ></span>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          href="Doc/EOA%20and%20LOA/Affiliation%202021-22.pdf"
+                          target="_blank"
+                          >2021-22</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/EOA%20and%20LOA/Affiliation%202022-23.pdf"
+                          target="_blank"
+                          >2022-23</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/EOA%20and%20LOA/Affiliation%202023-24.pdf"
+                          target="_blank"
+                          >2023-24</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/EOA%20and%20LOA/Provisional%20Affiliation%20LSPGCoER%20for%20AY%202024-25.pdf"
+                          target="_blank"
+                          >2024-25</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Doc/UGC%20compliance%20docs/3042%20Affi%20letter%202025-26%20LSPGCoE%20Ratnagiri.pdf"
+                          target="_blank"
+                          >2025-26</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="Doc/Grive.cell.pdf" target="_blank">Grievance Cell</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <img
+        class="page-hero-media"
+        src="images/college_top.png"
+        alt="LSPGCOER Ratnagiri campus"
+        loading="eager"
+        onerror="this.style.display = 'none'"
+      />
+      <div class="page-hero-inner">
+        <p class="breadcrumb">
+          <a href="index.html">Home</a
+          ><svg style="width: 11px; height: 11px"><use href="#i-chevron" /></svg
+          ><span>Departments</span
+          ><svg style="width: 11px; height: 11px"><use href="#i-chevron" /></svg
+          ><span style="color: var(--gold-bright)">Mechanical Engineering</span>
+        </p>
+        <h1>Department of Mechanical Engineering</h1>
+        <p class="lede">
+          B.Tech in Mechanical Engineering at Loknete Shamrao Peje Government
+          College of Engineering, Ratnagiri.
+        </p>
+        <a class="hero-mail" href="mailto:hod.mechanical@gcoer.ac.in"
+          ><svg><use href="#i-mail" /></svg>hod.mechanical@gcoer.ac.in</a
+        >
+      </div>
+    </section>
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 44" preserveAspectRatio="none">
+        <path
+          d="M0,24 C240,44 480,0 720,14 C960,28 1200,6 1440,20 L1440,44 L0,44 Z"
+          fill="var(--paper)"
+        />
+      </svg>
     </div>
-  </div>
-</div>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <img src="images/lsp_logo.jpeg" alt="LSPGCOER Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP\nGCOER'}))">
-    <img src="images/logo3.jpeg" alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DBATU'}))">
-    <div class="brand-text">
-      <div class="name-en">Lokenete Shamrao Peje Government College of Engineering, Ratnagiri</div>
-      <div class="name-mr">लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी</div>
-      <div class="name-sub">An Institute of Government of Maharashtra &middot; Established 2021</div>
-    </div>
-    <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
-    <img src="images/dte_logo.gif" alt="Directorate of Technical Education, Maharashtra Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DTE'}))">
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <svg id="menuIcon"><use href="#i-menu"/></svg>
-    </button>
-  </div>
+    <!-- ============ MAIN CONTENT ============ -->
+    <main id="main-content">
+      <div class="wrap">
+        <div class="dept-grid">
+          <!-- SIDEBAR TABS (desktop) -->
+          <aside class="dept-side">
+            <div class="ds-head">Department Menu</div>
+            <div class="dept-tab-list" id="deptTabList">
+              <button class="dept-tab-btn active" data-tab="aboutdept">
+                <svg width="15" height="15"><use href="#i-book" /></svg>&nbsp;
+                About Department
+              </button>
+              <button class="dept-tab-btn" data-tab="hod">
+                <svg width="15" height="15"><use href="#i-user" /></svg>&nbsp;
+                HOD's Desk
+              </button>
+              <button class="dept-tab-btn" data-tab="visionandmission">
+                <svg width="15" height="15"><use href="#i-target" /></svg>&nbsp;
+                Vision &amp; Mission
+              </button>
+              <button class="dept-tab-btn" data-tab="peosandpsos">
+                <svg width="15" height="15"><use href="#i-flag" /></svg>&nbsp;
+                PEO's &amp; PSO's
+              </button>
+              <button class="dept-tab-btn" data-tab="faculty">
+                <svg width="15" height="15"><use href="#i-users" /></svg>&nbsp;
+                Faculty &amp; Staff
+              </button>
+              <button class="dept-tab-btn" data-tab="Laboratory">
+                <svg width="15" height="15"><use href="#i-flask" /></svg>&nbsp;
+                Laboratory Details
+              </button>
+              <button class="dept-tab-btn" data-tab="newsandevents">
+                <svg width="15" height="15"><use href="#i-newspaper" /></svg
+                >&nbsp; News &amp; Events
+              </button>
+              <button class="dept-tab-btn" data-tab="syllabus_comp">
+                <svg width="15" height="15"><use href="#i-file" /></svg>&nbsp;
+                Syllabus (Old)
+              </button>
+              <button class="dept-tab-btn" data-tab="syllabus_new">
+                <svg width="15" height="15"><use href="#i-file" /></svg>&nbsp;
+                Syllabus (NEP-2020)
+              </button>
+              <button class="dept-tab-btn" data-tab="academic">
+                <svg width="15" height="15"><use href="#i-calendar" /></svg
+                >&nbsp; Academic Calendar
+              </button>
+              <button class="dept-tab-btn" data-tab="time_table">
+                <svg width="15" height="15"><use href="#i-clock" /></svg>&nbsp;
+                Time-Table
+              </button>
+            </div>
+          </aside>
 
-  <nav class="main-nav" id="mainNav" aria-label="Primary">
-    <div class="nav-inner">
-      <div class="nav-scroll">
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
+          <!-- MAIN PANELS -->
+          <div>
+            <!-- MOBILE TAB PILLS -->
+            <div class="dept-side-mobile" id="deptTabListMobile"></div>
 
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">About Us <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
+            <!-- ABOUT DEPARTMENT -->
+            <div class="dept-panel active" id="panel-aboutdept">
+              <p class="eyebrow">Department</p>
+              <h2 style="margin-top: 0.5rem">
+                About the Department of Mechanical Engineering
+              </h2>
+              <p>
+                Welcome to the Department of Mechanical Engineering, Loknete
+                Shamrao Peje Government College of Engineering, Ratnagiri.
+                Mechanical Engineering is one of the oldest and broadest
+                engineering disciplines, dealing with the design, analysis,
+                manufacturing, and maintenance of mechanical systems. It plays a
+                vital role in industries such as automobile, energy,
+                manufacturing, aerospace and more, driving innovation and
+                industrial growth.
+              </p>
+
+              <h3>Why Choose Mechanical Engineering?</h3>
+              <p>
+                Choosing Mechanical Engineering is an excellent decision for
+                those interested in a versatile and evergreen career. This core
+                engineering field combines principles of thermodynamics,
+                mechanics, materials science, and manufacturing, allowing
+                graduates to design and build everything from small components
+                to large machines and power plants. With consistent demand
+                across manufacturing, automobile, energy and infrastructure
+                sectors, mechanical engineers are well-equipped for exciting
+                career opportunities and competitive salaries. This discipline
+                fosters strong analytical and problem-solving skills, enabling
+                engineers to contribute to sustainable and efficient engineering
+                solutions.
+              </p>
+
+              <h3>Our B.Tech Program</h3>
+              <p>
+                Our B.Tech Mechanical Engineering program covers a broad
+                spectrum of topics, including thermal engineering, design of
+                machine elements, manufacturing processes, CAD/CAM, and
+                industrial engineering. Mechanical engineering is a core
+                discipline that combines principles from thermodynamics, fluid
+                mechanics, machine design, manufacturing and materials science
+                to design, develop and maintain mechanical systems. The program
+                has numerous applications across various industries, including
+                automotive, aerospace, energy, manufacturing, and consumer
+                goods, and is designed not just to impart knowledge, but also to
+                develop well-rounded professionals ready to excel in the dynamic
+                field of mechanical engineering.
+              </p>
+
+              <ul class="bullets">
+                <li>
+                  <b>Design Engineering:</b> Mechanical engineers design machine
+                  components and systems that are safe, efficient and reliable
+                  using tools like CAD and FEA.
+                </li>
+                <li>
+                  <b>Manufacturing &amp; Production:</b> Mechanical engineering
+                  plays a crucial role in manufacturing processes, production
+                  planning and quality control across industries.
+                </li>
+                <li>
+                  <b>Thermal &amp; Energy Systems:</b> Mechanical engineers work
+                  on thermal systems like engines, turbines, refrigeration and
+                  HVAC systems for various applications.
+                </li>
+                <li>
+                  <b>Automation &amp; Robotics:</b> Mechanical engineers
+                  contribute to automation systems and robotics used in
+                  industrial and manufacturing processes.
+                </li>
+              </ul>
+
+              <h3>Career Opportunities</h3>
+              <p>
+                Mechanical Engineering graduates have a wide range of career
+                opportunities due to the versatile nature of the field,
+                including:
+              </p>
+              <ul class="bullets">
+                <li>Design Engineer</li>
+                <li>Production/Manufacturing Engineer</li>
+                <li>Quality Control Engineer</li>
+                <li>Maintenance Engineer</li>
+                <li>Automobile Engineer</li>
+                <li>Thermal/Energy Engineer</li>
+                <li>Research and Development Engineer</li>
+                <li>Project Engineer</li>
+                <li>Consulting Engineer</li>
+                <li>Sales/Application Engineer</li>
+              </ul>
+            </div>
+
+            <!-- HOD'S DESK -->
+            <div class="dept-panel" id="panel-hod">
+              <p class="eyebrow">Leadership</p>
+              <h2 style="margin-top: 0.5rem">Message from the HOD</h2>
+              <div class="hod-card">
+                <div class="hod-photo-wrap">
+                  <img
+                    class="hod-photo"
+                    src="images/Staff_Photos/HOD_Mechanical.jpeg"
+                    alt="HOD Mechanical Engineering"
+                  />
+                  <span class="hod-name">Head of Department</span>
+                  <span class="hod-role">Mechanical Engineering</span>
+                </div>
+                <div>
+                  <p style="margin-top: 0">
+                    <b>Welcome to the Department of Mechanical Engineering</b>
+                  </p>
+                  <p>
+                    I hope this message finds you well. As we progress through
+                    another exciting semester in the Mechanical Engineering
+                    Department, I want to take a moment to reflect on our shared
+                    journey and the road ahead.
+                  </p>
+                  <p>
+                    Mechanical Engineering remains the backbone of the
+                    engineering industry, and our mission is to equip you with
+                    the knowledge and skills necessary to thrive in this dynamic
+                    field. We are committed to providing a comprehensive
+                    curriculum that integrates design, thermal, manufacturing
+                    and industrial engineering, ensuring that you are
+                    well-prepared for the challenges and opportunities that lie
+                    ahead.
+                  </p>
+                  <p>
+                    This semester, we have introduced several new initiatives
+                    aimed at enhancing your learning experience. Workshops with
+                    industry leaders, hands-on projects, and collaborative
+                    research opportunities are just a few examples of how we aim
+                    to bridge the gap between theory and practical application.
+                    I encourage all of you to actively participate and take
+                    advantage of these resources.
+                  </p>
+                  <p>
+                    Additionally, please remember that your feedback is
+                    invaluable. We are continually seeking ways to improve our
+                    programs and support your academic and professional growth.
+                    Do not hesitate to reach out to your professors or me
+                    directly with any suggestions or concerns.
+                  </p>
+                  <p>
+                    Let's continue to foster a culture of innovation,
+                    collaboration, and excellence within our department. I am
+                    excited about the creativity and talent each of you brings
+                    and look forward to seeing the remarkable contributions you
+                    will make to the field of Mechanical Engineering.
+                  </p>
+                  <div class="sign-block">
+                    <p style="margin-top: 0"><b>Warm regards,</b></p>
+                    <p style="margin-top: 0.3rem">
+                      <b>Head of Department</b><br />Department of Mechanical
+                      Engineering<br />Loknete Shamrao Peje Government College
+                      of Engineering, Ratnagiri
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- VISION AND MISSION -->
+            <div class="dept-panel" id="panel-visionandmission">
+              <p class="eyebrow">Direction</p>
+              <h2 style="margin-top: 0.5rem">Vision &amp; Mission</h2>
+              <div class="vm-block">
+                <h3 style="color: var(--gold)">Vision</h3>
+                <p>
+                  The vision of the department is to achieve excellence in
+                  teaching, learning, research and transfer of technology and
+                  overall development of students in the field of Mechanical
+                  Engineering.
+                </p>
+              </div>
+              <div class="vm-block" style="margin-top: 1.25rem">
+                <h3 style="color: var(--gold)">Mission</h3>
+                <p>
+                  Imparting quality education, looking after holistic
+                  development of students and conducting need based research and
+                  extension in the domain of Mechanical Engineering.
+                </p>
+              </div>
+            </div>
+
+            <!-- PEO'S AND PSO'S -->
+            <div class="dept-panel" id="panel-peosandpsos">
+              <p class="eyebrow">Outcomes</p>
+              <h2 style="margin-top: 0.5rem">PEO's &amp; PSO's</h2>
+              <div class="doc-image-stack">
+                <img
+                  src="images/PEO Mechanical.png"
+                  alt="Programme Educational Objectives - Mechanical"
+                />
+                <img
+                  src="images/POs Mechanical.png"
+                  alt="Programme Outcomes - Mechanical"
+                />
+              </div>
+            </div>
+
+            <!-- FACULTY -->
+            <div class="dept-panel" id="panel-faculty">
+              <p class="eyebrow">People</p>
+              <h2 style="margin-top: 0.5rem">Meet the Faculties</h2>
+              <p>
+                At Loknete Shamrao Peje Government College of Engineering,
+                Ratnagiri (GCOER), the Department of Mechanical Engineering is
+                proud to have a dedicated and talented team of faculty members.
+                They are well-qualified, experienced, and passionate about
+                teaching. Our faculty stay updated with the latest advancements
+                in Mechanical Engineering. Our teachers are not only highly
+                qualified and experienced but also deeply committed to student
+                learning, ensuring every student gets the guidance and support
+                they need to succeed.
+              </p>
+
+              <h3 class="fac-section-title">Visiting Faculties</h3>
+              <div class="fac-grid">
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/Mr. R. K. Aambekar.png"
+                    alt="Mr. R. K. Aambekar"
+                  />
+                  <h4>Mr. R. K. Aambekar</h4>
+                  <p class="fac-role">Visiting Faculty</p>
+                  <a
+                    class="fac-resume"
+                    href="Doc/staff resume/Faculty1 Resume.pdf"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </div>
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/Mrs. S. S. Kulkarni.jpg"
+                    alt="Mrs. S. S. Kulkarni"
+                  />
+                  <h4>Mrs. S. S. Kulkarni</h4>
+                  <p class="fac-role">Visiting Faculty</p>
+                  <a
+                    class="fac-resume"
+                    href="Doc/staff resume/Faculty2 Resume.pdf"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </div>
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/Mr. C. R. Jadhav.jpg"
+                    alt="Mr. C. R. Jadhav"
+                  />
+                  <h4>Mr. C. R. Jadhav</h4>
+                  <p class="fac-role">Visiting Faculty</p>
+                  <a
+                    class="fac-resume"
+                    href="Doc/staff resume/Faculty3 Resume.pdf"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </div>
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/E. Devipriya.jpg"
+                    alt="E. Devipriya"
+                  />
+                  <h4>E. Devipriya</h4>
+                  <p class="fac-role">Visiting Faculty</p>
+                  <a
+                    class="fac-resume"
+                    href="Doc/staff resume/Faculty3 Resume.pdf"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </div>
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/Miss. R. R. MUKADAM.jpg"
+                    alt="Miss. R. R. MUKADAM"
+                  />
+                  <h4>Miss. R. R. MUKADAM</h4>
+                  <p class="fac-role">Visiting Faculty</p>
+                  <a
+                    class="fac-resume"
+                    href="Doc/staff resume/Faculty3 Resume.pdf"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </div>
+              </div>
+
+              <h3 class="fac-section-title">Contractual Staff</h3>
+              <div class="fac-grid">
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/person.png"
+                    alt="Technical Lab Assistant 1"
+                  />
+                  <h4>Technical Lab Assistant 1</h4>
+                  <p class="fac-role">Technical Lab Assistant</p>
+                </div>
+                <div class="fac-card">
+                  <img
+                    class="fac-photo"
+                    src="images/Staff_Photos/person.png"
+                    alt="Technical Lab Assistant 2"
+                  />
+                  <h4>Technical Lab Assistant 2</h4>
+                  <p class="fac-role">Technical Lab Assistant</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- LABORATORY -->
+            <div class="dept-panel" id="panel-Laboratory">
+              <p class="eyebrow">Infrastructure</p>
+              <h2 style="margin-top: 0.5rem">Laboratory Details</h2>
+              <h3>Equipment List</h3>
+              <div class="lab-slider-wrap">
+                <img
+                  src="images/DSR Mechanical.png"
+                  alt="Mechanical Engineering Laboratory Equipment List"
+                />
+              </div>
+            </div>
+
+            <!-- NEWS AND EVENTS -->
+            <div class="dept-panel" id="panel-newsandevents">
+              <p class="eyebrow">Updates</p>
+              <h2 style="margin-top: 0.5rem">News &amp; Events</h2>
+              <div class="news-grid">
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder1.jpeg"
+                      alt="Youth Event 24-25"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">12 January 2026</p>
+                    <h4>Youth Event 24-25</h4>
+                    <p>
+                      A Mechatronics Department arranged a Youth Event. 24-25
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=youthevent2425"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder2.jpeg"
+                      alt="Guest Lecture On data Mine's"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">6 November 2025</p>
+                    <h4>Guest Lecture On data Mine's</h4>
+                    <p>
+                      A vibrant exchange of ideas during the annual Debate
+                      Competition with 10 teams from SY and TY Mechatronics.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=datamines2025"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder3.png"
+                      alt="Project Exhibition"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">19 November 2025</p>
+                    <h4>Project Exhibition</h4>
+                    <p>
+                      Showcasing innovative and industry oriented project with
+                      practical applications developed by graduating students.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=projectex2025"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder4.png"
+                      alt="Brain Battle Quiz"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">5 June 2025</p>
+                    <h4>Brain Battle Quiz</h4>
+                    <p>
+                      An intense quiz competition with 30 teams, testing
+                      technical and non-technical knowledge through rigorous
+                      rounds.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=brainbattlequiz2025"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder5.png"
+                      alt="Debate Competition"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">28 March 2025</p>
+                    <h4>Debate Competition</h4>
+                    <p>
+                      A vibrant exchange of ideas during the annual Debate
+                      Competition with 10 teams from SY and TY Mechatronics.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=debatecompetition2025"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder6.jpeg"
+                      alt="Hands-On Training 2024-25"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">6 December 2024</p>
+                    <h4>Hands-On Training 2024-25</h4>
+                    <p>
+                      Hands-On Training Program: Students engage in practical
+                      training with advanced tools and systems.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=handsontraining2425"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder8.jpeg"
+                      alt="Project Exhibition 2024-25"
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">11 December 2024</p>
+                    <h4>Project Exhibition 2024-25</h4>
+                    <p>
+                      The Mechatronics department organized a project exhibition
+                      showcasing student innovations and achievements.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=projectex2425"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-thumb">
+                    <img
+                      src="images/events/Mecha_Placeholder7.jpg"
+                      alt="Industrial Visit to Finolex Pipes &amp; Fittings, Rtn."
+                    />
+                  </div>
+                  <div class="news-body">
+                    <p class="news-date">6 December 2025</p>
+                    <h4>
+                      Industrial Visit to Finolex Pipes &amp; Fittings, Rtn.
+                    </h4>
+                    <p>
+                      The Dept. of Mechatronics of LSPGCoE, Rtn., in
+                      collaboration with the Mechatronics Students Association
+                      (MXSA), organized an industrial visit to Finolex Pipes
+                      &amp; Fittings, Rtn. on 6 December 2025. The visit was
+                      conducted under the guidance of HOD S. G. Akojwar,
+                      accompanied by Prof. V. S. Jadhav, Mr. C. R. Jadhav, and
+                      Mrs. Devi Priya, who supported and supervised the students
+                      throughout the program.
+                    </p>
+                    <a
+                      class="news-readmore"
+                      href="mecha_event.html?id=finolexvisit2025"
+                      >Read more &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- SYLLABUS OLD -->
+            <div class="dept-panel" id="panel-syllabus_comp">
+              <p class="eyebrow">Curriculum</p>
+              <h2 style="margin-top: 0.5rem">Syllabus (Old)</h2>
+
+              <h3>Second Year</h3>
+              <div class="embed-wrap">
+                <embed
+                  src="Syllabus/BTech-mechanical_-second-year.pdf"
+                  type="application/pdf"
+                />
+              </div>
+
+              <h3>Third Year</h3>
+              <div class="embed-wrap">
+                <embed
+                  src="Syllabus/BTech-mechanical_-third-year.pdf"
+                  type="application/pdf"
+                />
+              </div>
+
+              <h3>Final Year</h3>
+              <div class="embed-wrap">
+                <embed
+                  src="Syllabus/Btech-mechanical-final-year.pdf"
+                  type="application/pdf"
+                />
+              </div>
+            </div>
+
+            <!-- SYLLABUS NEP-2020 -->
+            <div class="dept-panel" id="panel-syllabus_new">
+              <p class="eyebrow">Curriculum</p>
+              <h2 style="margin-top: 0.5rem">Syllabus (NEP-2020)</h2>
+
+              <h3>Second Year</h3>
+              <div class="embed-wrap">
+                <embed
+                  src="Syllabus/Mecha 25-26/AF_Syllabus_Second Year B. Tech Mechanical Engineering_2025-26.pdf"
+                  type="application/pdf"
+                />
+              </div>
+            </div>
+
+            <!-- ACADEMIC CALENDAR -->
+            <div class="dept-panel" id="panel-academic">
+              <p class="eyebrow">Schedule</p>
+              <h2 style="margin-top: 0.5rem">Academic Calendar</h2>
+
+              <div class="cal-block">
+                <h3>Academic Calendar Odd Sem (Winter AY 25-26)</h3>
+                <img
+                  src="images/Academic calendar ODD Sem 2025 GCOER_page-1.jpg"
+                  alt="Academic Calendar Odd Sem Winter AY 25-26"
+                />
+              </div>
+
+              <div class="cal-block">
+                <h3>Academic Calendar</h3>
+                <img
+                  src="images/AC_Engg_UGPG_OddSem_AY25-26_page-0001.jpg"
+                  alt="Academic Calendar Odd Sem AY25-26"
+                />
+                <img
+                  src="images/AC_Engg_UGPG_EvenSem_AY25-26_page-0002.jpg"
+                  alt="Academic Calendar Even Sem AY25-26"
+                  style="margin-top: 1rem"
+                />
+              </div>
+            </div>
+
+            <!-- TIME TABLE -->
+            <div class="dept-panel" id="panel-time_table">
+              <p class="eyebrow">Schedule</p>
+              <h2 style="margin-top: 0.5rem">Time-Table</h2>
+              <div class="cal-block">
+                <img
+                  src="TimeTable/TT Mechanical for Even Sem Summer 25-26.png"
+                  alt="Mechanical Time-Table Even Sem Summer 25-26"
+                />
+              </div>
+              <div class="tt-download">
+                <a
+                  class="btn btn-primary"
+                  href="TimeTable/TT Mechanical for Even Summer 2025-26.pdf"
+                  download="time_table.pdf"
+                  ><svg><use href="#i-download" /></svg>Download PDF</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap" style="padding-bottom: clamp(2rem, 4vw, 3.5rem)">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          "
+        >
+          <a href="index.html" class="btn btn-ghost">Back to Home</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img
+            src="images/lsp_logo.jpeg"
+            alt="LSPGCOER Logo"
+            class="logo-mark"
+            style="border-radius: 50%"
+            onerror="
+              this.replaceWith(
+                Object.assign(document.createElement('div'), {
+                  className: 'logo-mark fallback',
+                  innerText: 'LSP',
+                }),
+              )
+            "
+          />
+          <div>
+            <h4>LSPGCOER, Ratnagiri</h4>
+            <p>
+              Near Thiba Palace Road, Ratnagiri &ndash; 415612, Maharashtra. An
+              institute of Government of Maharashtra, affiliated to DBATU,
+              Lonere.
+            </p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
             <li><a href="about_institute.html">About Institute</a></li>
-            <li><a href="Doc/Citizen%20charter%20new.pdf" target="_blank">Draft Citizens Charter</a></li>
             <li><a href="course_details.html">Course Details</a></li>
+            <li><a href="index.html#admission">Admission</a></li>
+            <li><a href="index.html#facilities">Departments</a></li>
           </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">Admission <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="Doc/IMP%20Instructions%20about%20admission%20in%20EN3042%20for%202024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
-            <li><a href="Doc/Admission%20Fees%20structure%2025-26_page-0001%20.pdf" target="_blank">Fee Structure</a></li>
-            <li><a href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
-            <li><a href="Doc/FE-ACAP%20(25-26)IL-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
-            <li><a href="Doc/ACAP%20(DSE-2526)%20IL%20round-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown open">
-          <button class="dropdown-btn" aria-expanded="true">Departments <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="AI_Dept.html">Artificial Intelligence &amp; Data Science</a></li>
-            <li><a href="Civil_Dept.html">Civil &amp; Infrastructure Engineering</a></li>
-            <li><a href="Electrical_Dept.html">Electrical Engineering</a></li>
-            <li><a href="Foodtech_Dept.html">Food Technology &amp; Management</a></li>
-            <li><a href="Mechatronics_Dept.html">Mechatronics Engineering</a></li>
-            <li><a href="Mechanical_Dept.html" class="active">Mechanical Engineering</a></li>
-            <li><a href="Science_Dept.html">Science &amp; Humanities</a></li>
-            <li><a href="Workshop.html">Workshop Department</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">Students Corner <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li class="dropdown-submenu">
-              <span class="submenu-toggle">Student Notices <svg><use href="#i-chevron"/></svg></span>
-              <ul class="dropdown-menu">
-                <li><a href="Doc/Student%20Notice%2025-26.pdf" target="_blank">Notice 1</a></li>
-                <li><a href="Doc/Student%20Notices-2%2025-26.pdf" target="_blank">Notice 2</a></li>
-              </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://www.gcoer.ac.in/Doc/RTI.pdf">RTI</a></li>
+            <li>
+              <a href="https://www.gcoer.ac.in/Doc/Grive.cell.pdf"
+                >Grievance Cell</a
+              >
             </li>
-            <li><a href="Doc/Gymkhana/APPLICATION%20FORM%20FOR%20NOMINATION%20TO%20GYMKHANA%20POST%2026.pdf" target="_blank">Gymkhana Notice &amp; Application Form <span class="badge">New</span></a></li>
-            <li><a href="Doc/AC_Engg_UGPG_EvenSem_AY25-26.pdf" target="_blank">Academic Calendar 25-26</a></li>
-            <li><a href="Doc/Academic%20calendar%20ODD%20Sem%202025%20GCOER.pdf" target="_blank">Academic Calendar Odd Sem (Winter AY 25-26)</a></li>
-            <li><a href="Doc/LSPGCoE%20Ratnagiri%20Governance%20Manual%20for%20Students_w.e.f.%20January%2001,%202025.pdf" target="_blank">Governance Manual</a></li>
-            <li><a href="Doc/bonafide%20certificate%20procedure.pdf" target="_blank">Bonafide Procedure</a></li>
-            <li><a href="Doc/Application%20for%20Bonafide%20Certificate%20(1).pdf" target="_blank">Application Format</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">Scholarship <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="Doc/Scholarship%20Notice.pdf" target="_blank">Scholarship Notice</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">Facilities <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="GCOER_library.html">Library</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">Hostel <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Girls Hostel <span class="badge muted">Not Available</span></a></li>
-            <li><a href="#">Boys Hostel <span class="badge muted">Not Available</span></a></li>
-            <li class="dropdown-submenu">
-              <span class="submenu-toggle">अल्पसंख्यांक Girls Hostel <svg><use href="#i-chevron"/></svg></span>
-              <ul class="dropdown-menu">
-                <li><a href="Doc/Notice%20Hostel-26.pdf" target="_blank">Notices</a></li>
-                <li><a href="Doc/Hostel%20Notice%202.pdf" target="_blank">Notices 1 <span class="badge">Latest</span></a></li>
-                <li><a href="Doc/%E0%A4%85%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%9A%E0%A5%87%20%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C.pdf" target="_blank">Admission Form</a></li>
-                <li><a href="Doc/%E0%A4%B5%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE.pdf" target="_blank">Rules and Regulations</a></li>
-              </ul>
+            <li>
+              <a
+                href="https://dte.maharashtra.gov.in/"
+                target="_blank"
+                rel="noopener"
+                >DTE Maharashtra</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://cetcell.mahacet.org/"
+                target="_blank"
+                rel="noopener"
+                >CET Cell</a
+              >
             </li>
           </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">Mandatory Disclosure <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="Doc/Mandatary%20disclosure%20New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
-            <li><a href="Doc/Mandatory%20Disclosure%202025-26.pdf" target="_blank">Mandatory Disclosure 2025-26</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">UGC Compliance <span class="badge">New</span> <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="Doc/UGC%20compliance%20docs/UGC%20Self%20Compliance.pdf" target="_blank">UGC Compliance</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/IQAC%20.pdf" target="_blank">IQAC Committee (incl. External Members)</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/Mandatory%20disclosure%20.pdf" target="_blank">Mandatory Disclosure</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/Int%20Comp%20Com.pdf" target="_blank">Internal Complaint Committee</a></li>
-            <li><a href="Doc/UGC%20compliance%20docs/C-66540_AISHE_provisional-certificate_DCF.pdf" target="_blank">AISHE Certificate</a></li>
-          </ul>
-        </li>
-
-        <li><a href="Doc/RTI.pdf" target="_blank">RTI</a></li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">T&amp;P <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li><a href="Doc/LSPGCoER_Ind_Training_and_Internship%20Policy_Complete%20Draft%20Document%20(13%20March%202025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
-          </ul>
-        </li>
-
-        <li class="has-dropdown">
-          <button class="dropdown-btn" aria-expanded="false">AICTE EOA <svg><use href="#i-chevron"/></svg></button>
-          <ul class="dropdown-menu">
-            <li class="dropdown-submenu">
-              <span class="submenu-toggle">EOA <svg><use href="#i-chevron"/></svg></span>
-              <ul class="dropdown-menu">
-                <li><a href="Doc/EOA%20and%20LOA/LOA%202021-22.PDF" target="_blank">2021-22</a></li>
-                <li><a href="Doc/EOA%202022-23_EOA%20GCOER.pdf" target="_blank">2022-23</a></li>
-                <li><a href="Doc/EOA%202023-24.pdf" target="_blank">2023-24</a></li>
-                <li><a href="Doc/EOA%20REPORT%202024-2025.pdf" target="_blank">2024-25</a></li>
-                <li><a href="Doc/EOA%20Report%202025-26.PDF" target="_blank">2025-26</a></li>
-                <li><a href="Doc/EOA%20Report%202026-2027.pdf" target="_blank">2026-27</a></li>
-              </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li>
+              <a href="mailto:principal@gcoer.ac.in">principal@gcoer.ac.in</a>
             </li>
-            <li class="dropdown-submenu">
-              <span class="submenu-toggle">Affiliation <svg><use href="#i-chevron"/></svg></span>
-              <ul class="dropdown-menu">
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202021-22.pdf" target="_blank">2021-22</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202022-23.pdf" target="_blank">2022-23</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Affiliation%202023-24.pdf" target="_blank">2023-24</a></li>
-                <li><a href="Doc/EOA%20and%20LOA/Provisional%20Affiliation%20LSPGCoER%20for%20AY%202024-25.pdf" target="_blank">2024-25</a></li>
-                <li><a href="Doc/UGC%20compliance%20docs/3042%20Affi%20letter%202025-26%20LSPGCoE%20Ratnagiri.pdf" target="_blank">2025-26</a></li>
-              </ul>
+            <li><a href="mailto:office@gcoer.ac.in">office@gcoer.ac.in</a></li>
+            <li>
+              <a href="mailto:hod.mechanical@gcoer.ac.in"
+                >hod.mechanical@gcoer.ac.in</a
+              >
             </li>
+            <li><a href="tel:8793284358">8793284358</a></li>
           </ul>
-        </li>
-
-        <li><a href="Doc/Grive.cell.pdf" target="_blank">Grievance Cell</a></li>
-      </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
-
-<!-- ============ PAGE HERO ============ -->
-<section class="page-hero">
-  <img class="page-hero-media" src="images/college_top.png" alt="LSPGCOER Ratnagiri campus" loading="eager" onerror="this.style.display='none'">
-  <div class="page-hero-inner">
-    <p class="breadcrumb"><a href="index.html">Home</a><svg style="width:11px;height:11px"><use href="#i-chevron"/></svg><span>Departments</span><svg style="width:11px;height:11px"><use href="#i-chevron"/></svg><span style="color:var(--gold-bright)">Mechanical Engineering</span></p>
-    <h1>Department of Mechanical Engineering</h1>
-    <p class="lede">B.Tech in Mechanical Engineering at Loknete Shamrao Peje Government College of Engineering, Ratnagiri.</p>
-    <a class="hero-mail" href="mailto:hod.mechanical@gcoer.ac.in"><svg><use href="#i-mail"/></svg>hod.mechanical@gcoer.ac.in</a>
-  </div>
-</section>
-<div class="wave-divider">
-  <svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,24 C240,44 480,0 720,14 C960,28 1200,6 1440,20 L1440,44 L0,44 Z" fill="var(--paper)"/></svg>
-</div>
-
-<!-- ============ MAIN CONTENT ============ -->
-<main id="main-content">
-  <div class="wrap">
-    <div class="dept-grid">
-
-      <!-- SIDEBAR TABS (desktop) -->
-      <aside class="dept-side">
-        <div class="ds-head">Department Menu</div>
-        <div class="dept-tab-list" id="deptTabList">
-          <button class="dept-tab-btn active" data-tab="aboutdept"><svg width="15" height="15"><use href="#i-book"/></svg>&nbsp; About Department</button>
-          <button class="dept-tab-btn" data-tab="hod"><svg width="15" height="15"><use href="#i-user"/></svg>&nbsp; HOD's Desk</button>
-          <button class="dept-tab-btn" data-tab="visionandmission"><svg width="15" height="15"><use href="#i-target"/></svg>&nbsp; Vision &amp; Mission</button>
-          <button class="dept-tab-btn" data-tab="peosandpsos"><svg width="15" height="15"><use href="#i-flag"/></svg>&nbsp; PEO's &amp; PSO's</button>
-          <button class="dept-tab-btn" data-tab="faculty"><svg width="15" height="15"><use href="#i-users"/></svg>&nbsp; Faculty &amp; Staff</button>
-          <button class="dept-tab-btn" data-tab="Laboratory"><svg width="15" height="15"><use href="#i-flask"/></svg>&nbsp; Laboratory Details</button>
-          <button class="dept-tab-btn" data-tab="newsandevents"><svg width="15" height="15"><use href="#i-newspaper"/></svg>&nbsp; News &amp; Events</button>
-          <button class="dept-tab-btn" data-tab="syllabus_comp"><svg width="15" height="15"><use href="#i-file"/></svg>&nbsp; Syllabus (Old)</button>
-          <button class="dept-tab-btn" data-tab="syllabus_new"><svg width="15" height="15"><use href="#i-file"/></svg>&nbsp; Syllabus (NEP-2020)</button>
-          <button class="dept-tab-btn" data-tab="academic"><svg width="15" height="15"><use href="#i-calendar"/></svg>&nbsp; Academic Calendar</button>
-          <button class="dept-tab-btn" data-tab="time_table"><svg width="15" height="15"><use href="#i-clock"/></svg>&nbsp; Time-Table</button>
-        </div>
-      </aside>
-
-      <!-- MAIN PANELS -->
-      <div>
-        <!-- MOBILE TAB PILLS -->
-        <div class="dept-side-mobile" id="deptTabListMobile"></div>
-
-        <!-- ABOUT DEPARTMENT -->
-        <div class="dept-panel active" id="panel-aboutdept">
-          <p class="eyebrow">Department</p>
-          <h2 style="margin-top:.5rem">About the Department of Mechanical Engineering</h2>
-          <p>Welcome to the Department of Mechanical Engineering, Loknete Shamrao Peje Government College of Engineering, Ratnagiri. Mechanical Engineering is one of the oldest and broadest engineering disciplines, dealing with the design, analysis, manufacturing, and maintenance of mechanical systems. It plays a vital role in industries such as automobile, energy, manufacturing, aerospace and more, driving innovation and industrial growth.</p>
-
-          <h3>Why Choose Mechanical Engineering?</h3>
-          <p>Choosing Mechanical Engineering is an excellent decision for those interested in a versatile and evergreen career. This core engineering field combines principles of thermodynamics, mechanics, materials science, and manufacturing, allowing graduates to design and build everything from small components to large machines and power plants. With consistent demand across manufacturing, automobile, energy and infrastructure sectors, mechanical engineers are well-equipped for exciting career opportunities and competitive salaries. This discipline fosters strong analytical and problem-solving skills, enabling engineers to contribute to sustainable and efficient engineering solutions.</p>
-
-          <h3>Our B.Tech Program</h3>
-          <p>Our B.Tech Mechanical Engineering program covers a broad spectrum of topics, including thermal engineering, design of machine elements, manufacturing processes, CAD/CAM, and industrial engineering. Mechanical engineering is a core discipline that combines principles from thermodynamics, fluid mechanics, machine design, manufacturing and materials science to design, develop and maintain mechanical systems. The program has numerous applications across various industries, including automotive, aerospace, energy, manufacturing, and consumer goods, and is designed not just to impart knowledge, but also to develop well-rounded professionals ready to excel in the dynamic field of mechanical engineering.</p>
-
-          <ul class="bullets">
-            <li><b>Design Engineering:</b> Mechanical engineers design machine components and systems that are safe, efficient and reliable using tools like CAD and FEA.</li>
-            <li><b>Manufacturing &amp; Production:</b> Mechanical engineering plays a crucial role in manufacturing processes, production planning and quality control across industries.</li>
-            <li><b>Thermal &amp; Energy Systems:</b> Mechanical engineers work on thermal systems like engines, turbines, refrigeration and HVAC systems for various applications.</li>
-            <li><b>Automation &amp; Robotics:</b> Mechanical engineers contribute to automation systems and robotics used in industrial and manufacturing processes.</li>
-          </ul>
-
-          <h3>Career Opportunities</h3>
-          <p>Mechanical Engineering graduates have a wide range of career opportunities due to the versatile nature of the field, including:</p>
-          <ul class="bullets">
-            <li>Design Engineer</li>
-            <li>Production/Manufacturing Engineer</li>
-            <li>Quality Control Engineer</li>
-            <li>Maintenance Engineer</li>
-            <li>Automobile Engineer</li>
-            <li>Thermal/Energy Engineer</li>
-            <li>Research and Development Engineer</li>
-            <li>Project Engineer</li>
-            <li>Consulting Engineer</li>
-            <li>Sales/Application Engineer</li>
-          </ul>
-        </div>
-
-        <!-- HOD'S DESK -->
-        <div class="dept-panel" id="panel-hod">
-          <p class="eyebrow">Leadership</p>
-          <h2 style="margin-top:.5rem">Message from the HOD</h2>
-          <div class="hod-card">
-            <div class="hod-photo-wrap">
-              <img class="hod-photo" src="GCOER WEBSITE/images/Staff_Photos/HOD_Mechanical.jpeg" alt="HOD Mechanical Engineering">
-              <span class="hod-name">Head of Department</span>
-              <span class="hod-role">Mechanical Engineering</span>
-            </div>
-            <div>
-              <p style="margin-top:0"><b>Welcome to the Department of Mechanical Engineering</b></p>
-              <p>I hope this message finds you well. As we progress through another exciting semester in the Mechanical Engineering Department, I want to take a moment to reflect on our shared journey and the road ahead.</p>
-              <p>Mechanical Engineering remains the backbone of the engineering industry, and our mission is to equip you with the knowledge and skills necessary to thrive in this dynamic field. We are committed to providing a comprehensive curriculum that integrates design, thermal, manufacturing and industrial engineering, ensuring that you are well-prepared for the challenges and opportunities that lie ahead.</p>
-              <p>This semester, we have introduced several new initiatives aimed at enhancing your learning experience. Workshops with industry leaders, hands-on projects, and collaborative research opportunities are just a few examples of how we aim to bridge the gap between theory and practical application. I encourage all of you to actively participate and take advantage of these resources.</p>
-              <p>Additionally, please remember that your feedback is invaluable. We are continually seeking ways to improve our programs and support your academic and professional growth. Do not hesitate to reach out to your professors or me directly with any suggestions or concerns.</p>
-              <p>Let's continue to foster a culture of innovation, collaboration, and excellence within our department. I am excited about the creativity and talent each of you brings and look forward to seeing the remarkable contributions you will make to the field of Mechanical Engineering.</p>
-              <div class="sign-block">
-                <p style="margin-top:0"><b>Warm regards,</b></p>
-                <p style="margin-top:.3rem"><b>Head of Department</b><br>Department of Mechanical Engineering<br>Loknete Shamrao Peje Government College of Engineering, Ratnagiri</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- VISION AND MISSION -->
-        <div class="dept-panel" id="panel-visionandmission">
-          <p class="eyebrow">Direction</p>
-          <h2 style="margin-top:.5rem">Vision &amp; Mission</h2>
-          <div class="vm-block">
-            <h3 style="color:var(--gold)">Vision</h3>
-            <p>The vision of the department is to achieve excellence in teaching, learning, research and transfer of technology and overall development of students in the field of Mechanical Engineering.</p>
-          </div>
-          <div class="vm-block" style="margin-top:1.25rem">
-            <h3 style="color:var(--gold)">Mission</h3>
-            <p>Imparting quality education, looking after holistic development of students and conducting need based research and extension in the domain of Mechanical Engineering.</p>
-          </div>
-        </div>
-
-        <!-- PEO'S AND PSO'S -->
-        <div class="dept-panel" id="panel-peosandpsos">
-          <p class="eyebrow">Outcomes</p>
-          <h2 style="margin-top:.5rem">PEO's &amp; PSO's</h2>
-          <div class="doc-image-stack">
-            <img src="GCOER WEBSITE/images/PEO Mechanical.png" alt="Programme Educational Objectives - Mechanical">
-            <img src="GCOER WEBSITE/images/POs Mechanical.png" alt="Programme Outcomes - Mechanical">
-          </div>
-        </div>
-
-        <!-- FACULTY -->
-        <div class="dept-panel" id="panel-faculty">
-          <p class="eyebrow">People</p>
-          <h2 style="margin-top:.5rem">Meet the Faculties</h2>
-          <p>At Loknete Shamrao Peje Government College of Engineering, Ratnagiri (GCOER), the Department of Mechanical Engineering is proud to have a dedicated and talented team of faculty members. They are well-qualified, experienced, and passionate about teaching. Our faculty stay updated with the latest advancements in Mechanical Engineering. Our teachers are not only highly qualified and experienced but also deeply committed to student learning, ensuring every student gets the guidance and support they need to succeed.</p>
-
-          <h3 class="fac-section-title">Visiting Faculties</h3>
-          <div class="fac-grid">
-            <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/person.png" alt="Faculty Name 1">
-              <h4>Faculty Name 1</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Faculty1 Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/person.png" alt="Faculty Name 2">
-              <h4>Faculty Name 2</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Faculty2 Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/Staff_Photos/person.png" alt="Faculty Name 3">
-              <h4>Faculty Name 3</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Faculty3 Resume.pdf" target="_blank">Resume</a>
-            </div>
-          </div>
-
-          <h3 class="fac-section-title">Contractual Staff</h3>
-          <div class="fac-grid">
-            <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/person.png" alt="Technical Lab Assistant 1">
-              <h4>Technical Lab Assistant 1</h4>
-              <p class="fac-role">Technical Lab Assistant</p>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="GCOER WEBSITE/images/person.png" alt="Technical Lab Assistant 2">
-              <h4>Technical Lab Assistant 2</h4>
-              <p class="fac-role">Technical Lab Assistant</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- LABORATORY -->
-        <div class="dept-panel" id="panel-Laboratory">
-          <p class="eyebrow">Infrastructure</p>
-          <h2 style="margin-top:.5rem">Laboratory Details</h2>
-          <h3>Equipment List</h3>
-          <div class="lab-slider-wrap">
-            <img src="GCOER WEBSITE/images/DSR Mechanical.png" alt="Mechanical Engineering Laboratory Equipment List">
-          </div>
-        </div>
-
-        <!-- NEWS AND EVENTS -->
-        <div class="dept-panel" id="panel-newsandevents">
-          <p class="eyebrow">Updates</p>
-          <h2 style="margin-top:.5rem">News &amp; Events</h2>
-          <div class="news-grid">
-
-            <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Mecha_Placeholder3.png" alt="Project Exhibition"></div>
-              <div class="news-body">
-                <p class="news-date">19 November 2025</p>
-                <h4>Project Exhibition</h4>
-                <p>Showcasing innovative and industry oriented projects with practical applications developed by graduating students.</p>
-                <a class="news-readmore" href="#" target="_blank">Read more &rarr;</a>
-              </div>
-            </div>
-
-            <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Mecha_Placeholder2.jpeg" alt="Sample Event Title 2"></div>
-              <div class="news-body">
-                <p class="news-date">6 November 2025</p>
-                <h4>Sample Event Title 2</h4>
-                <p>Description of the Mechanical department event goes here.</p>
-                <a class="news-readmore" href="#" target="_blank">Read more &rarr;</a>
-              </div>
-            </div>
-
-            <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Mecha_Placeholder1.jpeg" alt="Sample Event Title 1"></div>
-              <div class="news-body">
-                <p class="news-date">12 January 2026</p>
-                <h4>Sample Event Title 1</h4>
-                <p>Description of the Mechanical department event goes here.</p>
-                <a class="news-readmore" href="#" target="_blank">Read more &rarr;</a>
-              </div>
-            </div>
-
-            <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Mecha_Placeholder4.png" alt="Technical Quiz Competition"></div>
-              <div class="news-body">
-                <p class="news-date">5 June 2025</p>
-                <h4>Technical Quiz Competition</h4>
-                <p>An intense quiz competition testing technical and non-technical knowledge through rigorous rounds.</p>
-                <a class="news-readmore" href="#" target="_blank">Read more &rarr;</a>
-              </div>
-            </div>
-
-            <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Mecha_Placeholder5.png" alt="Debate Competition"></div>
-              <div class="news-body">
-                <p class="news-date">28 March 2025</p>
-                <h4>Debate Competition</h4>
-                <p>A vibrant exchange of ideas during the annual Debate Competition among students.</p>
-                <a class="news-readmore" href="#" target="_blank">Read more &rarr;</a>
-              </div>
-            </div>
-
-            <div class="news-card">
-              <div class="news-thumb"><img src="GCOER WEBSITE/images/events/Mecha_Placeholder6.jpeg" alt="Hands-On Training 2024-25"></div>
-              <div class="news-body">
-                <p class="news-date">6 December 2024</p>
-                <h4>Hands-On Training 2024-25</h4>
-                <p>Hands-On Training Program: Students engage in practical training with advanced tools and systems.</p>
-                <a class="news-readmore" href="#" target="_blank">Read more &rarr;</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- SYLLABUS OLD -->
-        <div class="dept-panel" id="panel-syllabus_comp">
-          <p class="eyebrow">Curriculum</p>
-          <h2 style="margin-top:.5rem">Syllabus (Old)</h2>
-
-          <h3>Second Year</h3>
-          <div class="embed-wrap">
-            <embed src="Syllabus/BTech-mechanical_-second-year.pdf" type="application/pdf">
-          </div>
-
-          <h3>Third Year</h3>
-          <div class="embed-wrap">
-            <embed src="Syllabus/BTech-mechanical_-third-year.pdf" type="application/pdf">
-          </div>
-
-          <h3>Final Year</h3>
-          <div class="embed-wrap">
-            <embed src="Syllabus/Btech-mechanical-final-year.pdf" type="application/pdf">
-          </div>
-        </div>
-
-        <!-- SYLLABUS NEP-2020 -->
-        <div class="dept-panel" id="panel-syllabus_new">
-          <p class="eyebrow">Curriculum</p>
-          <h2 style="margin-top:.5rem">Syllabus (NEP-2020)</h2>
-
-          <h3>Second Year</h3>
-          <div class="embed-wrap">
-            <embed src="Syllabus/Mecha 25-26/AF_Syllabus_Second Year B. Tech Mechanical Engineering_2025-26.pdf" type="application/pdf">
-          </div>
-        </div>
-
-        <!-- ACADEMIC CALENDAR -->
-        <div class="dept-panel" id="panel-academic">
-          <p class="eyebrow">Schedule</p>
-          <h2 style="margin-top:.5rem">Academic Calendar</h2>
-
-          <div class="cal-block">
-            <h3>Academic Calendar Odd Sem (Winter AY 25-26)</h3>
-            <img src="GCOER WEBSITE/images/Academic calendar ODD Sem 2025 GCOER_page-1.jpg" alt="Academic Calendar Odd Sem Winter AY 25-26">
-          </div>
-
-          <div class="cal-block">
-            <h3>Academic Calendar</h3>
-            <img src="GCOER WEBSITE/images/AC_Engg_UGPG_OddSem_AY25-26_page-0001.jpg" alt="Academic Calendar Odd Sem AY25-26">
-            <img src="GCOER WEBSITE/images/AC_Engg_UGPG_EvenSem_AY25-26_page-0002.jpg" alt="Academic Calendar Even Sem AY25-26" style="margin-top:1rem">
-          </div>
-        </div>
-
-        <!-- TIME TABLE -->
-        <div class="dept-panel" id="panel-time_table">
-          <p class="eyebrow">Schedule</p>
-          <h2 style="margin-top:.5rem">Time-Table</h2>
-          <div class="cal-block">
-            <img src="TimeTable/TT Mechanical for Even Sem Summer 25-26.png" alt="Mechanical Time-Table Even Sem Summer 25-26">
-          </div>
-          <div class="tt-download">
-            <a class="btn btn-primary" href="TimeTable/TT Mechanical for Even Summer 2025-26.pdf" download="time_table.pdf"><svg><use href="#i-download"/></svg>Download PDF</a>
-          </div>
-        </div>
-
+      <div class="footer-bottom">
+        <span
+          >&copy; Copyright 2021 &mdash; Government College of Engineering,
+          Ratnagiri</span
+        >
+        <span
+          >Developed and Maintained by:<a href="https://www.praseonix.in/">
+            Praseonix Software Solution Pvt. Ltd.</a
+          ></span
+        >
       </div>
-    </div>
-  </div>
+    </footer>
 
-  <div class="wrap" style="padding-bottom:clamp(2rem,4vw,3.5rem)">
-    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
-      <a href="index.html" class="btn btn-ghost">Back to Home</a>
-    </div>
-  </div>
-</main>
+    <button id="backToTop" aria-label="Back to top">
+      <svg style="width: 20px; height: 20px; transform: rotate(180deg)">
+        <use href="#i-chevron" />
+      </svg>
+    </button>
 
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <img src="images/lsp_logo.jpeg" alt="LSPGCOER Logo" class="logo-mark" style="border-radius: 50%;" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP'}))">
-      <div>
-        <h4>LSPGCOER, Ratnagiri</h4>
-        <p>Near Thiba Palace Road, Ratnagiri &ndash; 415612, Maharashtra. An institute of Government of Maharashtra, affiliated to DBATU, Lonere.</p>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h5>Explore</h5>
-      <ul>
-        <li><a href="about_institute.html">About Institute</a></li>
-        <li><a href="course_details.html">Course Details</a></li>
-        <li><a href="index.html#admission">Admission</a></li>
-        <li><a href="index.html#facilities">Departments</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Resources</h5>
-      <ul>
-        <li><a href="https://www.gcoer.ac.in/Doc/RTI.pdf">RTI</a></li>
-        <li><a href="https://www.gcoer.ac.in/Doc/Grive.cell.pdf">Grievance Cell</a></li>
-        <li><a href="https://dte.maharashtra.gov.in/" target="_blank" rel="noopener">DTE Maharashtra</a></li>
-        <li><a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener">CET Cell</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Contact</h5>
-      <ul>
-        <li><a href="mailto:principal@gcoer.ac.in">principal@gcoer.ac.in</a></li>
-        <li><a href="mailto:office@gcoer.ac.in">office@gcoer.ac.in</a></li>
-        <li><a href="mailto:hod.mechanical@gcoer.ac.in">hod.mechanical@gcoer.ac.in</a></li>
-        <li><a href="tel:8793284358">8793284358</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; Copyright 2021 &mdash; Government College of Engineering, Ratnagiri</span>
-    <span>Developed and Maintained by:<a href="https://www.praseonix.in/"> Praseonix Software Solution Pvt. Ltd.</a></span>
-  </div>
-</footer>
+    <script>
+      (function () {
+        "use strict";
+        var header = document.getElementById("siteHeader");
+        var backToTop = document.getElementById("backToTop");
+        window.addEventListener(
+          "scroll",
+          function () {
+            var y = window.scrollY || document.documentElement.scrollTop;
+            if (y > 24) {
+              header.classList.add("scrolled");
+            } else {
+              header.classList.remove("scrolled");
+            }
+            if (y > 500) {
+              backToTop.classList.add("show");
+            } else {
+              backToTop.classList.remove("show");
+            }
+          },
+          { passive: true },
+        );
+        backToTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
 
-<button id="backToTop" aria-label="Back to top">
-  <svg style="width:20px;height:20px;transform:rotate(180deg)"><use href="#i-chevron"/></svg>
-</button>
+        var menuToggle = document.getElementById("menuToggle");
+        var mainNav = document.getElementById("mainNav");
+        var menuIcon = document.getElementById("menuIcon");
+        menuToggle.addEventListener("click", function () {
+          var isOpen = mainNav.classList.toggle("open");
+          menuToggle.setAttribute("aria-expanded", isOpen);
+          menuIcon.innerHTML = isOpen
+            ? '<use href="#i-close"/>'
+            : '<use href="#i-menu"/>';
+        });
 
-<script>
-(function(){
-  "use strict";
-  var header = document.getElementById('siteHeader');
-  var backToTop = document.getElementById('backToTop');
-  window.addEventListener('scroll', function(){
-    var y = window.scrollY || document.documentElement.scrollTop;
-    if(y > 24){ header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
-    if(y > 500){ backToTop.classList.add('show'); } else { backToTop.classList.remove('show'); }
-  }, {passive:true});
-  backToTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+        /* ---- Top-level dropdowns: opening one closes all the others ---- */
+        var dropdownParents = document.querySelectorAll(".has-dropdown");
+        dropdownParents.forEach(function (el) {
+          var trigger = el.querySelector(":scope > .dropdown-btn");
+          if (!trigger) return;
+          trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var wasOpen = el.classList.contains("open");
 
-  var menuToggle = document.getElementById('menuToggle');
-  var mainNav = document.getElementById('mainNav');
-  var menuIcon = document.getElementById('menuIcon');
-  menuToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', isOpen);
-    menuIcon.innerHTML = isOpen ? '<use href="#i-close"/>' : '<use href="#i-menu"/>';
-  });
+            dropdownParents.forEach(function (other) {
+              if (other !== el) {
+                other.classList.remove("open");
+                var otherTrigger = other.querySelector(
+                  ":scope > .dropdown-btn",
+                );
+                if (otherTrigger)
+                  otherTrigger.setAttribute("aria-expanded", "false");
+                other
+                  .querySelectorAll(".dropdown-submenu.open")
+                  .forEach(function (sub) {
+                    sub.classList.remove("open");
+                  });
+              }
+            });
 
-  /* ---- Top-level dropdowns: opening one closes all the others ---- */
-  var dropdownParents = document.querySelectorAll('.has-dropdown');
-  dropdownParents.forEach(function(el){
-    var trigger = el.querySelector(':scope > .dropdown-btn');
-    if(!trigger) return;
-    trigger.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      var wasOpen = el.classList.contains('open');
+            el.classList.toggle("open", !wasOpen);
+            trigger.setAttribute("aria-expanded", !wasOpen);
+          });
+        });
 
-      dropdownParents.forEach(function(other){
-        if(other !== el){
-          other.classList.remove('open');
-          var otherTrigger = other.querySelector(':scope > .dropdown-btn');
-          if(otherTrigger) otherTrigger.setAttribute('aria-expanded','false');
-          other.querySelectorAll('.dropdown-submenu.open').forEach(function(sub){
-            sub.classList.remove('open');
+        /* ---- Nested submenus ---- */
+        var submenuParents = document.querySelectorAll(".dropdown-submenu");
+        submenuParents.forEach(function (el) {
+          var trigger = el.querySelector(":scope > .submenu-toggle");
+          if (!trigger) return;
+          trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var wasOpen = el.classList.contains("open");
+
+            submenuParents.forEach(function (other) {
+              if (other !== el && other.parentElement === el.parentElement) {
+                other.classList.remove("open");
+              }
+            });
+
+            el.classList.toggle("open", !wasOpen);
+          });
+        });
+
+        document.addEventListener("click", function (e) {
+          dropdownParents.forEach(function (el) {
+            if (!el.contains(e.target)) {
+              el.classList.remove("open");
+              var trigger = el.querySelector(":scope > .dropdown-btn");
+              if (trigger) trigger.setAttribute("aria-expanded", "false");
+            }
+          });
+          submenuParents.forEach(function (el) {
+            if (!el.contains(e.target)) {
+              el.classList.remove("open");
+            }
+          });
+        });
+
+        var revealEls = document.querySelectorAll(".reveal");
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("in");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1 },
+          );
+          revealEls.forEach(function (el) {
+            io.observe(el);
+          });
+        } else {
+          revealEls.forEach(function (el) {
+            el.classList.add("in");
           });
         }
-      });
 
-      el.classList.toggle('open', !wasOpen);
-      trigger.setAttribute('aria-expanded', !wasOpen);
-    });
-  });
+        /* ---- Department tab switcher ---- */
+        var tabButtons = document.querySelectorAll(".dept-tab-btn");
+        var panels = document.querySelectorAll(".dept-panel");
+        var mobileList = document.getElementById("deptTabListMobile");
 
-  /* ---- Nested submenus ---- */
-  var submenuParents = document.querySelectorAll('.dropdown-submenu');
-  submenuParents.forEach(function(el){
-    var trigger = el.querySelector(':scope > .submenu-toggle');
-    if(!trigger) return;
-    trigger.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      var wasOpen = el.classList.contains('open');
+        // clone buttons for mobile pill bar
+        tabButtons.forEach(function (btn) {
+          var clone = btn.cloneNode(true);
+          mobileList.appendChild(clone);
+        });
 
-      submenuParents.forEach(function(other){
-        if(other !== el && other.parentElement === el.parentElement){
-          other.classList.remove('open');
+        function activateTab(tabId) {
+          document.querySelectorAll(".dept-tab-btn").forEach(function (b) {
+            b.classList.toggle("active", b.getAttribute("data-tab") === tabId);
+          });
+          panels.forEach(function (p) {
+            p.classList.toggle("active", p.id === "panel-" + tabId);
+          });
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }
-      });
 
-      el.classList.toggle('open', !wasOpen);
-    });
-  });
-
-  document.addEventListener('click', function(e){
-    dropdownParents.forEach(function(el){
-      if(!el.contains(e.target)){
-        el.classList.remove('open');
-        var trigger = el.querySelector(':scope > .dropdown-btn');
-        if(trigger) trigger.setAttribute('aria-expanded','false');
-      }
-    });
-    submenuParents.forEach(function(el){
-      if(!el.contains(e.target)){
-        el.classList.remove('open');
-      }
-    });
-  });
-
-  var revealEls = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
-      });
-    }, {threshold:0.1});
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
-  }
-
-  /* ---- Department tab switcher ---- */
-  var tabButtons = document.querySelectorAll('.dept-tab-btn');
-  var panels = document.querySelectorAll('.dept-panel');
-  var mobileList = document.getElementById('deptTabListMobile');
-
-  // clone buttons for mobile pill bar
-  tabButtons.forEach(function(btn){
-    var clone = btn.cloneNode(true);
-    mobileList.appendChild(clone);
-  });
-
-  function activateTab(tabId){
-    document.querySelectorAll('.dept-tab-btn').forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-tab') === tabId);
-    });
-    panels.forEach(function(p){
-      p.classList.toggle('active', p.id === 'panel-' + tabId);
-    });
-    window.scrollTo({top:0, behavior:'smooth'});
-  }
-
-  document.querySelectorAll('.dept-tab-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      activateTab(btn.getAttribute('data-tab'));
-    });
-  });
-})();
-</script>
-
-</body>
+        document.querySelectorAll(".dept-tab-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            activateTab(btn.getAttribute("data-tab"));
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
