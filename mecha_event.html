@@ -293,8 +293,8 @@ Constitution'}))">
           </ul>
         </li>
 
-        <li class="has-dropdown open">
-          <button class="dropdown-btn" aria-expanded="true">Departments <svg><use href="#i-chevron"/></svg></button>
+        <li class="has-dropdown">
+          <button class="dropdown-btn" aria-expanded="false">Departments <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
             <li><a href="AI_Dept.html">Artificial Intelligence &amp; Data Science</a></li>
             <li><a href="Civil_Dept.html">Civil &amp; Infrastructure Engineering</a></li>
@@ -572,6 +572,11 @@ Constitution'}))">
 
   document.querySelectorAll('#mainNav .nav-list a').forEach(function(a){
     a.addEventListener('click', function(){
+      dropdownParents.forEach(function(el){
+        el.classList.remove('open');
+        var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
+        if(trigger) trigger.setAttribute('aria-expanded','false');
+      });
       if(window.innerWidth <= 1500){
         mainNav.classList.remove('open');
         menuToggle.setAttribute('aria-expanded','false');
