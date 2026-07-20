@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Department of Science & Humanities &amp; | LSPGCOER Ratnagiri</title>
+    <title>Department of Science &amp; Humanities | LSPGCOER Ratnagiri</title>
     <meta
       name="description"
       content="Department of Science & Humanities at Loknete Shamrao Peje Government College of Engineering, Ratnagiri — about, HOD's desk, vision & mission, faculty, laboratory, news, syllabus, academic calendar and time-table."
@@ -1513,13 +1513,13 @@
                 </ul>
               </li>
 
-              <li class="has-dropdown open">
-                <button class="dropdown-btn" aria-expanded="true">
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
                   Departments <svg><use href="#i-chevron" /></svg>
                 </button>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="AI_Dept.html" class="active"
+                    <a href="AI_Dept.html"
                       >Artificial Intelligence &amp; Data Science</a
                     >
                   </li>
@@ -1542,7 +1542,9 @@
                     >
                   </li>
                   <li>
-                    <a href="Science_Dept.html">Science &amp; Humanities</a>
+                    <a href="Science_Dept.html" class="active"
+                      >Science &amp; Humanities</a
+                    >
                   </li>
                   <li><a href="Workshop.html">Workshop Department</a></li>
                 </ul>
@@ -1933,14 +1935,6 @@
                 <svg width="15" height="15"><use href="#i-user" /></svg>&nbsp;
                 HOD's Desk
               </button>
-              <button class="dept-tab-btn" data-tab="visionandmission">
-                <svg width="15" height="15"><use href="#i-target" /></svg>&nbsp;
-                Vision &amp; Mission
-              </button>
-              <button class="dept-tab-btn" data-tab="peosandpsos">
-                <svg width="15" height="15"><use href="#i-flag" /></svg>&nbsp;
-                Program Outcomes
-              </button>
               <button class="dept-tab-btn" data-tab="faculty">
                 <svg width="15" height="15"><use href="#i-users" /></svg>&nbsp;
                 Faculty &amp; Staff
@@ -2114,112 +2108,6 @@
               </div>
             </div>
 
-            <!-- VISION AND MISSION -->
-            <div class="dept-panel" id="panel-visionandmission">
-              <p class="eyebrow">Direction</p>
-              <h2 style="margin-top: 0.5rem">Vision &amp; Mission</h2>
-              <div class="vm-block">
-                <h3 style="color: var(--gold)">Vision</h3>
-                <p>
-                  To be a center of excellence in foundational sciences and
-                  humanities education, fostering critical thinking, ethical
-                  values, and mathematical proficiency in engineering students
-                  to prepare them for advanced technological challenges.
-                </p>
-              </div>
-              <div class="vm-block" style="margin-top: 1.25rem">
-                <h3 style="color: var(--gold)">Mission</h3>
-                <ol>
-                  <li>
-                    To impart high-quality education in physics, chemistry,
-                    mathematics, and communication skills, building a strong
-                    conceptual foundation for engineering disciplines.
-                  </li>
-                  <li>
-                    To nurture innovation, scientific curiosity, and analytical
-                    skills through hands-on laboratory experiences.
-                  </li>
-                  <li>
-                    To cultivate ethical values, professional communication, and
-                    soft skills for responsible societal contributions.
-                  </li>
-                </ol>
-              </div>
-            </div>
-
-            <!-- PROGRAM OUTCOMES -->
-            <div class="dept-panel" id="panel-peosandpsos">
-              <p class="eyebrow">Outcomes</p>
-              <h2 style="margin-top: 0.5rem">Program Outcomes (POs)</h2>
-              <p>
-                The Department of Science &amp; Humanities focuses on building
-                the foundational capabilities of engineering students. Our
-                academic objectives are aligned with the 12 standard Program
-                Outcomes (POs) defined by the NBA, which prepare students for
-                engineering study:
-              </p>
-              <ul class="bullets" style="margin-top: 1rem">
-                <li>
-                  <b>Engineering Knowledge:</b> Apply knowledge of mathematics,
-                  science, and engineering fundamentals to solve complex
-                  problems.
-                </li>
-                <li>
-                  <b>Problem Analysis:</b> Identify, formulate, and analyze
-                  engineering problems using principles of mathematics and
-                  natural sciences.
-                </li>
-                <li>
-                  <b>Design/Development of Solutions:</b> Design system
-                  components or processes that meet specified needs with
-                  appropriate consideration for safety and society.
-                </li>
-                <li>
-                  <b>Conduct Investigations:</b> Use research-based knowledge
-                  and methods to analyze data and provide valid conclusions.
-                </li>
-                <li>
-                  <b>Modern Tool Usage:</b> Select and apply appropriate
-                  techniques, resources, and modern engineering tools to complex
-                  engineering activities.
-                </li>
-                <li>
-                  <b>The Engineer and Society:</b> Assess societal, health,
-                  safety, and legal issues and the consequent responsibilities
-                  relevant to engineering practice.
-                </li>
-                <li>
-                  <b>Environment and Sustainability:</b> Understand the impact
-                  of engineering solutions in societal and environmental
-                  contexts and demonstrate sustainable development.
-                </li>
-                <li>
-                  <b>Ethics:</b> Apply ethical principles and commit to
-                  professional ethics and responsibilities of engineering
-                  practice.
-                </li>
-                <li>
-                  <b>Individual and Team Work:</b> Function effectively as an
-                  individual, and as a member or leader in diverse teams.
-                </li>
-                <li>
-                  <b>Communication:</b> Communicate effectively on complex
-                  engineering activities with the engineering community and
-                  society.
-                </li>
-                <li>
-                  <b>Project Management and Finance:</b> Demonstrate knowledge
-                  of engineering and management principles to manage projects as
-                  a member or leader in a team.
-                </li>
-                <li>
-                  <b>Life-long Learning:</b> Recognize the need for, and have
-                  the preparation and ability to engage in independent and
-                  life-long learning.
-                </li>
-              </ul>
-            </div>
-
             <!-- FACULTY -->
             <div class="dept-panel" id="panel-faculty">
               <p class="eyebrow">People</p>
@@ -2241,19 +2129,13 @@
                 <div class="fac-card">
                   <img
                     class="fac-photo"
-                    src="images/Staff_Photos/Dr. Uttam S. Kakade photo.png"
+                    src="images/Staff_Photos/Dr. Uttam S. Kakade photo.jpg.png"
                     alt="Dr. Uttam S. Kakade"
                   />
                   <h4>Dr. Uttam S. Kakade</h4>
                   <p class="fac-role">
                     HOD of Science & Humanities Dept. and Assistant Professor
                   </p>
-                  <a
-                    class="fac-resume"
-                    href="Doc/resume_akojwar-compressed.pdf"
-                    target="_blank"
-                    >Resume</a
-                  >
                 </div>
                 <div class="fac-card">
                   <img
@@ -2265,7 +2147,7 @@
                   <p class="fac-role">Assistant Professor</p>
                   <a
                     class="fac-resume"
-                    href="Doc/resume_akojwar-compressed.pdf"
+                    href="Doc/staff resume/Hemlata V. Patile Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2284,7 +2166,7 @@
                   <p class="fac-role">Visiting Faculty</p>
                   <a
                     class="fac-resume"
-                    href="Doc/RESUME_AAN.pdf"
+                    href="Doc/staff resume/Aditi Naik Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2299,7 +2181,7 @@
                   <p class="fac-role">Visiting Faculty</p>
                   <a
                     class="fac-resume"
-                    href="Doc/resume2025_JSP.pdf"
+                    href="Doc/staff resume/J S Pachkude Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2314,7 +2196,7 @@
                   <p class="fac-role">Visiting Faculty</p>
                   <a
                     class="fac-resume"
-                    href="Doc/staff resume/Resume_SSS.pdf"
+                    href="Doc/staff resume/Siddhika Sangare Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2329,7 +2211,7 @@
                   <p class="fac-role">Visiting Faculty</p>
                   <a
                     class="fac-resume"
-                    href="Doc/staff resume/resume_RMR.pdf"
+                    href="Doc/staff resume/Renuka Rathod Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2344,7 +2226,7 @@
                   <p class="fac-role">Visiting Faculty</p>
                   <a
                     class="fac-resume"
-                    href="Doc/staff resume/resume_SZK.pdf"
+                    href="Doc/staff resume/Safa K. Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2359,7 +2241,7 @@
                   <p class="fac-role">Visiting Faculty</p>
                   <a
                     class="fac-resume"
-                    href="Doc/staff resume/resume_SSD.pdf"
+                    href="Doc/staff resume/Dali Mam Resume.pdf"
                     target="_blank"
                     >Resume</a
                   >
@@ -2422,7 +2304,7 @@
                     </p>
                     <a
                       class="news-readmore"
-                      href="event.html?id=spectrum2026"
+                      href="science_event.html?id=spectrum2026"
                       >Read more &rarr;</a
                     >
                   </div>
@@ -2652,15 +2534,7 @@
             ? '<use href="#i-close"/>'
             : '<use href="#i-menu"/>';
         });
-/* ---- Close mobile nav when a link is tapped (event delegation) ---- */
-mainNav.addEventListener("click", function (e) {
-  var link = e.target.closest("a");
-  if (link && mainNav.contains(link)) {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuIcon.innerHTML = '<use href="#i-menu"/>';
-  }
-});
+
         /* ---- Top-level dropdowns: opening one closes all the others ---- */
         var dropdownParents = document.querySelectorAll(".has-dropdown");
         dropdownParents.forEach(function (el) {
@@ -2775,17 +2649,6 @@ mainNav.addEventListener("click", function (e) {
             activateTab(btn.getAttribute("data-tab"));
           });
         });
-
-        /* ---- Laboratory image slideshow ---- */
-        var labImages = [];
-        var labIndex = 0;
-        var labSlider = document.getElementById("labSlider");
-        if (labSlider && labImages.length > 0) {
-          setInterval(function () {
-            labIndex = (labIndex + 1) % labImages.length;
-            labSlider.src = labImages[labIndex];
-          }, 3000);
-        }
       })();
     </script>
   </body>
