@@ -53,6 +53,8 @@ window.ELECTRICAL_EVENTS = {
     venue: "Loknete Shamrao Peje Government College of Engineering, Ratnagiri",
     cover: "images/events/EngDay_4.png",
     images: [
+      "images/events/EngDay_4.png",
+      "images/events/EngDay_2.png",
       "images/events/EngDay_4.png"
     ],
     body: [
