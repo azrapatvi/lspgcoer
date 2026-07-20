@@ -549,7 +549,7 @@
         display: grid;
         grid-template-columns: 260px 1fr;
         gap: clamp(1.5rem, 3vw, 2.5rem);
-        align-items: start;
+        align-items: stretch;
         padding-top: clamp(2rem, 4vw, 3rem);
         padding-bottom: clamp(2.5rem, 5vw, 4rem);
       }
@@ -1461,8 +1461,8 @@
                 </ul>
               </li>
 
-              <li class="has-dropdown open">
-                <button class="dropdown-btn" aria-expanded="true">
+              <li class="has-dropdown">
+                <button class="dropdown-btn" aria-expanded="false">
                   Departments <svg><use href="#i-chevron" /></svg>
                 </button>
                 <ul class="dropdown-menu">
@@ -2655,6 +2655,27 @@
             }
           });
         });
+
+        /* ---- Close any open dropdown/submenu once a link inside it is clicked ---- */
+        document
+          .querySelectorAll(".dropdown-menu a")
+          .forEach(function (link) {
+            link.addEventListener("click", function () {
+              dropdownParents.forEach(function (el) {
+                el.classList.remove("open");
+                var trigger = el.querySelector(":scope > .dropdown-btn");
+                if (trigger) trigger.setAttribute("aria-expanded", "false");
+              });
+              submenuParents.forEach(function (el) {
+                el.classList.remove("open");
+              });
+              if (mainNav.classList.contains("open")) {
+                mainNav.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuIcon.innerHTML = '<use href="#i-menu"/>';
+              }
+            });
+          });
 
         var revealEls = document.querySelectorAll(".reveal");
         if ("IntersectionObserver" in window) {
