@@ -10,6 +10,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <style>
 /* ============ RESET ============ */
+html,body{overflow-x:hidden}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 img{max-width:100%;display:block}
@@ -253,7 +254,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1.
   <div class="header-inner">
     <img src="images/lsp_logo.jpeg" alt="LSPGCOER Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'LSP
 GCOER'}))">
-    <img src="images/logo3.jpeg" alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DBATU'}))">
+   
     <div class="brand-text">
       <div class="name-en">Lokenete Shamrao Peje Government College of Engineering, Ratnagiri</div>
       <div class="name-mr">लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी</div>
@@ -293,8 +294,8 @@ Constitution'}))">
           </ul>
         </li>
 
-        <li class="has-dropdown open">
-          <button class="dropdown-btn" aria-expanded="true">Departments <svg><use href="#i-chevron"/></svg></button>
+        <li class="has-dropdown">
+  <button class="dropdown-btn" aria-expanded="false">Departments <svg><use href="#i-chevron"/></svg></button>
           <ul class="dropdown-menu">
             <li><a href="AI_Dept.html">Artificial Intelligence &amp; Data Science</a></li>
             <li><a href="Civil_Dept.html">Civil &amp; Infrastructure Engineering</a></li>
@@ -571,14 +572,20 @@ Constitution'}))">
   });
 
   document.querySelectorAll('#mainNav .nav-list a').forEach(function(a){
-    a.addEventListener('click', function(){
-      if(window.innerWidth <= 1500){
-        mainNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded','false');
-        menuIcon.innerHTML = '<use href="#i-menu"/>';
-      }
+  a.addEventListener('click', function(){
+    dropdownParents.forEach(function(el){
+      el.classList.remove('open');
+      var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
+      if(trigger) trigger.setAttribute('aria-expanded', 'false');
     });
+
+    if(window.innerWidth <= 1500){
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded','false');
+      menuIcon.innerHTML = '<use href="#i-menu"/>';
+    }
   });
+});
 
   /* ---- load event from URL ?id=... ---- */
   var params = new URLSearchParams(window.location.search);

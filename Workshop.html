@@ -550,7 +550,7 @@
         display: grid;
         grid-template-columns: 260px 1fr;
         gap: clamp(1.5rem, 3vw, 2.5rem);
-        align-items: start;
+        align-items: stretch;
         padding-top: clamp(2rem, 4vw, 3rem);
         padding-bottom: clamp(2.5rem, 5vw, 4rem);
       }
@@ -1378,19 +1378,7 @@
             )
           "
         />
-        <img
-          src="images/logo3.jpeg"
-          alt="Dr. Babasaheb Ambedkar Technological University, Lonere Logo"
-          class="logo-mark header-badge-logo"
-          onerror="
-            this.replaceWith(
-              Object.assign(document.createElement('div'), {
-                className: 'logo-mark fallback',
-                innerText: 'DBATU',
-              }),
-            )
-          "
-        />
+        
         <div class="brand-text">
           <div class="name-en">
             Lokenete Shamrao Peje Government College of Engineering, Ratnagiri
@@ -2137,7 +2125,7 @@
                 <div class="fac-card">
                   <img
                     class="fac-photo"
-                    src="images/Staff_Photos/person.png"
+                    src="images/person.png"
                     alt="Mr. Mahesh K. P."
                   />
                   <h4>Mr. Mahesh K. P.</h4>
@@ -2146,7 +2134,7 @@
                 <div class="fac-card">
                   <img
                     class="fac-photo"
-                    src="images/Staff_Photos/person.png"
+                    src="images/person.png"
                     alt="Mr. Nagesh L. K."
                   />
                   <h4>Mr. Nagesh L. K.</h4>
@@ -2155,7 +2143,7 @@
                 <div class="fac-card">
                   <img
                     class="fac-photo"
-                    src="images/Staff_Photos/person.png"
+                    src="images/person.png"
                     alt="Mr. Pranil N. B."
                   />
                   <h4>Mr. Pranil N. B.</h4>
@@ -2164,7 +2152,7 @@
                 <div class="fac-card">
                   <img
                     class="fac-photo"
-                    src="images/Staff_Photos/person.png"
+                    src="images/person.png"
                     alt="Mr. Mukesh M. T."
                   />
                   <h4>Mr. Mukesh M. T.</h4>
@@ -2173,7 +2161,7 @@
                 <div class="fac-card">
                   <img
                     class="fac-photo"
-                    src="images/Staff_Photos/person.png"
+                    src="images/person.png"
                     alt="Mr. Prasanna P. K."
                   />
                   <h4>Mr. Prasanna P. K.</h4>
@@ -2198,7 +2186,7 @@
               <div class="lab-slider-wrap">
                 <img
                   id="labSlider"
-                  src="images/Lab/Workshop_Pract_Img1.jpg"
+                  src="images/Workshop_Pract_Img1.jpg"
                   alt="Workshop Laboratory & Practicals"
                 />
               </div>
@@ -2369,8 +2357,8 @@
       </div>
       <div class="footer-bottom">
         <span
-          >&copy; Copyright 2021 &mdash; Government College of Engineering,
-          Ratnagiri</span
+          >&copy; Copyright 2026 &mdash; Government College of Engineering,
+          Ratnagiri</span>
         >
         <span
           >Developed and Maintained by:<a href="https://www.praseonix.in/">
@@ -2540,11 +2528,10 @@
 
         /* ---- Laboratory image slideshow ---- */
         var labImages = [
-          "images/Lab/Workshop_Pract_Img1.jpg",
-          "images/Lab/Workshop_Pract_Img3.jpg",
-          "images/Lab/Workshop_Pract_Img5.jpg",
-          "images/Lab/Workshop_Pract_Img6.jpg",
-          "images/Lab/Workshop_Pract_Img8.jpg",
+          "images/Workshop_Pract_Img1.jpg",
+          "images/Workshop_Pract_Img1 (1).jpg",
+          "images/Workshop_Pract_Img5.jpg",
+          
         ];
         var labIndex = 0;
         var labSlider = document.getElementById("labSlider");

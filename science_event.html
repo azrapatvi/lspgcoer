@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Department of Science &amp; Humanities | LSPGCOER Ratnagiri</title>
-<meta name="description" content="Department of Science & Humanities at Loknete Shamrao Peje Government College of Engineering, Ratnagiri — about, HOD's desk, vision & mission, faculty, laboratory, news, syllabus, academic calendar and time-table.">
+<title id="pageTitle">Department Event | Science &amp; Humanities | LSPGCOER Ratnagiri</title>
+<meta name="description" content="News and event details from the Department of Science & Humanities, Lokenete Shamrao Peje Government College of Engineering, Ratnagiri.">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <style>
 /* ============ RESET ============ */
-html, body{ overflow-x:hidden; }
+html,body{
+  overflow-x:hidden;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 img{max-width:100%;display:block}
@@ -39,38 +41,15 @@ button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
   --maxw:1280px;
 }
 
-body{
-  font-family:var(--sans);
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(--navy-deep)}
-.eyebrow{
-  font-family:var(--mono);
-  font-size:.72rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--gold);
-  display:flex;align-items:center;gap:.5rem;
-  font-weight:600;
-}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;font-weight:600}
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--gold);display:inline-block}
-.btn{
-  display:inline-flex;align-items:center;gap:.55rem;
-  padding:.85rem 1.6rem;border-radius:var(--radius);
-  font-weight:600;font-size:.92rem;letter-spacing:.01em;
-  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
-  white-space:nowrap;
-}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.6rem;border-radius:var(--radius);font-weight:600;font-size:.92rem;letter-spacing:.01em;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;white-space:nowrap}
 .btn svg{width:16px;height:16px;flex-shrink:0}
-.btn-primary{background:var(--gold);color:var(--navy-deep)}
-.btn-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(201,154,68,.55)}
 .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
 .btn-ghost:hover{background:var(--navy);color:var(--white)}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-.reveal.in{opacity:1;transform:none}
+
 .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy-deep);padding:.7rem 1.2rem;z-index:999;font-weight:700}
 .skip-link:focus{left:1rem;top:1rem}
 
@@ -86,7 +65,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .plaque-contact svg{width:13px;height:13px}
 
 /* ============ HEADER ============ */
-.site-header{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .25s ease, padding .25s ease}
+.site-header{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--line);transition:box-shadow .25s ease}
 .site-header.scrolled{box-shadow:0 6px 24px -12px rgba(11,42,74,.25)}
 .header-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.4rem 1.25rem}
 .logo-mark{height:70px;width:70px;object-fit:contain;flex-shrink:0;transition:height .25s ease,width .25s ease}
@@ -114,122 +93,71 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 .dropdown-menu a{display:block;padding:.65rem .85rem;font-size:.92rem;border-radius:3px;color:var(--ink)}
 .dropdown-menu a:hover{background:var(--paper-dim);color:var(--azure)}
 .dropdown-menu a.active{color:var(--azure);background:var(--paper-dim)}
-.nav-apply{background:var(--navy);color:var(--white);padding:.4rem 1rem;border-radius:var(--radius);font-size:.8rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;flex-shrink:0;margin-left:auto;margin-right:.5rem}
-.nav-apply:hover{background:var(--azure)}
-
-/* ============ NESTED SUBMENUS ============ */
+.dropdown-menu li{position:relative}
+.dropdown-menu .badge{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.02em;padding:.15rem .45rem;border-radius:99px;margin-left:.4rem;background:var(--gold);color:var(--navy-deep);vertical-align:middle;white-space:nowrap}
+.dropdown-menu .badge.muted{background:var(--paper-dim);color:var(--slate)}
 .dropdown-submenu{position:relative}
-.submenu-toggle{display:flex;align-items:center;justify-content:space-between;gap:.4rem;padding:.65rem .85rem;font-size:.92rem;border-radius:3px;color:var(--ink);cursor:pointer}
-.submenu-toggle svg{width:12px;height:12px;transition:transform .2s ease;flex-shrink:0}
-.submenu-toggle:hover{background:var(--paper-dim);color:var(--azure)}
-.dropdown-submenu.open>.submenu-toggle{background:var(--paper-dim);color:var(--azure)}
-.dropdown-submenu.open>.submenu-toggle svg{transform:rotate(180deg)}
-.dropdown-submenu>.dropdown-menu{top:-.4rem;left:100%;margin-left:.35rem;opacity:0;visibility:hidden;transform:translateY(6px);}
+.dropdown-submenu>.submenu-toggle{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.55rem .7rem;font-size:.82rem;border-radius:3px;color:var(--ink);cursor:pointer}
+.dropdown-submenu>.submenu-toggle:hover{background:var(--paper-dim);color:var(--azure)}
+.dropdown-submenu>.submenu-toggle svg{width:11px;height:11px;flex-shrink:0;transform:rotate(-90deg);color:var(--slate)}
+.dropdown-submenu>.dropdown-menu{position:absolute;top:-.4rem;left:100%;margin-left:.35rem}
 .dropdown-submenu.open>.dropdown-menu{opacity:1;visibility:visible;transform:none}
 
-/* ============ PAGE HERO (compact banner) ============ */
-.page-hero{position:relative;background:var(--navy-deep);overflow:hidden}
-.page-hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:.5}
-.page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,48,.82) 0%,rgba(7,26,48,.9) 100%)}
-.page-hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:clamp(2.5rem,6vw,4rem) clamp(1.25rem,4vw,1.75rem)}
-.breadcrumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:#B7C4D6;display:flex;gap:.5rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap}
-.breadcrumb a:hover{color:var(--gold-bright)}
-.page-hero h1{color:var(--white);font-size:clamp(1.7rem,4vw,2.6rem);max-width:32ch;text-shadow:0 3px 18px rgba(0,0,0,.5)}
-.page-hero .lede{color:#DDE4EC;max-width:70ch;margin-top:1rem;font-size:1.02rem}
-.hero-mail{margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.78rem;color:var(--gold-bright)}
-.hero-mail svg{width:14px;height:14px}
+/* ============ PAGE HERO ============ */
+.page-hero{background:var(--navy-deep);color:var(--white);padding:clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,3.5rem)}
+.page-hero-inner{max-width:var(--maxw);margin:0 auto}
+.page-hero .eyebrow{color:var(--gold-bright)}
+.page-hero .eyebrow::before{background:var(--gold-bright)}
+.page-hero h1{color:var(--white);font-size:clamp(1.7rem,3.6vw,2.5rem);margin-top:.65rem;max-width:34ch}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.1rem;color:#C7D1DD;font-size:.9rem}
+.hero-meta span{display:flex;align-items:center;gap:.45rem}
+.hero-meta svg{width:15px;height:15px;color:var(--gold-bright);flex-shrink:0}
+.back-home{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.4rem;font-size:.82rem;color:var(--gold-bright);font-weight:600}
+.back-home:hover{text-decoration:underline}
+.back-home svg{width:14px;height:14px;transform:rotate(180deg)}
 
-.wave-divider{display:block;width:100%;line-height:0}
-.wave-divider svg{width:100%;height:44px;display:block}
+/* ============ MAIN LAYOUT ============ */
+main{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1.25rem,4vw,1.75rem)}
 
-/* ============ LAYOUT ============ */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,1.75rem)}
-.dept-grid{display:grid;grid-template-columns:260px 1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:start;padding-top:clamp(2rem,4vw,3rem);padding-bottom:clamp(2.5rem,5vw,4rem)}
-.dept-grid > div{min-width:0}
+/* ============ CAROUSEL ============ */
+.carousel{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--navy-deep)}
+.carousel-track-wrap{aspect-ratio:16/8;overflow:hidden;position:relative}
+.carousel-track{display:flex;height:100%;transition:transform .5s cubic-bezier(.65,0,.35,1)}
+.carousel-slide{flex:0 0 100%;height:100%;position:relative}
+.carousel-slide img{width:100%;height:100%;object-fit:cover}
+.carousel-slide .no-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),var(--azure) 60%,var(--gold) 140%);color:rgba(255,255,255,.85);font-family:var(--mono);font-size:.85rem;letter-spacing:.04em;text-align:center;padding:1rem}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(7,26,48,.55);color:var(--white);display:flex;align-items:center;justify-content:center;z-index:5;transition:background .2s ease,transform .2s ease}
+.carousel-arrow:hover{background:var(--gold);color:var(--navy-deep)}
+.carousel-arrow svg{width:20px;height:20px}
+.carousel-prev{left:1rem}
+.carousel-next{right:1rem}
+.carousel-next svg{transform:scaleX(-1)}
+.carousel-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:5}
+.carousel-dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.45);transition:background .2s ease,transform .2s ease}
+.carousel-dots button.active{background:var(--gold-bright);transform:scale(1.25)}
+.carousel-count{position:absolute;top:1rem;right:1rem;background:rgba(7,26,48,.55);color:var(--white);font-family:var(--mono);font-size:.72rem;padding:.3rem .65rem;border-radius:99px;z-index:5;letter-spacing:.03em}
 
-/* ============ DEPT TAB SIDEBAR ============ */
-.dept-side{position:sticky;top:100px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(11,42,74,.04);min-width:0}
-.dept-tab-btn{flex-wrap:nowrap}
-.dept-tab-btn span,.dept-tab-btn{word-break:break-word}
-.dept-side .ds-head{padding:1rem 1.1rem;background:var(--navy);color:var(--white);font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
-.dept-tab-list{padding:.5rem}
-.dept-tab-btn{display:flex;align-items:center;gap:.6rem;width:100%;text-align:left;padding:.7rem .75rem;font-size:.85rem;font-weight:600;border-radius:3px;color:var(--ink);border-left:3px solid transparent}
-.dept-tab-btn:hover{background:var(--paper-dim);color:var(--azure)}
-.dept-tab-btn.active{background:var(--paper-dim);color:var(--azure);border-left-color:var(--gold)}
+/* ============ EVENT BODY ============ */
+.event-body{max-width:820px;margin:clamp(2rem,4vw,3rem) auto 0}
+.event-body p{color:var(--slate);margin-top:1.1rem;font-size:1rem;text-align:justify}
+.event-body p:first-of-type{margin-top:0}
+.event-body p b{color:var(--navy-deep)}
+.event-quote{margin-top:2rem;padding:1.5rem 1.75rem;background:var(--paper-dim);border-left:4px solid var(--gold);border-radius:var(--radius);font-family:var(--serif);font-style:italic;color:var(--navy-deep);font-size:1.08rem}
 
-/* mobile: horizontal scroll pill tabs */
-.dept-side-mobile{display:none}
+.event-actions{max-width:820px;margin:2.5rem auto 0;display:flex;gap:1rem;flex-wrap:wrap}
 
-/* ============ DEPT PANELS ============ */
-.dept-panel{display:none;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.5rem,3vw,2.25rem);box-shadow:0 1px 2px rgba(11,42,74,.04);min-width:0;overflow-wrap:break-word}
-.dept-panel.active{display:block}
-.dept-panel h2{font-size:clamp(1.3rem,2.5vw,1.7rem)}
-.dept-panel h2,.dept-panel h3,.dept-panel p{overflow-wrap:break-word;word-break:break-word}
-.dept-panel h3{font-size:1.05rem;color:var(--azure);margin-top:1.5rem}
-.dept-panel p{color:var(--slate);margin-top:.85rem;text-align:justify}
-.dept-panel ul.bullets{margin-top:.6rem;padding-left:1.2rem}
-.dept-panel ul.bullets li{list-style:disc;color:var(--slate);margin-bottom:.4rem}
-.dept-panel ul.bullets li b{color:var(--navy-deep)}
-.sign-block{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
-.sign-block b{color:var(--navy-deep)}
-
-/* HOD card */
-.hod-card{display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start;margin-top:.5rem}
-.hod-photo{width:100%;border-radius:50%;aspect-ratio:1/1;object-fit:cover;border:4px solid var(--paper-dim)}
-.hod-photo-wrap{display:flex;flex-direction:column;align-items:center;gap:.75rem;text-align:center}
-.hod-photo-wrap .hod-name{font-family:var(--serif);font-weight:700;color:var(--navy-deep)}
-.hod-photo-wrap .hod-role{font-size:.82rem;color:var(--azure)}
-
-/* Vision/Mission */
-.vm-block{margin-top:1.25rem;padding:1.25rem 1.4rem;background:var(--paper-dim);border-radius:var(--radius);border-left:3px solid var(--gold)}
-.vm-block h3{margin-top:0;color:var(--navy-deep)}
-.vm-block p{color:var(--slate);margin-top:.6rem}
-.vm-block ol{margin-top:.6rem;padding-left:1.2rem}
-.vm-block ol li{color:var(--slate);margin-bottom:.5rem}
-
-/* PEO/PSO images */
-.doc-image-stack{margin-top:1rem;display:flex;flex-direction:column;gap:1.25rem}
-.doc-image-stack img{border:1px solid var(--line);border-radius:var(--radius)}
-
-/* Faculty grid */
-.fac-section-title{margin-top:2rem;margin-bottom:.25rem}
-.fac-section-title:first-of-type{margin-top:0}
-.fac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:1.25rem;margin-top:1rem}
-.fac-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.1rem;text-align:center;transition:transform .2s ease,box-shadow .2s ease}
-.fac-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.fac-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto .9rem;border:3px solid var(--white);box-shadow:0 0 0 1px var(--line)}
-.fac-card h4{font-size:.94rem;color:var(--navy-deep)}
-.fac-card .fac-role{font-size:.8rem;color:var(--azure);margin-top:.3rem}
-.fac-card .fac-resume{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:700;color:var(--azure);padding:.35rem .8rem;border:1px solid var(--azure);border-radius:99px}
-.fac-card .fac-resume:hover{background:var(--azure);color:var(--white)}
-
-/* Lab */
-.lab-slider-wrap{margin-top:1.25rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
-.lab-slider-wrap img{width:100%;height:auto;display:block}
-.lab-caption{font-size:.8rem;color:var(--slate);margin-top:.5rem;text-align:center}
-
-/* News */
-.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.4rem;margin-top:1.25rem}
-.news-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+/* ============ RELATED EVENTS ============ */
+.related{margin-top:clamp(3rem,6vw,4.5rem)}
+.related h3{font-size:clamp(1.3rem,2.4vw,1.6rem);margin-bottom:1.5rem}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.news-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(11,42,74,.04);transition:transform .2s ease,box-shadow .2s ease;display:block}
 .news-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.news-thumb{aspect-ratio:4/3;background:var(--paper-dim);overflow:hidden}
-.news-thumb img{width:100%;height:100%;object-fit:cover}
-.news-body{padding:1rem 1.1rem 1.2rem}
-.news-date{font-family:var(--mono);font-size:.68rem;color:var(--azure);letter-spacing:.05em;text-transform:uppercase}
-.news-body h4{font-size:.92rem;margin-top:.45rem;color:var(--navy-deep)}
-.news-body p{font-size:.82rem;color:var(--slate);margin-top:.5rem;text-align:left}
-.news-readmore{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:700;color:var(--azure)}
-.news-readmore:hover{text-decoration:underline}
-
-/* Syllabus / calendar embeds */
-.embed-wrap{margin-top:1.25rem;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.embed-wrap embed{width:100%;height:900px;display:block}
-.cal-block{margin-top:1.75rem}
-.cal-block:first-of-type{margin-top:0}
-.cal-block img{border:1px solid var(--line);border-radius:var(--radius);margin-top:1rem}
-
-/* Timetable */
-.tt-download{display:flex;justify-content:center;margin-top:1.5rem}
+.ph-img{aspect-ratio:16/10;object-fit:cover;width:100%;background:linear-gradient(135deg,var(--navy) 0%,var(--azure) 60%,var(--gold) 140%)}
+.news-card .nc-body{padding:1.1rem 1.2rem 1.3rem}
+.news-card .nc-date{font-family:var(--mono);font-size:.7rem;color:var(--azure);letter-spacing:.06em;text-transform:uppercase}
+.news-card h4{font-size:1.02rem;margin-top:.5rem;line-height:1.35}
+.news-card .nc-readmore{display:inline-flex;align-items:center;gap:.35rem;margin-top:.8rem;font-size:.8rem;font-weight:600;color:var(--azure)}
+.news-card .nc-readmore svg{width:13px;height:13px}
 
 /* ============ FOOTER ============ */
 .site-footer{background:var(--navy-deep);color:#C7D1DD}
@@ -247,49 +175,16 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 #backToTop.show{opacity:1;visibility:visible;transform:none}
 #backToTop:hover{background:var(--azure)}
 #backToTop svg{width:20px;height:20px}
+.backtotop-icon{transform:rotate(180deg)}
 
-/* ============ RESPONSIVE ============ */
+.not-found{max-width:600px;margin:3rem auto;text-align:center;padding:3rem 1.5rem}
+.not-found h2{margin-bottom:1rem}
+.not-found p{color:var(--slate);margin-bottom:1.5rem}
 
-/* tablet: shrink sidebar column instead of hiding it too late */
-@media (max-width:1100px){
-  .dept-grid{grid-template-columns:210px 1fr;gap:1.25rem}
-  .dept-tab-btn{padding:.6rem .55rem;font-size:.8rem}
-  .dept-tab-btn svg{width:13px;height:13px;flex-shrink:0}
-}
-
-@media (max-width:960px){
-  .dept-grid{grid-template-columns:1fr}
-  .dept-side{position:static;display:none}
-  .dept-side-mobile{
-    display:flex;
-    gap:.5rem;
-    overflow-x:auto;
-    padding:.4rem .1rem 1rem;
-    margin-top:1.5rem;
-    -webkit-overflow-scrolling:touch;
-    scroll-snap-type:x proximity;
-    scrollbar-width:none;
-  }
-  .dept-side-mobile::-webkit-scrollbar{display:none}
-  .dept-side-mobile .dept-tab-btn{
-    width:auto;
-    flex:0 0 auto;
-    scroll-snap-align:start;
-    background:var(--white);
-    border:1px solid var(--line);
-    border-radius:99px;
-    white-space:nowrap;
-    border-left:none;
-    padding:.55rem 1.1rem;
-    font-size:.8rem;
-    gap:.4rem;
-  }
-  .dept-side-mobile .dept-tab-btn svg{width:13px;height:13px;flex-shrink:0}
-  .dept-side-mobile .dept-tab-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
-  .hod-card{grid-template-columns:1fr;justify-items:center;text-align:center}
+@media (max-width:1080px){
+  .news-grid{grid-template-columns:repeat(2,1fr)}
   .footer-top{grid-template-columns:1fr 1fr}
 }
-
 @media (max-width:1500px){
   .menu-toggle{display:block}
   .main-nav{display:none}
@@ -297,25 +192,28 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   .nav-inner{flex-direction:column;align-items:stretch;padding:.5rem 1rem}
   .nav-scroll{overflow:visible;flex:none;width:100%}
   .nav-list{flex-direction:column;width:auto;justify-content:flex-start}
-  .nav-apply{display:block;text-align:center;margin:.75rem .2rem .25rem}
   .nav-list>li>a,.dropdown-btn{padding:.8rem .3rem;border-bottom:1px solid var(--line)}
   .dropdown-menu{position:static;box-shadow:none;border:none;display:none;opacity:1;visibility:visible;transform:none;padding-left:.6rem}
   .has-dropdown.open>.dropdown-menu{display:block}
-  .dropdown-submenu>.dropdown-menu{margin-left:0}
+  .dropdown-submenu>.dropdown-menu{margin-left:0;padding-left:1rem}
   .dropdown-submenu.open>.dropdown-menu{display:block}
+  .dropdown-submenu>.submenu-toggle svg{transform:rotate(0)}
+  .dropdown-submenu.open>.submenu-toggle svg{transform:rotate(90deg)}
 }
 @media (max-width:760px){
   .plaque-inner .tags{display:none}
   .plaque-inner{padding:.3rem 1rem}
   .plaque-contact{gap:.8rem;font-size:.68rem}
-  .header-inner{padding:.5rem .85rem;gap:.5rem}
-  .logo-mark{height:38px;width:36px}
-  .site-header.scrolled .logo-mark{height:30px;width:30px}
-  .brand-text .name-en{font-size:.86rem;line-height:1.2}
+  .header-inner{padding:.5rem .85rem;gap:.6rem}
+  .logo-mark{height:38px;width:38px}
   .brand-text .name-mr{display:none}
   .brand-text .name-sub{display:none}
+  .header-badge-logo{display:none}
+  .carousel-track-wrap{aspect-ratio:4/3}
+  .carousel-arrow{width:36px;height:36px}
+  .news-grid{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr}
-  .embed-wrap embed{height:500px}
+  .event-actions{flex-direction:column}
 }
 </style>
 </head>
@@ -323,29 +221,21 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ============ ICON SPRITE ============ -->
 <svg style="display:none" aria-hidden="true">
 <defs>
 <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></symbol>
 <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
 <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></symbol>
 <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
 <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M18 4h2v16h-2"/></symbol>
-<symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></symbol>
-<symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
-<symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v18"/><path d="M5 4h13l-3 5 3 5H5"/></symbol>
-<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/><circle cx="17" cy="9" r="3"/><path d="M15 21c.3-3 2.3-5.5 5-6"/></symbol>
-<symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6l-6 10a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-10V3"/></symbol>
-<symbol id="i-newspaper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4z"/><path d="M4 4v17a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 8h7M8 12h7M8 16h4"/></symbol>
-<symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/></symbol>
-<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.5 2"/></symbol>
-<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0l-4-4m4 4l4-4"/><path d="M4 19h16"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
 </defs>
 </svg>
 
-<!-- ============ PLAQUE / GOVT INFO BAR ============ -->
+<!-- ============ PLAQUE BAR ============ -->
 <div class="plaque-bar">
   <div class="plaque-inner">
     <div class="tags">
@@ -371,14 +261,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
       <div class="name-mr">लोकनेते शामराव पेजे शासकीय अभियांत्रिकी महाविद्यालय, रत्नागिरी</div>
       <div class="name-sub">An Institute of Government of Maharashtra &middot; Established 2021</div>
     </div>
-
     <img src="images/75_years.jpeg" alt="75 Years of the Constitution of India" class="logo-mark header-badge-logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'75 Yrs\nConstitution'}))">
     <img src="images/dte_logo.gif" alt="Directorate of Technical Education, Maharashtra Logo" class="logo-mark" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-mark fallback',innerText:'DTE'}))">
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg id="menuIcon"><use href="#i-menu"/></svg>
     </button>
   </div>
-
   <nav class="main-nav" id="mainNav" aria-label="Primary">
     <div class="nav-inner">
       <div class="nav-scroll">
@@ -399,7 +287,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
           <ul class="dropdown-menu">
             <li><a href="Doc/IMP%20Instructions%20about%20admission%20in%20EN3042%20for%202024-25.pdf" target="_blank">Detailed Guidelines for Admission Process</a></li>
             <li><a href="Doc/Admission%20Fees%20structure%2025-26_page-0001%20.pdf" target="_blank">Fee Structure</a></li>
-            <li><a href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
+            <li><a href="Doc/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A4%95%20%20(4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
             <li><a href="Doc/FE-ACAP%20(25-26)IL-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (First Year) 25-26</a></li>
             <li><a href="Doc/ACAP%20(DSE-2526)%20IL%20round-3042%20.docx.pdf" target="_blank">Admission Notification Against CAP Round (Direct Second Year) 25-26</a></li>
           </ul>
@@ -530,287 +418,54 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   </nav>
 </header>
 
-<!-- ============ PAGE HERO ============ -->
+<!-- ============ PAGE HERO (filled by JS) ============ -->
 <section class="page-hero">
-  <img class="page-hero-media" src="images/college_top.png" alt="LSPGCOER Ratnagiri campus" loading="eager" onerror="this.style.display='none'">
   <div class="page-hero-inner">
-    <p class="breadcrumb"><a href="index.html">Home</a><svg style="width:11px;height:11px"><use href="#i-chevron"/></svg><span>Departments</span><svg style="width:11px;height:11px"><use href="#i-chevron"/></svg><span style="color:var(--gold-bright)">Science &amp; Humanities</span></p>
-    <h1>Department of Science &amp; Humanities</h1>
-    <p class="lede">B.Tech in Science &amp; Humanities at Loknete Shamrao Peje Government College of Engineering, Ratnagiri.</p>
-    <a class="hero-mail" href="mailto:hod.science@gcoer.ac.in"><svg><use href="#i-mail"/></svg>hod.science@gcoer.ac.in</a>
+    <p class="eyebrow">Dept. of Science &amp; Humanities &middot; News &amp; Events</p>
+    <h1 id="eventTitle">Loading event&hellip;</h1>
+    <div class="hero-meta">
+      <span><svg><use href="#i-calendar"/></svg><span id="eventDate"></span></span>
+      <span><svg><use href="#i-pin"/></svg><span id="eventVenue"></span></span>
+    </div>
+    <a href="Science_Dept.html" class="back-home"><svg><use href="#i-arrow"/></svg>Back to Department News &amp; Events</a>
   </div>
 </section>
-<div class="wave-divider">
-  <svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,24 C240,44 480,0 720,14 C960,28 1200,6 1440,20 L1440,44 L0,44 Z" fill="var(--paper)"/></svg>
-</div>
 
-<!-- ============ MAIN CONTENT ============ -->
 <main id="main-content">
-  <div class="wrap">
-    <div class="dept-grid">
 
-      <!-- SIDEBAR TABS (desktop) -->
-      <aside class="dept-side">
-        <div class="ds-head">Department Menu</div>
-        <div class="dept-tab-list" id="deptTabList">
-          <button class="dept-tab-btn active" data-tab="aboutdept"><svg width="15" height="15"><use href="#i-book"/></svg>&nbsp; About Department</button>
-          <button class="dept-tab-btn" data-tab="hod"><svg width="15" height="15"><use href="#i-user"/></svg>&nbsp; HOD's Desk</button>
-          <button class="dept-tab-btn" data-tab="visionandmission"><svg width="15" height="15"><use href="#i-target"/></svg>&nbsp; Vision &amp; Mission</button>
-          <button class="dept-tab-btn" data-tab="peosandpsos"><svg width="15" height="15"><use href="#i-flag"/></svg>&nbsp; PEO's &amp; PSO's</button>
-          <button class="dept-tab-btn" data-tab="faculty"><svg width="15" height="15"><use href="#i-users"/></svg>&nbsp; Faculty &amp; Staff</button>
-          <button class="dept-tab-btn" data-tab="Laboratory"><svg width="15" height="15"><use href="#i-flask"/></svg>&nbsp; Laboratory Details</button>
-          <button class="dept-tab-btn" data-tab="newsandevents"><svg width="15" height="15"><use href="#i-newspaper"/></svg>&nbsp; News &amp; Events</button>
-          <button class="dept-tab-btn" data-tab="syllabus_comp"><svg width="15" height="15"><use href="#i-file"/></svg>&nbsp; Syllabus (Old)</button>
-          <button class="dept-tab-btn" data-tab="syllabus_new"><svg width="15" height="15"><use href="#i-file"/></svg>&nbsp; Syllabus (NEP-2020)</button>
-          <button class="dept-tab-btn" data-tab="academic"><svg width="15" height="15"><use href="#i-calendar"/></svg>&nbsp; Academic Calendar</button>
-          <button class="dept-tab-btn" data-tab="time_table"><svg width="15" height="15"><use href="#i-clock"/></svg>&nbsp; Time-Table</button>
-        </div>
-      </aside>
+  <!-- ============ NOT FOUND STATE ============ -->
+  <div class="not-found" id="notFound" style="display:none">
+    <h2>Event not found</h2>
+    <p>We couldn&rsquo;t find the event you were looking for. It may have been moved or the link is incorrect.</p>
+    <a href="Science_Dept.html" class="btn btn-ghost">Back to Department News &amp; Events <svg><use href="#i-arrow"/></svg></a>
+  </div>
 
-      <!-- MAIN PANELS -->
-      <div>
-        <!-- MOBILE TAB PILLS -->
-        <div class="dept-side-mobile" id="deptTabListMobile"></div>
-
-        <!-- ABOUT DEPARTMENT -->
-        <div class="dept-panel active" id="panel-aboutdept">
-          <p class="eyebrow">Department</p>
-          <h2 style="margin-top:.5rem">About the Department of Science &amp; Humanities</h2>
-          <p>Welcome to the Department of Science &amp; Humanities at Loknete Shamrao Peje Government College of Engineering, Ratnagiri, established in the year 2021. It serves as a link between pure sciences (Physics, Mathematics, Chemistry, biological sciences etc.) and engineering/technology disciplines. The Department aims to cater to the needs of technology students during their initial semesters by providing a strong foundation through various theoretical and practical courses as per the curriculum of the affiliated university. The essential basic concepts related to physical, chemical and mathematical sciences, along with value education and co-curricular courses, are inculcated in the minds of budding engineers in their initial years of study. This Department equips students with the essential knowledge and skills they need to succeed in their chosen areas.</p>
-
-          <h3>Career Opportunities</h3>
-          <p>Graduates in Science &amp; Humanities can explore diverse career paths, including:</p>
-          <ul class="bullets">
-            <li><b>Research Analyst:</b> Conduct studies that combine scientific and humanistic insights.</li>
-            <li><b>Science Communicator:</b> Make scientific information accessible to the public through writing and presentations.</li>
-            <li><b>Ethics Consultant:</b> Advise on ethical implications of scientific advancements.</li>
-            <li><b>Data Analyst:</b> Interpret data with an understanding of human behavior and societal impact.</li>
-            <li><b>Policy Advisor:</b> Develop policies addressing social issues using interdisciplinary insights.</li>
-            <li><b>User Experience (UX) Researcher:</b> Enhance product design by understanding user needs and behaviors.</li>
-            <li><b>Education Specialist:</b> Design educational programs that integrate science and humanities.</li>
-            <li><b>Cultural Analyst:</b> Examine the societal impacts of technology and scientific advancements.</li>
-            <li><b>Environmental Scientist:</b> Tackle ecological challenges with a focus on community and ethical implications.</li>
-          </ul>
-          <p>Our students have the opportunity to collaborate with industry leaders, work on real-world challenges, and gain internships that give them a competitive edge in the job market.</p>
-        </div>
-
-        <!-- HOD'S DESK -->
-        <div class="dept-panel" id="panel-hod">
-          <p class="eyebrow">Leadership</p>
-          <h2 style="margin-top:.5rem">Message from the HOD</h2>
-          <div class="hod-card">
-            <div class="hod-photo-wrap">
-              <img class="hod-photo" src="images/Staff_Photos/Dr. Uttam S. Kakade photo.jpg.png" alt="Dr. Uttam S. Kakade">
-              <span class="hod-name">Dr. Uttam S. Kakade</span>
-              <span class="hod-role">Head of Department</span>
-            </div>
-            <div>
-              <p style="margin-top:0"><b>Welcome to the Department of Science &amp; Humanities!</b></p>
-              <p>As the Head of Department for Science &amp; Humanities, I am delighted to welcome you to our vibrant academic community. Our department is a unique and dynamic space where the exploration of human experience and the wonders of the natural world converge. We are committed to providing a rich and stimulating learning environment.</p>
-              <p>To our dedicated faculty and staff, I want to express my sincere gratitude for your tireless efforts and commitment to excellence. Your passion for teaching, research, and supporting our students is the cornerstone of our department's success.</p>
-              <p>I am incredibly proud of the achievements of our department over the past year. We encourage you to engage with your studies, participate in departmental events, reach out to faculty, and utilize the resources available to you.</p>
-              <p>Please do not hesitate to contact me or any member of the departmental staff if you have any questions or require assistance. We are here to support your academic journey and foster a thriving departmental community.</p>
-              <p>Thank you for being a part of the Science &amp; Humanities department. I look forward to a productive and fulfilling semester, and to seeing the contributions you will make around campus.</p>
-              <div class="sign-block">
-                <p style="margin-top:0"><b>Warm regards,</b></p>
-                <p style="margin-top:.3rem"><b>Dr. Uttam S. Kakade</b><br>Head of Department<br>Department of Science &amp; Humanities<br>Loknete Shamrao Peje Government College of Engineering, Ratnagiri</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- VISION AND MISSION -->
-        <div class="dept-panel" id="panel-visionandmission">
-          <p class="eyebrow">Direction</p>
-          <h2 style="margin-top:.5rem">Vision &amp; Mission</h2>
-          <div class="vm-block">
-            <h3 style="color:var(--gold)">Vision</h3>
-            <p>To build a strong foundation of scientific temper, mathematical rigour, and human values in every engineering student, enabling them to apply the principles of basic sciences and humanities towards innovative and ethical engineering practice.</p>
-          </div>
-          <div class="vm-block" style="margin-top:1.25rem">
-            <h3 style="color:var(--gold)">Mission</h3>
-            <ol>
-              <li>To impart a strong foundation in Physics, Mathematics, Chemistry and allied basic sciences that supports every engineering discipline offered by the institute.</li>
-              <li>To foster analytical thinking, problem-solving ability and a scientific temperament among first-year engineering students.</li>
-              <li>To inculcate value education, communication skills and co-curricular development so that students grow into well-rounded, ethical engineering professionals.</li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- PEO'S AND PSO'S -->
-        <div class="dept-panel" id="panel-peosandpsos">
-          <p class="eyebrow">Outcomes</p>
-          <h2 style="margin-top:.5rem">PEO's &amp; PSO's</h2>
-
-          <h3 style="margin-top:0">Programme Educational Objectives (PEOs)</h3>
-          <ul class="bullets">
-            <li><b>PEO 1:</b> Graduates will possess a strong foundation in basic sciences and mathematics enabling them to pursue advanced studies and solve engineering problems.</li>
-            <li><b>PEO 2:</b> Graduates will apply scientific and analytical reasoning to identify, formulate and address real-world engineering challenges.</li>
-            <li><b>PEO 3:</b> Graduates will demonstrate professional ethics, effective communication and lifelong learning as responsible engineers and citizens.</li>
-          </ul>
-
-          <h3>Programme Specific Outcomes (PSOs)</h3>
-          <ul class="bullets">
-            <li><b>PSO 1:</b> Ability to apply concepts of Physics, Chemistry and Mathematics to model and analyse engineering problems across disciplines.</li>
-            <li><b>PSO 2:</b> Ability to integrate scientific knowledge with human values, communication skills and co-curricular exposure for holistic engineering practice.</li>
-          </ul>
-        </div>
-
-        <!-- FACULTY -->
-        <div class="dept-panel" id="panel-faculty">
-          <p class="eyebrow">People</p>
-          <h2 style="margin-top:.5rem">Meet the Faculties</h2>
-          <p>At Loknete Shamrao Peje Government College of Engineering, Ratnagiri (GCOER), the Department of Science &amp; Humanities is proud to have a dedicated and talented team of faculty members. They are well-qualified, experienced, and passionate about teaching. Our faculty stay updated with the latest advancements in basic sciences and humanities. Our teachers are not only highly qualified and experienced but also deeply committed to student learning, ensuring every student gets the guidance and support they need to succeed.</p>
-
-          <h3 class="fac-section-title">Regular Faculty</h3>
-          <div class="fac-grid">
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/Dr. Uttam S. Kakade photo.jpg.png" alt="Dr. Uttam S. Kakade">
-              <h4>Dr. Uttam S. Kakade</h4>
-              <p class="fac-role">HOD of Science &amp; Humanities Dept. and Assistant Professor</p>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/Dr. H. V. Patile photo.png" alt="Dr. H. V. Patile">
-              <h4>Dr. H. V. Patile</h4>
-              <p class="fac-role">Assistant Professor</p>
-              <a class="fac-resume" href="Doc/staff resume/Hemlata V. Patile Resume.pdf" target="_blank">Resume</a>
-            </div>
-          </div>
-
-          <h3 class="fac-section-title">Visiting Faculty</h3>
-          <div class="fac-grid">
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/img_Naik.png" alt="Mrs. A. A. Naik">
-              <h4>Mrs. A. A. Naik</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Aditi Naik Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/Pachkude.jpg" alt="Ms. J. S. Pachkude">
-              <h4>Ms. J. S. Pachkude</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/J S Pachkude Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/Sangare.png" alt="Ms. S. S. Sangare">
-              <h4>Ms. S. S. Sangare</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Siddhika Sangare Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/R M Rathod photo.png" alt="Ms. R. M. Rathod">
-              <h4>Ms. R. M. Rathod</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Renuka Rathod Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/S Z Khatib photo.png" alt="Ms. S. Z. Khatib">
-              <h4>Ms. S. Z. Khatib</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Safa K. Resume.pdf" target="_blank">Resume</a>
-            </div>
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/S S Dali photo.jpg" alt="Mrs. S. S. Dali">
-              <h4>Mrs. S. S. Dali</h4>
-              <p class="fac-role">Visiting Faculty</p>
-              <a class="fac-resume" href="Doc/staff resume/Dali Mam Resume.pdf" target="_blank">Resume</a>
-            </div>
-          </div>
-
-          <h3 class="fac-section-title">Contractual Staff</h3>
-          <div class="fac-grid">
-            <div class="fac-card">
-              <img class="fac-photo" src="images/Staff_Photos/person.png" alt="Mr. Mahesh K. Pawar">
-              <h4>Mr. Mahesh K. Pawar</h4>
-              <p class="fac-role">Technical Lab Assistant</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- LABORATORY -->
-        <div class="dept-panel" id="panel-Laboratory">
-          <p class="eyebrow">Infrastructure</p>
-          <h2 style="margin-top:.5rem">Laboratory Details</h2>
-          <h3>Equipment List</h3>
-          <div class="lab-slider-wrap">
-            <img id="labSlider" src="images/S&H Equipment list_page-1.png" alt="S&amp;H Equipment List">
-          </div>
-          <p class="lab-caption">Slideshow rotates through equipment list &amp; laboratory images automatically.</p>
-        </div>
-
-        <!-- NEWS AND EVENTS -->
-        <div class="dept-panel" id="panel-newsandevents">
-          <p class="eyebrow">Updates</p>
-          <h2 style="margin-top:.5rem">News &amp; Events</h2>
-          <div class="news-grid">
-            <div class="news-card">
-              <div class="news-thumb"><img src="images/events/news_event_SH.jpg" alt="Spectrum 2026"></div>
-              <div class="news-body">
-                <p class="news-date">9 April, 2025</p>
-                <h4>Spectrum 2026</h4>
-                <p>Spectrum 2K26 was a vibrant platform that brought together innovation, creativity, talent, and knowledge under one roof. Organized by the Department of Science and Humanities, this event aimed to inspire students to explore new ideas, showcase their abilities, and engage in exciting academic activities.</p>
-                <a class="news-readmore" href="science_event.html?id=spectrum2026">Read more &rarr;</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SYLLABUS OLD -->
-        <div class="dept-panel" id="panel-syllabus_comp">
-          <p class="eyebrow">Curriculum</p>
-          <h2 style="margin-top:.5rem">Syllabus (Old)</h2>
-          <div class="embed-wrap">
-            <embed src="Doc/Sylllabus-for-Science-Humanities-2020-21mon-for-all-branches.pdf" type="application/pdf">
-          </div>
-        </div>
-
-        <!-- SYLLABUS NEP-2020 -->
-        <div class="dept-panel" id="panel-syllabus_new">
-          <p class="eyebrow">Curriculum</p>
-          <h2 style="margin-top:.5rem">Syllabus (NEP-2020)</h2>
-          <div class="embed-wrap">
-            <embed src="Doc/NEP_First-Year-B.Tech-syllabus-Hum&Sci._2024-25.pdf" type="application/pdf">
-          </div>
-        </div>
-
-        <!-- ACADEMIC CALENDAR -->
-        <div class="dept-panel" id="panel-academic">
-          <p class="eyebrow">Schedule</p>
-          <h2 style="margin-top:.5rem">Academic Calendar</h2>
-
-          <div class="cal-block">
-            <h3>Academic Calendar Odd Sem (Winter AY 25-26)</h3>
-            <img src="images/Academic calendar ODD Sem 2025 GCOER_page-1_S&H.jpg" alt="Academic Calendar Odd Sem Winter AY 25-26">
-          </div>
-
-          <div class="cal-block">
-            <h3>Academic Calendar</h3>
-            <img src="images/Academic calendar ODD Sem 2025 GCOER_page-2_S&H.jpg" alt="Academic Calendar Odd Sem AY25-26">
-            <img src="images/AC_Engg_UGPG_EvenSem_AY25-26_page-0002_S&H.jpg" alt="Academic Calendar Even Sem AY25-26" style="margin-top:1rem">
-          </div>
-        </div>
-
-        <!-- TIME TABLE -->
-        <div class="dept-panel" id="panel-time_table">
-          <p class="eyebrow">Schedule</p>
-          <h2 style="margin-top:.5rem">Time-Table</h2>
-          <div class="cal-block">
-            <img src="images/TT S&H for Even Sem Summer 25-26.png" alt="Science and Humanities Time-Table Even Sem Summer 25-26">
-          </div>
-          <div class="tt-download">
-            <a class="btn btn-primary" href="images/TT S&H for Even Sem Summer 25-26.png" download="time_table.png"><svg><use href="#i-download"/></svg>Download Time-Table</a>
-          </div>
-        </div>
-
+  <div id="eventContent">
+    <!-- ============ CAROUSEL ============ -->
+    <div class="carousel" id="carousel">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="carouselTrack"></div>
       </div>
+      <button class="carousel-arrow carousel-prev" id="carPrev" aria-label="Previous image"><svg><use href="#i-arrow-left"/></svg></button>
+      <button class="carousel-arrow carousel-next" id="carNext" aria-label="Next image"><svg><use href="#i-arrow-left"/></svg></button>
+      <div class="carousel-dots" id="carDots"></div>
+      <div class="carousel-count" id="carCount"></div>
     </div>
+
+    <!-- ============ DETAILS ============ -->
+    <article class="event-body" id="eventBodyText"></article>
+
+    <div class="event-actions">
+      <a href="Science_Dept.html" class="btn btn-ghost"><svg><use href="#i-arrow-left"/></svg>All Department News &amp; Events</a>
+    </div>
+
+    <!-- ============ RELATED EVENTS ============ -->
+    <section class="related">
+      <h3>More from the Science &amp; Humanities Department</h3>
+      <div class="news-grid" id="relatedGrid"></div>
+    </section>
   </div>
 
-  <div class="wrap" style="padding-bottom:clamp(2rem,4vw,3.5rem)">
-    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
-      <a href="index.html" class="btn btn-ghost">Back to Home</a>
-    </div>
-  </div>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -828,15 +483,15 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
       <ul>
         <li><a href="about_institute.html">About Institute</a></li>
         <li><a href="course_details.html">Course Details</a></li>
-        <li><a href="index.html#admission">Admission</a></li>
+        <li><a href="Science_Dept.html">Science &amp; Humanities Dept.</a></li>
         <li><a href="index.html#facilities">Departments</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Resources</h5>
       <ul>
-        <li><a href="https://www.gcoer.ac.in/Doc/RTI.pdf">RTI</a></li>
-        <li><a href="https://www.gcoer.ac.in/Doc/Grive.cell.pdf">Grievance Cell</a></li>
+        <li><a href="Doc/RTI.pdf">RTI</a></li>
+        <li><a href="Doc/Grive.cell.pdf">Grievance Cell</a></li>
         <li><a href="https://dte.maharashtra.gov.in/" target="_blank" rel="noopener">DTE Maharashtra</a></li>
         <li><a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener">CET Cell</a></li>
       </ul>
@@ -852,18 +507,19 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; Copyright 2021 &mdash; Government College of Engineering, Ratnagiri</span>
+    <span>&copy; Copyright 2026 &mdash; Government College of Engineering, Ratnagiri</span>
     <span>Developed and Maintained by:<a href="https://www.praseonix.in/"> Praseonix Software Solution Pvt. Ltd.</a></span>
   </div>
 </footer>
 
-<button id="backToTop" aria-label="Back to top">
-  <svg style="width:20px;height:20px;transform:rotate(180deg)"><use href="#i-chevron"/></svg>
-</button>
+<button id="backToTop" aria-label="Back to top"><svg class="backtotop-icon"><use href="#i-chevron"/></svg></button>
 
+<script src="science-events-data.js"></script>
 <script>
 (function(){
   "use strict";
+
+  /* ---- header shrink / back to top ---- */
   var header = document.getElementById('siteHeader');
   var backToTop = document.getElementById('backToTop');
   window.addEventListener('scroll', function(){
@@ -873,6 +529,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
   }, {passive:true});
   backToTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
 
+  /* ---- mobile menu ---- */
   var menuToggle = document.getElementById('menuToggle');
   var mainNav = document.getElementById('mainNav');
   var menuIcon = document.getElementById('menuIcon');
@@ -882,121 +539,168 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(
     menuIcon.innerHTML = isOpen ? '<use href="#i-close"/>' : '<use href="#i-menu"/>';
   });
 
-  /* ---- Top-level dropdowns: opening one closes all the others ---- */
-  var dropdownParents = document.querySelectorAll('.has-dropdown');
+  /* ---- dropdown menus ---- */
+  var dropdownParents = document.querySelectorAll('.has-dropdown, .dropdown-submenu');
   dropdownParents.forEach(function(el){
-    var trigger = el.querySelector(':scope > .dropdown-btn');
+    var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
     if(!trigger) return;
     trigger.addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
       var wasOpen = el.classList.contains('open');
-
-      dropdownParents.forEach(function(other){
-        if(other !== el){
-          other.classList.remove('open');
-          var otherTrigger = other.querySelector(':scope > .dropdown-btn');
-          if(otherTrigger) otherTrigger.setAttribute('aria-expanded','false');
-          other.querySelectorAll('.dropdown-submenu.open').forEach(function(sub){
-            sub.classList.remove('open');
-          });
+      var siblingScope = el.parentElement;
+      siblingScope.querySelectorAll(':scope > .has-dropdown.open, :scope > .dropdown-submenu.open').forEach(function(sib){
+        if(sib !== el){
+          sib.classList.remove('open');
+          var sibTrigger = sib.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
+          if(sibTrigger) sibTrigger.setAttribute('aria-expanded','false');
         }
       });
-
       el.classList.toggle('open', !wasOpen);
       trigger.setAttribute('aria-expanded', !wasOpen);
     });
   });
-
-  /* ---- Nested submenus ---- */
-  var submenuParents = document.querySelectorAll('.dropdown-submenu');
-  submenuParents.forEach(function(el){
-    var trigger = el.querySelector(':scope > .submenu-toggle');
-    if(!trigger) return;
-    trigger.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      var wasOpen = el.classList.contains('open');
-
-      submenuParents.forEach(function(other){
-        if(other !== el && other.parentElement === el.parentElement){
-          other.classList.remove('open');
-        }
-      });
-
-      el.classList.toggle('open', !wasOpen);
-    });
-  });
-
   document.addEventListener('click', function(e){
     dropdownParents.forEach(function(el){
       if(!el.contains(e.target)){
         el.classList.remove('open');
-        var trigger = el.querySelector(':scope > .dropdown-btn');
+        var trigger = el.querySelector(':scope > .dropdown-btn, :scope > .submenu-toggle');
         if(trigger) trigger.setAttribute('aria-expanded','false');
       }
     });
-    submenuParents.forEach(function(el){
-      if(!el.contains(e.target)){
-        el.classList.remove('open');
+  });
+
+  document.querySelectorAll('#mainNav .nav-list a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(window.innerWidth <= 1500){
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuIcon.innerHTML = '<use href="#i-menu"/>';
       }
     });
   });
 
-  var revealEls = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
-      });
-    }, {threshold:0.1});
-    revealEls.forEach(function(el){ io.observe(el); });
+  /* ---- load event from URL ?id=... ---- */
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  var EVENTS = window.SCIENCE_EVENTS || {};
+  var event = id ? EVENTS[id] : null;
+
+  if(!event){
+    document.getElementById('eventContent').style.display = 'none';
+    document.getElementById('notFound').style.display = 'block';
+    document.getElementById('eventTitle').textContent = 'Event not found';
+    document.title = 'Event not found | Science & Humanities | LSPGCOER Ratnagiri';
+    return;
+  }
+
+  document.title = event.title.replace(/&mdash;/g,'\u2014').replace(/&amp;/g,'&').replace(/&ndash;/g,'\u2013').replace(/&ldquo;/g,'\u201c').replace(/&rdquo;/g,'\u201d') + ' | Science & Humanities | LSPGCOER Ratnagiri';
+  document.getElementById('pageTitle').textContent = document.title;
+  document.getElementById('eventTitle').innerHTML = event.title;
+  document.getElementById('eventDate').textContent = event.date || '';
+  document.getElementById('eventVenue').textContent = event.venue || '';
+
+  /* body text */
+  var bodyEl = document.getElementById('eventBodyText');
+  (event.body || []).forEach(function(p){
+    var para = document.createElement('p');
+    para.innerHTML = p;
+    bodyEl.appendChild(para);
+  });
+  if(event.quote){
+    var q = document.createElement('p');
+    q.className = 'event-quote';
+    q.innerHTML = '&ldquo;' + event.quote + '&rdquo;';
+    bodyEl.appendChild(q);
+  }
+
+  /* ---- carousel ---- */
+  var images = (event.images && event.images.length) ? event.images : (event.cover ? [event.cover] : []);
+  var track = document.getElementById('carouselTrack');
+  var dotsWrap = document.getElementById('carDots');
+  var countEl = document.getElementById('carCount');
+  var current = 0;
+
+  images.forEach(function(src, i){
+    var slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = event.title.replace(/&mdash;|&amp;|&ndash;|&ldquo;|&rdquo;/g,'') + ' photo ' + (i+1);
+    img.loading = 'lazy';
+    img.onerror = function(){
+      slide.innerHTML = '<div class="no-img">Add photo here<br>(' + src + ')</div>';
+    };
+    slide.appendChild(img);
+    track.appendChild(slide);
+
+    var dot = document.createElement('button');
+    dot.setAttribute('aria-label', 'Go to image ' + (i+1));
+    if(i === 0) dot.classList.add('active');
+    dot.addEventListener('click', function(){ goTo(i); });
+    dotsWrap.appendChild(dot);
+  });
+
+  function updateCarousel(){
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    Array.prototype.forEach.call(dotsWrap.children, function(d, i){
+      d.classList.toggle('active', i === current);
+    });
+    countEl.textContent = (current+1) + ' / ' + images.length;
+  }
+  function goTo(i){
+    current = (i + images.length) % images.length;
+    updateCarousel();
+  }
+
+  if(images.length > 1){
+    document.getElementById('carPrev').addEventListener('click', function(){ goTo(current - 1); });
+    document.getElementById('carNext').addEventListener('click', function(){ goTo(current + 1); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight') goTo(current + 1);
+      if(e.key === 'ArrowLeft') goTo(current - 1);
+    });
+    /* touch swipe */
+    var startX = null;
+    var wrap = document.querySelector('.carousel-track-wrap');
+    wrap.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+    wrap.addEventListener('touchend', function(e){
+      if(startX === null) return;
+      var diff = e.changedTouches[0].clientX - startX;
+      if(diff > 40) goTo(current - 1);
+      else if(diff < -40) goTo(current + 1);
+      startX = null;
+    }, {passive:true});
+    /* autoplay, pauses on hover */
+    var autoplay = setInterval(function(){ goTo(current + 1); }, 5000);
+    document.getElementById('carousel').addEventListener('mouseenter', function(){ clearInterval(autoplay); });
   } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
+    document.getElementById('carPrev').style.display = 'none';
+    document.getElementById('carNext').style.display = 'none';
   }
+  updateCarousel();
 
-  /* ---- Department tab switcher ---- */
-  var tabButtons = document.querySelectorAll('.dept-tab-btn');
-  var panels = document.querySelectorAll('.dept-panel');
-  var mobileList = document.getElementById('deptTabListMobile');
-
-  // clone buttons for mobile pill bar
-  tabButtons.forEach(function(btn){
-    var clone = btn.cloneNode(true);
-    mobileList.appendChild(clone);
+  /* ---- related events (up to 3 others) ---- */
+  var relatedGrid = document.getElementById('relatedGrid');
+  var otherIds = Object.keys(EVENTS).filter(function(k){ return k !== id; });
+  otherIds.slice(0, 3).forEach(function(k){
+    var ev = EVENTS[k];
+    var card = document.createElement('a');
+    card.className = 'news-card';
+    card.href = 'science_event.html?id=' + encodeURIComponent(k);
+    var coverImg = ev.cover || (ev.images && ev.images[0]) || '';
+    card.innerHTML =
+      '<img src="' + coverImg + '" alt="" class="ph-img" loading="lazy" onerror="this.style.background=\'linear-gradient(135deg,var(--navy),var(--azure) 60%,var(--gold) 140%)\'">' +
+      '<div class="nc-body">' +
+        '<p class="nc-date">' + (ev.date || '') + '</p>' +
+        '<h4>' + ev.title + '</h4>' +
+        '<span class="nc-readmore">Read More <svg><use href="#i-arrow"/></svg></span>' +
+      '</div>';
+    relatedGrid.appendChild(card);
   });
 
-  function activateTab(tabId){
-    document.querySelectorAll('.dept-tab-btn').forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-tab') === tabId);
-    });
-    panels.forEach(function(p){
-      p.classList.toggle('active', p.id === 'panel-' + tabId);
-    });
-    window.scrollTo({top:0, behavior:'smooth'});
-  }
-
-  document.querySelectorAll('.dept-tab-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      activateTab(btn.getAttribute('data-tab'));
-    });
-  });
-
-  /* ---- Laboratory image slideshow ---- */
-  var labImages = [
-    "images/S&H Equipment list_page-1.png",
-    "images/S&H Equipment list_page-2.png"
-  ];
-  var labIndex = 0;
-  var labSlider = document.getElementById('labSlider');
-  if(labSlider){
-    setInterval(function(){
-      labIndex = (labIndex + 1) % labImages.length;
-      labSlider.src = labImages[labIndex];
-    }, 3000);
-  }
 })();
 </script>
 
 </body>
-</html>
+</html>   

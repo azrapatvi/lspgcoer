@@ -12,7 +12,7 @@ window.FTM_EVENTS = {
     date: "16 October 2024",
     venue: "Loknete Shamrao Peje Government College of Engineering, Ratnagiri",
     cover: "images/events/FTM_Event1.jpeg",
-    images: ["images/events/FTM_Event1.jpeg"],
+    images: ["images/events/FTM_Event1.jpeg","images/events/FTM_Event2.jpeg","images/events/FTM_Event3.jpeg"],
     body: [
       "The Food Tech and Management Department hosted events focused on innovations in food technology, management practices, industry trends, and networking opportunities for students and professionals, including seminars, workshops, guest lectures, and competitions.",
     ],
@@ -23,8 +23,8 @@ window.FTM_EVENTS = {
     title: "Guest Lecture",
     date: "May 2025",
     venue: "Loknete Shamrao Peje Government College of Engineering, Ratnagiri",
-    cover: "images/events/FTM_Event2.jpg",
-    images: ["images/events/FTM_Event2.jpg"],
+    cover: "images/events/FTM_Guest lect. img (1).jpg",
+    images: ["images/events/FTM_Guest lect. img (1).jpg","images/events/FTM_Guest lect. img (2).jpg"],
     body: [
       "The Department of Food Technology and Management hosted a guest lecture conducted by Gadre Marine Export Pvt. Ltd., covering industry practices and career opportunities in food processing.",
     ],
@@ -35,8 +35,8 @@ window.FTM_EVENTS = {
     title: "World Food Day",
     date: "16 October 2025",
     venue: "Loknete Shamrao Peje Government College of Engineering, Ratnagiri",
-    cover: "images/events/FTM_Event3.jpg",
-    images: ["images/events/FTM_Event3.jpg"],
+    cover: "images/events/FoodDay-2025_1.jpg",
+    images: ["images/events/FoodDay-2025_4.jpg","images/events/FoodDay-2025_2.jpg","images/events/FoodDay-2025_3.jpg","images/events/FoodDay-2025_1.jpg","images/events/FoodDay-2025_6.jpg","images/events/FoodDay-2025_7.jpg"],
     body: [
       "The Food Tech and Management Department hosted events focused on innovations in food technology, management practices, industry trends, and networking opportunities for students and professionals to mark World Food Day.",
     ],
